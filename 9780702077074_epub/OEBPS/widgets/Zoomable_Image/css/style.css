@@ -1,0 +1,198 @@
+.main-image-area {
+	background-color: white;
+	position: relative;
+	margin: 0px auto 0;
+	height: calc(100vh - 0px) !important;
+	overflow: hidden;
+}
+
+.inner-image-area {
+	height: 100%;
+	display: block;
+	-webkit-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-ms-transform-origin: center center;
+	transform-origin: center center;
+	position: relative;
+	line-height: 0;
+	margin: auto;
+	min-height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.inner-image-area img {
+	width: auto !Important;
+	margin: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.zoomimage .inner-image-area #img {
+	position: relative;
+	width: auto;
+	max-height: 100%;
+	margin: auto;
+	display: flex;
+}
+
+input#slide[type=range] {
+	-webkit-appearance: none;
+	margin: 0;
+	width: 90px;
+	border-radius: 5px;
+}
+
+input#slide[type=range]:focus {
+	outline: none;
+}
+
+input#slide[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 5px;
+	cursor: pointer;
+	box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
+	background: #E8E8E8;
+	border-radius: 5px;
+	border: 0px solid #000101;
+}
+
+input#slide[type=range]::-webkit-slider-thumb {
+	box-shadow: 0px 1px 0 rgb(0 0 0 / 20%);
+	border: 2px solid #fff;
+	height: 13px;
+	width: 13px;
+	border-radius: 15px;
+	background: #A2A2A2;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -5px;
+}
+
+input#slide[type=range]:hover::-webkit-slider-thumb {
+	background: #007cb6;
+}
+
+.inner-image-area .ss-img-wrap,
+.inner-image-area .img-wrap {
+	position: relative;
+	width: auto !important;
+	height: 100% !important;
+	margin: auto;
+	display: flex;
+}
+
+@media screen and (max-width:767px) {
+	.review {
+		padding: 10px 20px;
+	}
+	.inner-image-area img {
+		width: auto!important;
+		max-width: 100%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+	.inner-image-area .ss-img-wrap {
+		transform: scale(0.8);
+	}
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+	.inner-image-area .img-wrap {
+		transform: scale(0.98);
+	}
+	.img-slider {
+		transform: scale(0.3);
+	}
+	.zoomimage .inner-image-area #img {
+		max-height: 60% !important;
+	}
+}
+
+input#sliderInputBox {
+	width: 90px;
+	border: none;
+	background: transparent;
+}
+
+#imageSlider {
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+	top: 2px;
+	left: 16px;
+	width: 77px;
+}
+
+.slide-thumbnail {
+	width: 100%;
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.active,
+.slide-thumbnail:hover {
+	opacity: 1;
+}
+
+.visually-hidden {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	position: absolute !important;
+	height: 0px;
+	width: 0px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px);
+	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+	clip: rect(1px, 1px, 1px, 1px);
+	/*maybe deprecated but we need to support legacy browsers */
+	clip-path: inset(50%);
+	/*modern browsers, clip-path works inwards from each corner*/
+	white-space: nowrap;
+	/* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+}
+
+.disabled {
+	pointer-events: none;
+	color: lightgray!important;
+}
+
+#image-map {
+	position: relative;
+	width: auto !important;
+	height: auto !important;
+	display: inline-block;
+}
+
+.main-slider-area.slide7 *::selection {
+	color: none !important;
+	background: none !important;
+}
+
+#image-map {
+	margin-top: 50px;
+}
+
+.img-tour #image-map {
+	margin-top: 50px;
+	position: relative;
+	width: auto;
+	max-height: 85%;
+	margin: auto;
+	display: flex;
+}
+
+#imageSlider1 {
+	top: 0px !important;
+}
+
+
+
+.slides.inner-slide-area.zoomimg span.hotspot_slide_wrap1 img {
+	max-width: 90%;
+	max-height: 80%;
+	padding-bottom: 70px;
+}

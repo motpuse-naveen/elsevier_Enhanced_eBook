@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+<meta charset="utf-8" />
+	
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	
+<title> EPUB: Audio Wheezes</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	
+<script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
+	
+<script type="text/javascript" src="../script/jquery-ui.min.js"></script>
+	
+<script type="text/javascript" src="../script/slider-a11y-vertical.js"></script></head><!--[if gt IE 9]><!-->
+
+<body class="audiofigure-exhibit has-bottom-bar">
+	
+<div class="book" role="main">
+	
+<div class="audio-document-area" tabindex="0" />
+		
+<div role="application">
+			
+<div class="bottom-bar-container center-in-display">
+				
+<div class="bottom-bar">
+					
+<div class="inline-audio">
+						
+<div class="subcaption">
+							
+<h1>Wheezes</h1>
+						</div>
+						<!-- <audio controls src="../audio/audio1.mp3" class = 'playAudio'></audio> -->
+						
+<div class="controls audio-control">
+							
+<div class="media-controls">
+								
+<div class="play-pause pause" title="Play" role="button" tabindex="0"> 
+ <audio id="playAudio" class="playAudio" preload="auto" title="Audio">
+	<source src="../audio/audio1.mp3" />
+	<em>audio not supported</em>
+</audio>                         
+                                  
+</div>
+								
+<div class="slider-wrapper">
+									
+<div class="slider media">
+										
+<div class="track" id="audioTrack" />
+										
+<div class="handle" id="audioHandle" tabindex="0" role="slider" aria-label="Audio current time is 00:00" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >
+											
+<div />
+										</div>
+										
+<div class="loading" id="audioLoading" />
+										
+<div class="progress" id="audioProgress" />
+										
+<div class="timecode-marker" />
+									</div>
+								</div>
+								
+<div class="time">
+									<span class="elapsed-time">0:00</span> / <span class="total-time">0</span>
+								</div>
+								
+<div class="volume-slider-out">
+									
+<div class="volume volume-med" id="audioVolume" tabindex="0" role="button" aria-label="Volume, press Enter key to Mute Unmute the audio, Press Space key to open the Volume Slider">
+										
+<div class="mute-button" />
+									</div>
+									
+<div class="volume-slider">
+										<!-- <div class="slider" id="volumeSlider" >
+											<div class="track" id="volumeTrack"></div>
+											<div class="handle1" id="volumeHandle" style="left: 53%;" tabindex="0" aria-label="Use Up or Down Arrow keys to increase or Decrease the Volume">
+												<div></div>
+											</div>
+										</div> -->
+										
+<div class="aria-widget-vertical-slider">
+											
+<div id="idTempValue" class="value">
+											  0
+											</div>
+											
+<div class="rail" style="height: 90px;">
+												
+<div id="volumeSlider" role="slider" tabindex="0" class="thumb" aria-valuemin="0" aria-valuenow="68" aria-valuemax="100" aria-label="Volume">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+<div id="ariaMessages" class="visually-hidden" aria-live="assertive" />
+	</div>
+	
+<script>var ia_timings = { responseStart: Date.now() };</script>
+	
+<script>
+		var sliders = document.getElementById('volumeSlider');
+		var sliderObj = null
+		var isDragging = false, isVolumeDragging = false, audioDragging = false, volumeDragging = false;
+		function isOpenedOnMobile() {
+			return (('ontouchstart' in window) ||
+				(navigator.maxTouchPoints &gt; 0) ||
+				(navigator.msMaxTouchPoints &gt; 0));
+		}
+		var isMuteUnmute = false;
+		function muteUnmute(e) {
+			e.stopPropagation();
+			e.preventDefault();
+			if (e.keyCode === 13 || e.type === 'mousedown' || e.type === 'click' || e.type === 'touchstart') {
+				// if ($('.playAudio')[0].volume &gt; 0) {
+				// 	sliderObj.moveVSliderTo(0);
+				// 	$('.playAudio')[0].volume = 0;
+				// 	ariaAnnounce('Video volume is muted');
+				// 	$("#volumeHandle").css('left', '0%');
+				// } 
+				if (!$('.playAudio')[0].muted) {
+					$('.playAudio')[0].volume = 0;
+					sliderObj.moveVSliderTo(0);
+					$('.playAudio')[0].muted = true;
+					ariaAnnounce('Video volume is muted');
+					$("#volumeHandle").css('left', '0%');
+				} else {
+					$('.playAudio')[0].volume = 1;
+					$("#volumeHandle").css('left', '100%');
+					sliderObj.moveVSliderTo(100);
+					$('.playAudio')[0].muted = false;
+					ariaAnnounce('Video volume is un muted');	
+				}
+				isMuteUnmute = true;
+				addRemoveVolumeClass();
+			}
+			if (e.keyCode === 32  || e.type === 'touchstart') {
+				isMuteUnmute = true;
+				if ($(".volume-slider-out").hasClass("show")) {
+					showHideVolumeBar(false);
+				} else {
+					showHideVolumeBar(true);
+				}
+			}
+		}
+		function enableVolumeHandler(e) {
+			if (e.type === 'mouseleave') {
+				showHideVolumeBar();
+			}
+			if (e.type === 'mouseenter' || e.keyCode === 32) {
+				showHideVolumeBar(true);
+			}
+		}
+		function showHideVolumeBar(show) {
+			if (show &amp;&amp; !isOpenedOnMobile()) {
+				$(".volume-slider-out").addClass("show");
+				if (!isOpenedOnMobile()) {
+					setTimeout(() =&gt; {
+						$(".volume-slider-out").attr('aria-expanded', true);
+						ariaAnnounce('Volume Slider Expanded');
+					}, 100);
+				}
+				setTimeout(() =&gt; {
+					$(".volume-slider-out").find('#volumeSlider').focus();
+				}, 100);
+			} else {
+				$(".volume-slider-out").removeClass("show");
+				if (!isOpenedOnMobile()) { 
+					$(".volume-slider-out").attr('aria-expanded', false);
+					ariaAnnounce('Volume Slider Collapsed');
+				}
+				$('#audioVolume').focus();
+			}
+		}
+		function addWindowEvents() {
+			function enableDisableVolumeFeature() {
+				if (isOpenedOnMobile()) {
+					$('.volume-slider-out').off('mouseenter mouseleave');
+					$('#audioVolume').off("mousedown keyup", muteUnmute);
+					$('#audioVolume').on("click", muteUnmute);
+					$("#audioVolume").attr('aria-label', 'Mute Unmute');
+				} else {
+					$('.volume-slider-out').on('mouseenter mouseleave', enableVolumeHandler);
+					$('#audioVolume').on("mousedown keyup", muteUnmute);
+					
+					$('#audioVolume').off("click", muteUnmute);
+					$("#audioVolume").attr('aria-label', 'Volume. press Enter key to Mute the video, Press Space key to open the Volume Slider');
+				}
+			}
+			$('#volumeSlider').keydown(function (e) {
+				if ((e.which == 27) || (e.keyCode == 27) || (e.which == 9) || (e.keyCode == 9)) {
+					showHideVolumeBar(false);
+				}
+			});
+			$(document).ready(function () {
+				sliderObj = new VSlider(sliders);
+					sliderObj.init(function (val) {
+						$('.playAudio')[0].volume = (val/100);
+						if (!isMuteUnmute) {
+							ariaAnnounce('Audio volume is ' + (($('.playAudio')[0].volume).toFixed(1)) * 100);
+						} else {
+							isMuteUnmute = false;
+						}
+						addRemoveVolumeClass();    
+					});		
+				enableDisableVolumeFeature();
+				
+			});
+			$(document).mouseleave((e) =&gt; {
+				showHideVolumeBar(false);
+			});
+			$(window).click((e) =&gt; {
+				if (!$(e.target).hasClass('aria-widget-vertical-slider') &amp;&amp; !$(e.target).hasClass('mute-button')  &amp;&amp; e.target.id !== 'audioVolume' ) {
+					showHideVolumeBar(false);
+				}
+			});
+		}
+		addWindowEvents();
+		// $(window).click(() =&gt; {
+		// 	$(".volume-slider-out").removeClass('show');
+		// });
+		var audioDuration;
+		document.getElementById('playAudio').addEventListener("loadedmetadata", function (_event) {
+			var duration = $('.playAudio').duration;
+			$('.total-time').html(secondsToTime($('.playAudio')[0].duration));
+			$('.playAudio')[0].volume = 0.5;
+		});
+		 
+		var isDragging = false, isVolumeDragging = false, audioDragging = false, volumeDragging = false;
+		$('.play-pause').click(function () {
+			if ($(this).hasClass('play')) {
+				$(this).removeClass('play');
+				$(this).addClass('pause');
+				$(this).attr('title', 'Play');
+				ariaAnnounce('Audio paused');
+				$('.playAudio').trigger("pause");
+				clearInterval(audioDuration);
+			} else {
+				$('.playAudio').trigger("play");
+				$(this).addClass('play');
+				$(this).removeClass('pause');
+				$(this).attr('title', 'Pause');
+				ariaAnnounce('Audio played');
+				audioDuration = setInterval(audioTime, 100);
+			}
+		});
+		$('.play-pause').keydown(function (e) {
+			if ((e.which == 13) || (e.keyCode == 13) || (e.which == 32) || (e.keyCode == 32)) {
+				if ($(this).hasClass('play')) {
+					$(this).removeClass('play');
+					$(this).addClass('pause');
+					$(this).attr('title', 'Play');
+					ariaAnnounce('Audio paused');
+					$('.playAudio').trigger("pause");
+					clearInterval(audioDuration);
+				} else {
+					$('.playAudio').trigger("play");
+					$(this).addClass('play');
+					$(this).removeClass('pause');
+					ariaAnnounce('Audio played');
+					$(this).attr('title', 'Pause');
+					audioDuration = setInterval(audioTime, 100);
+				}
+			}
+		});
+		function audioTime() {
+			let duration = ($('.playAudio')[0].currentTime / $('.playAudio')[0].duration) * 100;
+			$('#audioHandle').css('left', duration + '%');
+			$('#audioProgress').css('width', duration + '%');
+			if ($('#audioLoading').width() &gt; 95) {
+				$('#audioLoading').css('width', '100%');
+			} else {
+				$('#audioLoading').css('width', (duration + 5) + '%');
+			}
+			$('.elapsed-time').html(secondsToTime($('.playAudio')[0].currentTime));
+		}
+		$("#audioTrack").on("click", function (e) {
+			getCurrentDuration(e);
+			var msg = 'Audio current time is ' + secondsToTime($('.playAudio')[0].currentTime);
+			$("#audioHandle").attr('aria-label', msg);
+			ariaAnnounce(msg);
+		});
+		$('#audioLoading').on("click", function (e) {
+			getCurrentDuration(e);
+			var msg = 'Audio current time is ' + secondsToTime($('.playAudio')[0].currentTime);
+			ariaAnnounce(msg);
+			$("#audioHandle").attr('aria-label', msg);
+		});
+		// $(".media-controls input[type='range']").on("input", function () {
+		// 	$('.playAudio')[0].volume = this.value;
+		// });
+		$('#volumeTrack').click(function (e) {
+			var progbar = $('#volumeTrack');
+			var pos = e.pageY - progbar.offset().top;
+			$('.playAudio')[0].volume = 1 - (pos / 100);
+			$('#volumeHandle').css('left', (100 - pos) + '%');
+			addRemoveVolumeClass();
+			ariaAnnounce('Audio volume is ' + (($('.playAudio')[0].volume).toFixed(1)) * 100);
+		});
+		$('#volumeHandle').mousedown(function (e) {
+			isVolumeDragging = true;
+		});
+		$(document).mousemove(function (e) {
+			if (isVolumeDragging) {
+				getAudioVolume(e);
+			}
+			// $('.handle').css('left', $('.playAudio')[0].currentTime + '%');
+			// $('.loading').css('width', ($('.playAudio')[0].currentTime + 1.3) + '%');
+			// $('.progress').css('width', $('.playAudio')[0].currentTime + '%');
+		});
+		$(document).mouseup(function (e) {
+			if (isVolumeDragging) {
+				getAudioVolume(e);
+				ariaAnnounce('Audio volume is ' + (($('.playAudio')[0].volume).toFixed(1)) * 100);
+			}
+			isVolumeDragging = false;
+		});
+		$('#audioHandle').mousedown(function (e) {
+			isDragging = true;
+		});
+		$(document).mousemove(function (e) {
+			if (isDragging) {
+				getCurrentDuration(e);
+			}
+			// $('.handle').css('left', $('.playAudio')[0].currentTime + '%');
+			// $('.loading').css('width', ($('.playAudio')[0].currentTime + 1.3) + '%');
+			// $('.progress').css('width', $('.playAudio')[0].currentTime + '%');
+		});
+		$(document).mouseup(function (e) {
+			if (isDragging) {
+				getCurrentDuration(e);
+				var msg = 'Audio current time is ' + secondsToTime($('.playAudio')[0].currentTime);
+				ariaAnnounce(msg);
+				$("#audioHandle").attr('aria-label', msg);
+			}
+			isDragging = false;
+		});
+		function getCurrentDuration(e) {
+			var progbar = $('#audioTrack');
+			var pos = e.pageX - progbar.offset().left; //Position cursor
+			var percent = pos / progbar.width(); //Get width element
+			$('.playAudio')[0].currentTime = percent * $('.playAudio')[0].duration;
+			progbar.value = percent / 100;
+			let duration = ($('.playAudio')[0].currentTime / $('.playAudio')[0].duration) * 100;
+			$('#audioHandle').css('left', duration + '%');
+			if ($('#audioLoading').width() &gt; 95) {
+				$('#audioLoading').css('width', '100%');
+			} else {
+				$('#audioLoading').css('width', (duration + 5) + '%');
+			}
+			$('#audioProgress').css('width', duration + '%');
+			$('.elapsed-time').html(secondsToTime($('.playAudio')[0].currentTime));
+		}
+		function secondsToTime(e) {
+			var h = Math.floor(e / 3600).toString().padStart(2, '0'),
+				m = Math.floor(e % 3600 / 60).toString().padStart(1, '0'),
+				s = Math.floor(e % 60).toString().padStart(2, '0');
+			return m + ' : ' + s;
+		}
+		function getAudioVolume(e) {
+			var progbar = $('#volumeTrack');
+			var pos = e.pageY - progbar.offset().top;
+			let audioVolume;
+			if ((1 - (pos / 100)) &gt; 1) {
+				audioVolume = 1;
+			} else if ((1 - (pos / 100)) &lt; 0) {
+				audioVolume = 0;
+			} else {
+				audioVolume = 1 - (pos / 100);
+			}
+			let volumePos;
+			if ((100 - pos) &gt; 100) {
+				volumePos = 100;
+			} else if ((100 - pos) &lt; 0) {
+				volumePos = 0;
+			} else {
+				volumePos = (100 - pos);
+			}
+			$('.playAudio')[0].volume = audioVolume;
+			$('#volumeHandle').css('left', volumePos + '%');
+			addRemoveVolumeClass();
+		}
+		$('#audioHandle').keydown(function (e) {
+			if ((e.which == 37) || (e.keyCode == 37)) {
+				if ($('.playAudio')[0].currentTime &gt; 0) {
+					$('.playAudio')[0].currentTime -= 5;
+				}
+			}
+			if ((e.which == 39) || (e.keyCode == 39)) {
+				if ($('.playAudio')[0].currentTime &lt; $('.playAudio')[0].duration) {
+					$('.playAudio')[0].currentTime += 5;
+				}
+			}
+			let duration = ($('.playAudio')[0].currentTime / $('.playAudio')[0].duration) * 100;
+			$('#audioHandle').css('left', duration + '%');
+			if ($('#audioLoading').width() &gt; 95) {
+				$('#audioLoading').css('width', '100%');
+			} else {
+				$('#audioLoading').css('width', (duration + 5) + '%');
+			}
+			$('#audioProgress').css('width', duration + '%');
+			$('.elapsed-time').html(secondsToTime($('.playAudio')[0].currentTime));
+			audioDragging = true;
+		});
+		$('#audioHandle').keyup(function (e) {
+			if (audioDragging) {
+				var msg = 'Audio current time is ' + secondsToTime($('.playAudio')[0].currentTime);
+				ariaAnnounce(msg);
+				$("#audioHandle").attr('aria-label', msg);
+				audioDragging = false;
+			}
+			// console.log(e)
+		});
+		$('#volumeHandle').keydown(function (e) {
+			if ((e.which == 27) || (e.keyCode == 27) || (e.which == 9) || (e.keyCode == 9)) { 
+				showHideVolumeBar(false);
+				$('#audioVolume').focus();
+			} else {
+				if ((e.which == 40) || (e.keyCode == 40)) {
+					if ($('.playAudio')[0].volume &gt; 0) {
+						$('.playAudio')[0].volume -= 0.1;
+					}
+				}
+				if ((e.which == 38) || (e.keyCode == 38)) {
+					if ($('.playAudio')[0].volume &lt; 0.9) {
+						$('.playAudio')[0].volume += 0.1;
+					}
+				}
+				if ($('.playAudio')[0].volume &lt; 0.1) {
+					$('.playAudio')[0].volume = 0;
+				} else if ($('.playAudio')[0].volume == 0.99) {
+					$('.playAudio')[0].volume = 1;
+				}
+				$('#volumeHandle').css('left', ($('.playAudio')[0].volume * 100) + '%');
+				addRemoveVolumeClass();
+				volumeDragging = true;
+			}
+		});
+		$('#volumeHandle').keyup(function (e) {
+			if (volumeDragging) {
+				ariaAnnounce('Audio volume is ' + (($('.playAudio')[0].volume).toFixed(1)) * 100);
+				volumeDragging = false;
+			}
+		});
+		function addRemoveVolumeClass() {
+			if (!isOpenedOnMobile()) {
+				if ($('.playAudio')[0].volume === 0) {
+					$('#audioVolume').removeClass().addClass('volume muted');
+				} else if ($('.playAudio')[0].volume &lt;= 0.3 &amp;&amp; $('.playAudio')[0].volume &gt; 0) {
+					$('#audioVolume').removeClass().addClass('volume volume-low');
+				} else if ($('.playAudio')[0].volume &lt;= 0.6 &amp;&amp; $('.playAudio')[0].volume &gt; 0.3) {
+					$('#audioVolume').removeClass().addClass('volume volume-med');
+				} else if ($('.playAudio')[0].volume &lt;= 1 &amp;&amp; $('.playAudio')[0].volume &gt; 0.6) {
+					$('#audioVolume').removeClass().addClass('volume volume-high');
+				}
+			} else {
+				if ($('.playAudio')[0].muted) {
+					$('#audioVolume').removeClass().addClass('volume muted');
+				} else {
+					$('#audioVolume').removeClass().addClass('volume volume-high');
+				}
+			}
+		}
+		
+		$('#audioHandle').focus(function (e) {
+			$(this).attr('aria-label', 'Audio current time is ' + secondsToTime($('.playAudio')[0].currentTime));
+		});
+		$('#volumeHandle').focus(function (e) {
+			$(this).attr('aria-label', 'Audio volume is ' + (($('.playAudio')[0].volume).toFixed(1)) * 100);
+		});
+		$('#audioVolume').on("mousedown keyup", function (e) {
+			e.stopPropagation();
+			e.preventDefault();
+			// if (e.keyCode === 13 || e.type === 'mousedown') {
+			// 	if ($('.playAudio')[0].volume &gt; 0) {
+			// 		$('.playAudio')[0].volume = 0;
+			// 		ariaAnnounce('Audio volume is muted');
+			// 		$("#volumeHandle").css('left', '0%');
+			// 	} else {
+			// 		$('.playAudio')[0].volume = 0.5;
+			// 		$("#volumeHandle").css('left', '50%');
+			// 		ariaAnnounce('Audio volume is un muted');
+			// 	}
+			// 	addRemoveVolumeClass();
+			// }
+			// if (e.keyCode === 32) {
+			// 	$(".volume-slider-out").addClass("show");
+			// 	$(".volume-slider-out").find('#volumeHandle').focus();
+			// }
+		});
+		function ariaAnnounce(msg) {
+			console.log(msg);
+			if (msg) {
+				$('#ariaMessages').html(msg);
+			}
+			setTimeout(function () {
+				$('#ariaMessages').html("");
+			}, 5000);
+		};
+	</script>
+</body></html>

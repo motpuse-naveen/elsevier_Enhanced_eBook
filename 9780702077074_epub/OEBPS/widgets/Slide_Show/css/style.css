@@ -1,0 +1,400 @@
+.main-image-area {
+	background-color: white;
+	position: relative;
+	margin: 44px auto 0;
+    height: calc(100vh - 50px) !important;
+	overflow: hidden;
+}
+
+.inner-image-area {
+	height: 100%;
+	display: block;
+	-webkit-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-ms-transform-origin: center center;
+	transform-origin: center center;
+	position: relative;
+	line-height: 0;
+	margin: auto;
+	min-height: auto;
+	justify-content: center;
+	align-items: center;
+}
+
+.inner-image-area img {
+	width: auto !Important;
+	margin: 0px auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.main-document-area {
+	background-color: white;
+	position: relative;
+	max-width: 979px;
+	margin: 0 auto 0;
+}
+
+.container {
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+}
+
+.inner-image-area .ss-img-wrap,
+.inner-image-area .img-wrap {
+	position: relative;
+	width: auto !important;
+	height: 100% !important;
+	margin: auto;
+	display: flex;
+}
+
+@media screen and (max-width:767px) {
+	.inner-image-area img {
+		width: auto!important;
+		max-width: 100%;
+	}
+	.inner-image-area .ss-img-wrap
+    {
+	    height: auto !important;
+    }
+	.inner-image-area {
+    display: flex;
+}
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+	.inner-image-area .ss-img-wrap {
+		transform: scale(0.8);
+	}
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+	.inner-image-area .img-wrap {
+		transform: scale(0.9);
+	}
+	.img-slider {
+		transform: scale(0.3);
+	}
+	.zoomimage .inner-image-area #img {
+		max-height: 60% !important;
+	}
+}
+
+
+/************* slide show page css *************/
+
+.main-slider-area {
+	background-color: white;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	overflow: hidden;
+	padding-top: 20px;
+	box-sizing: border-box;
+}
+
+.main-slider-area img {
+	vertical-align: middle;
+}
+
+.main-slider-area .holder {
+	width: 100%;
+	height: calc(100% - 90px);
+}
+
+.main-slider-area .thumbnail_main {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: 99;
+	display: flex;
+	justify-content: center;
+	height: 60px;
+	align-items: center;
+	background-color: #fff;
+	border-top: 1px solid #f2f2f6;
+}
+
+.main-slider-area .thumbnail_main .column {
+	height: 40px;
+	width: 40px;
+	border: 3px solid white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: auto 5px;
+	box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+	cursor: pointer;
+	position: relative;
+}
+
+.main-slider-area .thumbnail_main .column.active,
+.main-slider-area .thumbnail_main .column:hover {
+	border: 3px solid #007cb6;
+}
+
+.main-slider-area .thumbnail_main .column_inner {
+	-webkit-box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+	-webkit-transition: all, 0.14s ease-out;
+	-moz-transition: all, 0.14s ease-out;
+	-ms-transition: all, 0.14s ease-out;
+	transition: all, 0.14s ease-out;
+	-webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+	background: white;
+	border: 5px solid white;
+	box-sizing: border-box;
+	overflow: hidden;
+	position: absolute;
+	bottom: 52px;
+	left: -30px;
+	z-index: 100;
+	opacity: 0;
+	width: 100px;
+	height: 100px;
+	pointer-events: none;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.main-slider-area .thumbnail_main .column:hover .column_inner {
+	/* opacity: 1; */
+}
+
+.holder::-webkit-scrollbar {
+	display: none;
+}
+
+
+/* Hide the images by default */
+
+.slides {
+	display: none;
+}
+
+.slides.inner-slide-area {
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 90%;
+}
+
+.prevContainer,
+.nextContainer {
+	margin: auto 5px;
+}
+
+.prevContainer a,
+.nextContainer a {
+	width: 40px;
+	height: 40px;
+	background: url(../images/image_figure_controls.png) no-repeat;
+	background-size: 211px;
+	display: block;
+	cursor: pointer;
+}
+
+.prevContainer a {
+	background-position: -72px 0;
+}
+
+.prevContainer a:hover {
+	background-position: -37px 0;
+}
+
+.nextContainer a {
+	background-position: -102px 0;
+}
+
+.nextContainer a:hover {
+	background-position: -137px 0;
+}
+
+
+/* Container for image text */
+
+/* .caption-container {
+	width: 100%;
+	position: fixed;
+	bottom: 90px;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	font-weight: 400;
+	text-align: center;
+	padding: 1.6em;
+	color: #191919;	
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	box-sizing: border-box;
+	font-family: 'Conv_SourceSansPro-Regular', Verdana, Helvetica, sans-serif;
+	background-color: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid #f7f7f7;
+} */
+.caption-container {
+    width: 100%;
+    position: relative;
+    z-index: 99;
+    font-weight: 400;
+    text-align: center;
+    padding: 1em;
+    color: #191919;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Conv_SourceSansPro-Regular', Verdana, Helvetica, sans-serif;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid #f7f7f7;
+    height: 49px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+.caption-container #caption {
+	text-align: center;
+	margin: 0;
+}
+
+
+/* Add a transparency effect for thumbnail images */
+
+.slide-thumbnail {
+	width: 100%;
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.active,
+.slide-thumbnail:hover {
+	opacity: 1;
+}
+
+.visually-hidden {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	position: absolute !important;
+	height: 0px;
+	width: 0px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px);
+	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+	clip: rect(1px, 1px, 1px, 1px);
+	/*maybe deprecated but we need to support legacy browsers */
+	clip-path: inset(50%);
+	/*modern browsers, clip-path works inwards from each corner*/
+	white-space: nowrap;
+	/* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+}
+
+.disabled {
+	pointer-events: none;
+	color: lightgray!important;
+}
+
+.thumbnail_main .column:focus {
+	border: 1px solid black;
+}
+
+.thumbnail_main .column.selected {
+	background: #007cb6!important;
+	border: 1px solid #007cb6!important;
+	color: #fff!important;
+}
+
+ul.thumbnail_slidr_inner {
+	left: 0;
+	position: relative;
+}
+
+#imageSlider1 {
+	top: 0px !important;
+}
+
+div.aria-widget-vertical-slider {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+div.aria-widget-vertical-slider .rail {
+	margin: 2px;
+	padding: 1px;
+	position: relative;
+	left: 12px;
+	width: 4px;
+	z-index: 999;
+	bottom: 24px;
+	background: #444;
+	-webkit-box-shadow: 0px 1px 0 #000, 0px 1px 0 rgb(0 0 0 / 8%) inset;
+	-moz-box-shadow: 0px 1px 0 #000, 0px 1px 0 rgba(0, 0, 0, 0.08) inset;
+	box-shadow: 0px 1px 0 #000, 0px 1px 0 rgb(0 0 0 / 8%) inset;
+}
+
+div.aria-widget-vertical-slider .thumb {
+	border: 2px solid #fff;
+	background-color: #A2A2A2;
+	position: relative;
+	border-radius: 100%;
+	width: 10px !important;
+	height: 10px !important;
+	left: -5px !important;
+}
+
+div.aria-widget-vertical-slider .rail .thumb.focus,
+div.aria-widget-vertical-slider .rail .thumb:hover {
+	outline: 2px solid #d1d1d1;
+	background-color: #007cb6;
+}
+
+div.aria-widget-vertical-slider .rail.focus {
+	background-color: #aaa;
+}
+
+div.aria-widget-vertical-slider .label,
+div.aria-widget-vertical-slider .value {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	text-align: center;
+	width: 8em;
+}
+
+div.aria-widget-vertical-slider .label {
+	font-weight: bold;
+	font-size: 110%;
+}
+
+#id_kbd {
+	clear: both;
+}
+
+sup {
+	line-height: 14px;
+}
+
+.inner-image-area {
+	/* height: 100vh; */
+	/* Use vh as a fallback for browsers that do not support Custom Properties */
+	/* height: calc(var(--vh, 1vh) * 100); */
+	margin: 0 auto;
+}
+
+.slides.inner-slide-area.zoomimg span.hotspot_slide_wrap1 img {
+	max-width: 90%;
+	max-height: 80%;
+	padding-bottom: 70px;
+}
+#img1{
+    display: flex;
+}
+.zoom_image_popup{
+	z-index:999;
+}

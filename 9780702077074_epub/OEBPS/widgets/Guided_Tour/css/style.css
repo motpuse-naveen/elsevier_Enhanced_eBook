@@ -1,0 +1,305 @@
+/************* page css *************/
+.main-slider-area {
+	background-color: white;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.main-slider-area *:focus-visible {
+	outline: none !important;
+}
+.main-slider-area img {
+	vertical-align: middle;
+}
+.main-slider-area .holder {
+	width: 100%;
+	height: calc(100% - 90px);
+}
+.main-slider-area .thumbnail_main {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: 99;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 90px;
+	background-color: #fff;
+	border-top: 1px solid #f2f2f6;
+}
+.pin {
+    display: none;
+}
+.main-slider-area.slide7 .inner-slide-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+	transform: scale(1.2) !important;
+}
+.img-tour #image-map {
+    margin-top: 0px;
+    position: relative;
+    max-height: 100%;
+    margin: auto;
+    display: flex;
+	width: auto !important;
+    height: auto !important;
+}
+.slide7 #img {
+    max-width: 407px!important;
+    width: 407px!important;
+    height: 400px;
+}
+.main-slider-area img {
+    vertical-align: middle;
+}
+.tooltip-up, .tooltip-down, .tooltip-left {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #007cb6;
+    background: white;
+    color: #007cb6;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 16px;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: 0px 1px 4px rgb(0 0 0 / 35%);
+}
+.tooltip {
+    display: none;
+    border-radius: 8px;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: unset;
+    right: -1px;
+    z-index: 999;
+    padding: 10px;
+    color: #222;
+    background: #fff;
+    border: 3px solid #007cb6;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 4px rgb(0 0 0 / 35%);
+    cursor: auto;
+    width: 250px;
+}
+.tooltip-left .tooltip {
+    right: unset;
+    left: -1px;
+}
+.tooltip-down .tooltip {
+    top: unset;
+    right: unset;
+    bottom: -1px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.tooltip .pin-inner-txt {
+    font-weight: 400;
+    text-align: left;
+}
+.tooltip .pin-inner-txt p {
+    line-height: 1.45em;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-family: 'Conv_SourceSansPro-Regular', Verdana, Helvetica, sans-serif;
+}
+.tooltip .pin-inner-txt p b {
+    font-size: 16px;
+    font-weight: 700;
+    color: #007cb6;
+}
+.tooltip-up:after, .tooltip-down:after, .tooltip-left:after {
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -ms-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    content: "";
+    position: absolute;
+    height: 13px;
+    width: 17px;
+    background-image: url(../images/web_arrow_poptip.png);
+    background-position: -1px 0;
+    background-size: 18px;
+    left: 50%;
+    margin-left: -8.5px;
+    bottom: -14px;
+}
+.tooltip-left:after {
+    top: 50%;
+    margin-top: -8.5px;
+    right: unset;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    left: 0;
+    margin-left: -1px;
+}
+.tooltip-up:after {
+    top: 50%;
+    margin-top: -8.5px;
+    right: 0;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: right top;
+    -moz-transform-origin: right top;
+    -ms-transform-origin: right top;
+    transform-origin: right top;
+    left: unset;
+}
+.refreshContainer {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: auto 5px;
+}
+.prevContainer, .nextContainer {
+    margin: auto 5px;
+}
+.thumbnail_slidr {
+    overflow: hidden;
+}
+.refreshContainer .refresh_btn {
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 33px;
+    height: 33px;
+    background-image: url(../images/guided_tour_refresh_button.png);
+    background-size: 102px;
+    background-position: 7px 0;
+    cursor: pointer;
+}
+.refreshContainer:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 43px;
+    background-image: url(../images/guided_tour_refresh_line.png);
+    left: 44px;
+    top: -3px;
+}
+.prevContainer a, .nextContainer a {
+    width: 40px;
+    height: 40px;
+    background: url(../images/image_figure_controls.png) no-repeat;
+    background-size: 211px;
+    display: block;
+    cursor: pointer;
+}
+.prevContainer a {
+    background-position: -72px 0;
+}
+.nextContainer a {
+    background-position: -102px 0;
+}
+.disabled {
+    pointer-events: none;
+    color: lightgray!important;
+}
+ul.thumbnail_slidr_inner {
+    left: 0;
+    position: relative;
+}
+.thumbnail_slidr_inner {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+.main-slider-area.slide7 .thumbnail_main .column {
+    height: 30px;
+    width: 30px;
+    background: #fff;
+    border: 1px solid #E6E6E6;
+    color: #a2a2a2;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    text-align: center;
+    margin: 17px 3px;
+    box-shadow: none;
+}
+
+.thumbnail_main .column.selected {
+    background: #007cb6!important;
+    border: 1px solid #007cb6!important;
+    color: #fff!important;
+}
+.main-slider-area .thumbnail_main .column {
+    height: 40px;
+    width: 40px;
+	border: 3px solid white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto 5px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+    cursor: pointer;
+    position: relative;
+}
+.main-slider-area.slide7 .thumbnail_main .column div {
+    vertical-align: middle;
+    text-align: center;
+    line-height: 32px;
+    height: 30px;
+    width: 30px;
+}
+.main-slider-area.slide7 .thumbnail_main .column:hover {
+    border: 1px solid #007cb6;
+    color: #007cb6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.visually-hidden {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute !important;
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+.slide7 #image-map {
+    transform: scale(0.8) !important;
+}
+
+}

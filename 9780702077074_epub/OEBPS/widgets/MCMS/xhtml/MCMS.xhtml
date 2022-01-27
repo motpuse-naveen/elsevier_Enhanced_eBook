@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   
+<meta charset="utf-8" />
+   
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+   
+<title>EPUB:MCQ</title>
+   <link rel="stylesheet" type="text/css" href="../css/style.css" />
+   
+<script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
+   
+<script src="../js/QUIZ.js"></script></head>
+
+<body>
+   
+<div class="main-document-area mcq" role="main">
+      
+<div class="sr-only" style="position: absolute; left: -9999px;" role="heading" aria-level="1">MCQ</div>
+      
+<div class="mcq_inner" role="application">
+         
+<div class="tab-content">
+            <!--Panel 1-->
+            
+<div class="tab-pane-main">
+               
+<div class="tab-pane active" id="q-1">
+                  
+<div class="content-heading">
+                     
+<div id="questionNumber" role="heading" aria-level="2" />
+                     
+<div id="questionName" role="none" aria-level="3" />
+                     
+<div id="subheading2" />
+                     
+<div id="subheading3" />
+                  </div>
+                  
+<div class="ques-content">
+                     
+<ul class="Multiple-choice" role="listbox" aria-label="Options" />
+                  </div>
+                  
+<div class="answer-controls d-flex mt-3">
+                     <label class="correct" id="answer_label" />
+                     
+<p id="Add_solution"><i>Rationale: Only tuberculosis (e) from the listed conditions is more
+                           associated
+                           with
+                           ethnicity.</i></p>
+                     
+<p id="need_help">Need help with this one? <span class="text-link" tabindex="0" id="show_ans" aria-label="Show Answer" role="button" aria-expanded="false">Show
+                           answer</span>
+                     </p>
+                     <button class="check disabled" id="mcq_button" data-state="notAnswered" tabindex="-1" title="Check Answer">Check Answer</button>
+                  </div>
+               </div>
+            </div>
+            <!-- <div class="tab-pane" id="q-2"> -->
+            <footer role="none">
+               
+<div class="footer" role="navigation" aria-label="Pagination">
+                  
+<div class="arrow-mask left">
+                     
+<div class="arrow-left outer" role="button" aria-label="previous" tabindex="0" />
+                  </div>
+                  
+<div class="mcq_toolbar_main">
+                     
+<div class="steps d-flex justify-content-center">
+                        
+<ul class="nav nav-tabs md-tabs nav-justified" aria-label="Navigation" role="listbox">
+                        </ul>
+                     </div>
+                  </div>
+                  
+<div class="arrow-mask right">
+                     
+<div class="arrow-right outer" role="button" aria-label="next" tabindex="0" />
+                  </div>
+               </div>
+            </footer>
+         </div>
+      </div>
+      
+<div id="ariaMessages" class="visually-hidden" aria-live="assertive" />
+   </div>
+   
+<script>
+      var paginationTabindex = 10001;
+      var optionsIndex = 1;
+      const tabs = document.querySelector(".tab-content");
+      const tabButton = document.querySelectorAll(".step");
+      const contents = document.querySelectorAll(".tab-pane");
+      function getQuestionByEvent(e) {
+         var id;
+            if ($(e.target).is('span')) {
+               id = $(e.target).parent().attr('data-id');
+            } else if ($(e.target).is('a')) {
+               id = $(e.target).attr('data-id');
+            }
+            if (id) {
+               getNewQuestion(parseInt(id.split('-')[1]));
+               $('.nav-link').removeClass('active');
+               if ($(e.target).is('span')) {
+                  $(e.target).parent().addClass("active");
+               } else {
+                  $(e.target).addClass("active");
+               }
+            
+               $('#questionNumber').focus();
+               if (parseInt(id.split('-')[1]) === quiz.length) {
+                  $('.arrow-right').addClass('disabled');
+                  $('.arrow-left').removeClass('disabled');
+               } else if (parseInt(id.split('-')[1]) === 1) {
+                  $('.arrow-left').addClass('disabled');
+                  $('.arrow-right').removeClass('disabled');
+               } else {
+                  $('.arrow-right').removeClass('disabled');
+                  $('.arrow-left').removeClass('disabled');
+               }
+            }
+      }
+      $(".steps").on('click keydown', function (e) {
+         if ((e.type === 'keydown' &amp;&amp; e.keyCode == 13) || e.type === 'click') {
+            getQuestionByEvent(e);
+            $ul = $('.steps ul');
+            $ulWrapper = $ul.parent();
+            stepWidth = 38;
+            ulWrapperWidth = $ulWrapper.width();
+            wrapperCapacity = ulWrapperWidth / stepWidth;
+            totalItemsWidth = $('.steps ul li').length * stepWidth;
+            var stepAtCenter = -1;
+            var $selectedStep = $(e.target);
+            var selectedStep;
+            if ($selectedStep.is('span')) {
+               selectedStep = $selectedStep.parent().attr('data-id').split('-')[1];
+            } else if ($selectedStep.is('a')) {
+               selectedStep = $selectedStep.attr('data-id').split('-')[1];
+            }
+            autoDragPagination(selectedStep);
+            // get central item by removing css.left
+         }
+      });
+      function autoDragPagination(selectedStep) {
+            $ul = $('.steps ul');
+            $ulWrapper = $ul.parent();
+            stepWidth = 38;
+            ulWrapperWidth = $ulWrapper.width();
+            wrapperCapacity = ulWrapperWidth / stepWidth;
+            totalItemsWidth = $('.steps ul li').length * stepWidth;
+            var stepAtCenter = -1;
+            
+            var stepCountAtCenter = Math.floor(wrapperCapacity/2);
+            var oldLeft = parseInt($ul.css('left'))
+            var minLeft = 0-((totalItemsWidth - ulWrapperWidth) + stepWidth);
+            var maxLeft = 0;
+            // evaluating Center
+            if (oldLeft === 0) {
+               stepAtCenter = stepCountAtCenter;
+            } else {
+               var hiddenToLeft = Math.floor(Math.abs(oldLeft) / stepWidth);
+               stepAtCenter = hiddenToLeft + stepCountAtCenter;
+            }
+            // Applying left
+            if (selectedStep &gt; stepAtCenter) {
+               var newLeft = oldLeft - ((selectedStep - stepAtCenter)*stepWidth); 
+                  if (newLeft &lt; minLeft) {
+                     newLeft = minLeft;
+                  }
+                  // // (totalItemsWidth - ulWrapperWidth)
+                  // for(let i = 0; i&lt;=hiddenUnderLeft;i++) {
+                  //    // console.log()
+                  //    $($('.steps ul li')[i]).find('a').removeAttr('tabindex');
+                  // }
+                  $ul.css('left', newLeft);
+            } else {
+               var newLeft = oldLeft + ((stepAtCenter - selectedStep)*stepWidth); 
+               if (newLeft &gt; maxLeft) {
+                  newLeft = maxLeft;
+               }
+               $ul.css('left', newLeft);
+            }
+            // $('.steps ul li a').removeAttr('tabindex');
+            // var hiddenUnderLeft = (Math.abs(newLeft)/stepWidth);
+            // for (let i = hiddenUnderLeft+1; i&lt; hiddenUnderLeft + Math.floor(wrapperCapacity); i++) {
+            //    $($('.steps ul li')[i]).find('a').attr('tabindex', 0);
+            // }
+      }
+      var QuestionNumber = document.querySelector("#questionNumber");
+      var QuestionName = document.querySelector("#questionName");
+      var optionContainer = document.querySelector(".Multiple-choice");
+      var correctMsg = document.querySelector(".correct");
+      var indicator = document.querySelector(".nav-tabs");
+      var subHeadingContainer = document.querySelector(".content-heading");
+      var questionCounter = 0;
+      var currentQuestion;
+      var availableQuestion = [];
+      var availableOption = [];
+      var selectOption = [];
+      // add quiz question to new array;
+      function setAvailableQuestion() {
+         var totalQuestion = quiz.length;
+         for (var i = 0; i &lt; totalQuestion; i++) {
+            availableQuestion.push(quiz[i]);
+         }
+      }
+      // goto question and new question of array
+      function getNewQuestion(question) {
+         selectOption = [];
+         QuestionNumber.innerText = "Question " + (question);
+		//  &lt;!-- QuestionNumber.innerText = "Question " + (question) + " of " + (quiz.length); 
+         QuestionNumber.setAttribute('aria-label', "Question " + (question));
+         QuestionNumber.setAttribute('role', "heading");
+         QuestionNumber.setAttribute('tabindex', '0');
+         optionsIndex++;
+         // get random question
+         var questionIndex = quiz[question - 1];
+         currentQuestion = questionIndex;
+         QuestionName.innerHTML = currentQuestion.q;
+         QuestionName.setAttribute('tabindex', '0');
+         optionsIndex++
+         if (currentQuestion.q2) {
+            $('#subheading2').html(currentQuestion.q2);
+            $('#subheading2').attr('tabindex', '0');
+            $('#subheading2').show();
+            optionsIndex++
+         } else {
+            $('#subheading2').removeAttr('aria-label');
+            $('#subheading2').removeAttr('tabindex');
+            $('#subheading2').hide();
+            optionsIndex++
+         }
+         if (currentQuestion.q3.length) {
+            $('#subheading3').html(currentQuestion.q3[0]);
+            $('#subheading3').attr('tabindex', '0');
+            $('#subheading3').show();
+            optionsIndex++
+         } else {
+            $('#subheading3').removeAttr('aria-label');
+            $('#subheading3').removeAttr('tabindex');
+            $('#subheading3').hide();
+            optionsIndex++
+         }
+         var optionlen = currentQuestion.option.length;
+         for (var i = 0; i &lt; optionlen; i++) {
+            availableOption.push(i);
+         }
+         optionContainer.innerHTML = '';
+         for (var j = 0; j &lt; optionlen; j++) {
+            var option = document.createElement("li");
+            option.innerHTML = currentQuestion.option[j];
+            option.setAttribute('data-id', j);
+            option.setAttribute('tabindex', '0');
+            option.setAttribute('role', 'option');
+            optionsIndex++;
+            option.className = "focus-input";
+            optionContainer.appendChild(option);
+         }
+         $('.focus-input').on('keydown click', addActiveClass);
+         $('.tab-pane ').attr('data-state', currentQuestion.state);
+         $('.tab-pane ').attr('id', question);
+         if (currentQuestion.state === 'wrong') {
+            $('#mcq_button').html('Try Again');
+            $('#mcq_button').removeClass('disabled');
+            $('#mcq_button').attr('title', 'Try Again');
+            $('#mcq_button').attr('tabindex', '0');
+            $('#answer_label').show();
+            $('#Add_solution').hide();
+            $('#need_help').show();
+            $('#answer_label').html('Not quite');
+            $('#answer_label').removeClass().addClass('not-quite');
+         } else if (currentQuestion.state === 'correct') {
+            if (question == quiz.length) {
+               $('#mcq_button').html('Done');
+               $('#mcq_button').attr('title', 'Done');
+            } else {
+               $('#mcq_button').html('Next Question');
+               $('#mcq_button').attr('title', 'Next Question');
+            }
+            $('#mcq_button').removeClass('disabled');
+            $('#mcq_button').attr('tabindex', '0');
+            $('#answer_label').show();
+            $('#Add_solution').show();
+            $('#need_help').hide();
+            $('#answer_label').html("That's Correct!");
+            $('#answer_label').removeClass().addClass('correct');
+            unclickableOptions();
+         } else {
+            $('.focus-input').removeClass().addClass('focus-input');
+            $('#mcq_button').html('Check Answer');
+            $('#mcq_button').addClass('disabled');
+            // $('#questionNumber').focus();
+            $('#mcq_button').attr('title', 'Check Answer');
+            // $('#mcq_button').removeAttr('tabindex');
+            $('#mcq_button').attr('tabindex', '-1');
+            $('#answer_label').hide();
+            $('#Add_solution').hide();
+            $('#need_help').show();
+         }
+         $('.nav-link').removeClass('active');
+         $('.nav-link').each(function () {
+            if ($(this).attr('data-id') == 'q-' + question) {
+               $(this).addClass('active');
+            }
+         });
+         currentQuestion.userAnswered.forEach(userAns =&gt; {
+            let index = currentQuestion.answer.findIndex(currentQuest =&gt; currentQuest === userAns);
+            if (index !== -1) {
+               $("ul").find(`[data-id='${userAns}']`).removeClass().addClass("focus-input last-child");
+            } else {
+               $("ul").find(`[data-id='${userAns}']`).removeClass().addClass('focus-input wrong');
+            }
+         });
+         questionCounter++;
+      }
+      function addActiveClass(el) {
+		el.preventDefault();
+		el.stopPropagation();
+		
+         if ((el.type === 'keydown' &amp;&amp; el.keyCode == 13) || el.type === 'click') {
+            if (currentQuestion.state !== 'wrong' &amp;&amp; !$(el.target).hasClass('wrong') &amp;&amp; !$(el.target).hasClass('last-child')) {
+               $(el.target).removeClass().addClass('focus-input');
+               selectOption = [];
+               $(el.target).removeClass().addClass('focus-input active');
+               $('#mcq_button').html('Check Answer');
+               $('#mcq_button').removeAttr('aria-disabled');
+               $('#Add_solution').hide();
+               $('#answer_label').hide();
+               $('.tab-pane ').attr('data-state', 'answered');
+               $('#mcq_button').removeClass('disabled');
+               $('#mcq_button').attr('title', 'Check Answer');
+               $('#mcq_button').attr('tabindex', '0');
+               ariaAnnounce('Selected option is ' + $(el.target).text());
+            } else {
+               if (!$(el.target).hasClass('wrong') &amp;&amp; !$(el.target).hasClass('last-child')) {
+                  $(el.target).removeClass().addClass('focus-input active');
+               } else {
+                  $(el.target).removeClass('wrong');
+               }
+            }
+         }
+		 return false;
+      }
+      // check the current option is true or not .
+      function check(answer, selectOption) {
+         for (var i = 0; i &lt; answer.length; i++) {
+            if (answer[i] == selectOption[i]) {
+            }
+            else {
+               return false;
+               break;
+            }
+         }
+         return true;
+      }
+      function getResult(element) {
+         var wrongAns = 0;
+         var id = parseInt($(element[0]).attr('data-id'));
+         for (var i = 0; i &lt; element.length; i++) {
+            selectOption.push(parseInt($(element[i]).attr('data-id')));
+         }
+         selectOption.sort();
+         let dataId = 'q-' + parseInt($('.tab-pane').attr('id'));
+         selectOption.forEach(option =&gt; {
+            let index = currentQuestion.answer.findIndex(ans =&gt; ans === option);
+            if (index !== -1) {
+               $("ul").find(`[data-id='${option}']`).removeClass().addClass("focus-input last-child");
+            } else {
+               $("ul").find(`[data-id='${option}']`).removeClass().addClass('focus-input wrong');
+               wrongAns++;
+            }
+         });
+         if (wrongAns === 0  &amp;&amp; check(currentQuestion.answer , selectOption)!== false) {
+            correctMsg.innerHTML = "That's Correct!";
+            $(element).parent().attr("data-correct", "true");
+            $(element).attr("role", "img");
+            updateAnswerIndicator("correct");
+            if (parseInt($('.tab-pane').attr('id')) == quiz.length) {
+               $('#mcq_button').html('Done');
+               $('#mcq_button').attr('title', 'Done');
+            } else {
+               $('#mcq_button').html('Next Question');
+               $('#mcq_button').attr('title', 'Next Question');
+            }
+            $('#mcq_button').attr('tabindex', '0');
+            unclickableOptions();
+            $('#answer_label').show();
+            $('#need_help').hide();
+            $('#Add_solution').show();
+            $('.tab-pane ').attr('data-state', 'correct');
+            currentQuestion.state = 'correct';
+            $('.nav-link').each(function () {
+               if ($(this).attr('data-id') == dataId) {
+                  $(this).attr('data-correct', true);
+               }
+            });
+            ariaAnnounce('Selected answer' + $(element).text() + ' is correct.');
+         }
+         else {
+            if(currentQuestion.answer.length !== selectOption.length){
+               correctMsg.classList.add("not-quite");
+               correctMsg.innerHTML = "Not quite Please select any "+currentQuestion.answer.length +" Option.";
+            }
+            else{
+               correctMsg.classList.add("not-quite");
+               correctMsg.innerHTML = "Not quite ";
+            }
+            updateAnswerIndicator("wrong");
+            $('#mcq_button').html('Try Again');
+            $('#mcq_button').attr('title', 'Try Again');
+            $('#mcq_button').attr('tabindex', '0');
+            $('#answer_label').show();
+            $('#need_help').show();
+            $('.tab-pane ').attr('data-state', 'wrong');
+            $('.nav-link').each(function () {
+               if ($(this).attr('data-id') == dataId) {
+                  $(this).attr('data-correct', false);
+               }
+            });
+            currentQuestion.state = 'wrong';
+            ariaAnnounce('Sected answer' + $(element).text() + ' is incorrect.');
+         }
+         currentQuestion.userAnswered = selectOption;
+      }
+      function unclickableOptions() {
+         var optionLen = optionContainer.children.length;
+         for (var i = 0; i &lt; optionLen; i++) {
+            optionContainer.children[i].classList.add("already-answered")
+         }
+      }
+      function answerIndicatot() {
+         var totalQuestion = quiz.length;
+         for (var i = 0; i &lt; totalQuestion; i++) {
+            var footerLi = document.createElement("li");
+            indicator.appendChild(footerLi);
+            footerLi.classList.add("nav-item");
+            footerLi.setAttribute('role', 'option');
+            var footerAnchor = document.createElement("a");
+            footerLi.appendChild(footerAnchor);
+            footerAnchor.classList.add("nav-link");
+            footerAnchor.classList.add("step");
+            footerAnchor.setAttribute("data-id", 'q-' + (parseInt(i) + 1));
+            var footerSpan = document.createElement("span");
+            footerAnchor.appendChild(footerSpan);
+            if (parseInt(i) === 0) {
+               footerAnchor.classList.add("active");
+            }
+            footerAnchor.setAttribute("title", 'page ' + (parseInt(i) + 1));
+            footerAnchor.setAttribute('tabindex', '0');
+            paginationTabindex++;
+            footerSpan.innerHTML = (parseInt(i) + 1);
+         }
+      }
+      function updateAnswerIndicator(markType) {
+         let currentQuestion = parseInt($('.tab-pane').attr('id')) - 1;
+         if (markType === 'correct') {
+            $('#answer_label').removeClass().addClass('correct');
+            $('#Add_solution').children().html(quiz[currentQuestion].ansText);
+         } else if (markType === 'wrong') {
+            $('#answer_label').removeClass().addClass('not-quite');
+            $('#Add_solution').children().html(quiz[currentQuestion].ansText);
+         }
+      }
+      $('#mcq_button').on('mousedown click', function (e) {
+         if ((e.type === 'keydown' &amp;&amp; e.keyCode == 13) || e.type === 'click') {
+            let buttonText = $('#mcq_button').text().split(' ')[0].trim().toLocaleLowerCase();
+            if (buttonText === 'check') {
+               let answered = $('.Multiple-choice').find('.active');
+               getResult(answered);
+            } else if (buttonText === 'next') {
+               selectOption = [];
+               getNewQuestion(parseInt($('.tab-pane').attr('id')) + 1);
+               $('#answer_label').hide();
+               $('#Add_solution').hide();
+               $('#need_help').show();
+            } else if (buttonText === 'try') {
+               selectOption = [];
+               $('.focus-input').removeClass().addClass('focus-input');
+               $('#answer_label').hide();
+               $('#Add_solution').hide();
+               $('.nav-link').each(function () {
+                  let dataId = 'q-' + parseInt($('.tab-pane').attr('id'));
+                  if ($(this).attr('data-id') == dataId) {
+                     $(this).removeAttr('data-correct');
+                  }
+               });
+               $('#mcq_button').addClass('disabled');
+               $('#questionNumber').focus();
+               $('#mcq_button').html('Check Answer');
+               $('#mcq_button').attr('title', 'Check Answer');
+               // $('#mcq_button').removeAttr('tabindex');
+               $('#mcq_button').attr('tabindex', '-1');
+               let currentQuestionIndex = parseInt($('.tab-pane').attr('id')) - 1;
+               let question = quiz[currentQuestionIndex]
+               question.userAnswered = [];
+               question.state = 'notAnswered';
+            }
+         }
+      })
+      window.onload = function () {
+         setAvailableQuestion();
+         getNewQuestion(1);
+         answerIndicatot();
+         $('#Add_solution').hide();
+         $('#Add_solution').children().html(quiz[0].ansText);
+      };
+      $('#show_ans').on('click keydown', (function (e) {
+         if ((e.type === 'keydown' &amp;&amp; e.keyCode == 13) || e.type === 'click') {
+            $('#Add_solution').show();
+            $("#show_ans").attr('aria-expanded', true);
+            let currentQuestion = parseInt($('.tab-pane').attr('id')) - 1;
+            $('#mcq_button').html('Try Again');
+            $('#mcq_button').removeClass('disabled');
+            $('#mcq_button').attr('title', 'Try Again');
+            // $('#mcq_button').removeAttr('tabindex');
+            $('#mcq_button').attr('tabindex', '0');
+            $('.focus-input').removeClass('wrong');
+            quiz[currentQuestion].answer.forEach(option =&gt; {
+               $("ul").find(`[data-id='${option}']`).removeClass().addClass("focus-input last-child");
+               // ariaAnnounce('Correct answer is' + $(this).text());
+            });
+            let correctAnswer = quiz[currentQuestion].answer.map(el=&gt;el=el+1);
+            correctAnswer = correctAnswer.join(',');
+            setTimeout(() =&gt; {
+               ariaAnnounce('Correct answer is ' + correctAnswer);
+            }, 200);
+            $('#answer_label').hide();
+         }
+      }));
+      $('.arrow-left').on('click keydown', function (e) {
+         if ((e.type === 'keydown' &amp;&amp; e.keyCode == 13) || e.type === 'click') {
+            let currentQuestion = parseInt($('.tab-pane').attr('id'));
+            if (currentQuestion === 1) {
+               // getNewQuestion(quiz.length);
+               // autoDragPagination(quiz.length);
+            } else {
+               if (currentQuestion - 1 === 1) {
+                  $('.arrow-left').addClass('disabled');
+               } else {
+                  $('.arrow-left').removeClass('disabled');
+               }
+               $('.arrow-right').removeClass('disabled');
+               getNewQuestion(currentQuestion - 1);
+               autoDragPagination(currentQuestion - 1);
+            }
+         }
+      });
+      $('.arrow-right').on('click keydown', function (e) {
+         if ((e.type === 'keydown' &amp;&amp; e.keyCode == 13) || e.type === 'click') {
+            let currentQuestion = parseInt($('.tab-pane').attr('id'));
+            if (currentQuestion === quiz.length) {
+               // getNewQuestion(1);
+               // autoDragPagination(1);
+            } else {
+               if (currentQuestion + 1 === quiz.length) {
+                  $('.arrow-right').addClass('disabled');
+               } else {
+                  $('.arrow-right').removeClass('disabled');
+               }
+               $('.arrow-left').removeClass('disabled');
+               getNewQuestion(currentQuestion + 1);
+               autoDragPagination(currentQuestion + 1);
+            }
+         }
+      });
+      function ariaAnnounce(msg) {
+         console.log(msg);
+         if (msg) {
+            $('#ariaMessages').html(msg);
+         }
+         setTimeout(function () {
+            $('#ariaMessages').html("");
+         }, 5000);
+      };
+   </script>
+</body></html>
