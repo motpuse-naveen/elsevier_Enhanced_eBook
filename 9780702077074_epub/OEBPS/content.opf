@@ -67,15 +67,16 @@
       <item id="media_css" href="Style/media.css" media-type="text/css"/>
       <item id="math_css" href="Style/math.css" media-type="text/css"/>
       <item id="id_js" href="Style/math.js" media-type="text/javascript"/>
-      <item id="zoominimage"
-            href="Style/zoom-in-svgrepo-com.svg"
-            media-type="image/svg+xml"/>
-      <item id="zoomoutimage"
-            href="Style/zoom-out-svgrepo-com.svg"
-            media-type="image/svg+xml"/>
-      <item id="zoompopupcloseimage"
-            href="Style/close-svgrepo-com.svg"
-            media-type="image/svg+xml"/>
+      <item id="common_js" href="widgets/common_assets/scripts/common.js" media-type="text/javascript"/>
+      <item id="iframecommon_js" href="widgets/common_assets/scripts/iframe_common.js" media-type="text/javascript"/>
+      <item id="common_css" href="widgets/common_assets/css/common.css" media-type="text/css"/>
+      <item id="zoominimage" href="widgets/common_assets/images/zoom-out.png" media-type="image/png"/>
+      <item id="zoomoutimage" href="widgets/common_assets/images/zoom-in.png" media-type="image/png"/>
+      <item id="zoompopupcloseimage" href="widgets/common_assets/images/close.png" media-type="image/png"/>
+      <item id="zoompopupleftimage" href="widgets/common_assets/images/left.png" media-type="image/png"/>
+      <item id="zoompopuprightimage" href="widgets/common_assets/images/right.png" media-type="image/png"/>
+      <item id="zoompopupupimage" href="widgets/common_assets/images/up.png" media-type="image/png"/>
+      <item id="zoompopupdownimage" href="widgets/common_assets/images/down.png" media-type="image/png"/>
       <item id="CharisSILB" href="Style/fonts/CharisSILB.ttf"
             media-type="application/vnd.ms-opentype"/>
       <item id="CharisSILBI" href="Style/fonts/CharisSILBI.ttf"
@@ -140,7 +141,7 @@
             media-type="image/jpeg"/>
       <item id="part_p1" href="XHTML/part_p1.xhtml" media-type="application/xhtml+xml"/>
       <item id="B978070207705000001X"
-            href="XHTML/B978070207705000001X/B978070207705000001X.xhtml"
+            href="XHTML/B978070207705000001X/B978070207705000001X.xhtml" properties="scripted"
             media-type="application/xhtml+xml"/>
       <item id="B978070207705000001X_f01-01-9780702077050"
             href="IMAGES/B978070207705000001X/main.assets/f01-01-9780702077050.jpg"
@@ -245,7 +246,7 @@
             href="IMAGES/B978070207705000001X/main.assets/on01-07-9780702077050.jpg"
             media-type="image/jpeg"/>
       <item id="B9780702077050000021"
-            href="XHTML/B9780702077050000021/B9780702077050000021.xhtml"
+            href="XHTML/B9780702077050000021/B9780702077050000021.xhtml" properties="scripted"
             media-type="application/xhtml+xml"/>
       <item id="B9780702077050000021_f02-01-9780702077050"
             href="IMAGES/B9780702077050000021/main.assets/f02-01-9780702077050.jpg"
