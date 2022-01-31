@@ -4,6 +4,7 @@ figure.zoompop{
 }
 figure.zoompop img{
 	max-width: 100%;
+	cursor: pointer;
 	/*width: 100%;*/
 }
 figure.zoompop{
@@ -13,7 +14,7 @@ figure.zoompop{
 figure.zoompop:hover,figure.zoompop:focus{
 	margin-top: 30px;
 }
-figure.zoompop:hover:before,figure.zoompop:focus:before {
+figure.zoompop:before {
 	content: "Click on Image to Zoom";
 	position: absolute;
 	top: -25px;

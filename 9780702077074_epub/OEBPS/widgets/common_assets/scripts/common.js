@@ -61,7 +61,7 @@ function zoom_popup(img){
 
 function zoom_pulse_on(img){
     var imgWdt = img.clientWidth;
-    img.style.width = (imgWdt +(imgWdt*5/100))+ "px";
+    img.style.width = (imgWdt - (imgWdt*5/100))+ "px";
     img.setAttribute("orgwdt", imgWdt);
 }
 function zoom_pulse_off(img){
@@ -85,13 +85,16 @@ imageElms.forEach(element => {
 });*/
 var imageZoomElms = document.querySelectorAll("figure.zoompop img");
 imageZoomElms.forEach(element => {
-	element.addEventListener("click", function(){
+	element.addEventListener("click", function(event){
 		zoom_popup(this)
+        event.stopPropagation();
+        event.preventDefault();
+		return false;
 	});
-    element.addEventListener("mouseover", function(){
+    element.addEventListener("mouseover", function(event){
 		zoom_pulse_on(this)
 	});
-    element.addEventListener("mouseout", function(){
+    element.addEventListener("mouseout", function(event){
 		zoom_pulse_off(this)
 	});
     element.addEventListener("contextmenu", function(event){
@@ -134,14 +137,21 @@ document.getElementById("btnzoomout").addEventListener("click", function(){
 	var imgcurrwdt = document.querySelector(".zoom_image_popup .zoom_image").clientWidth;
 	var orgwdt = Number(document.querySelector(".zoom_image_popup .zoom_image").getAttribute("orgwdt"))
 	var newwdt = imgcurrwdt - (orgwdt/2);
-	if(newwdt>orgwdt){
-		ZOOM_STEP--;
-		document.querySelector(".zoom_image_popup .zoom_image").style.width = imgcurrwdt - (orgwdt/2) + "px";
-	}
-	else{
-		ZOOM_STEP=0;
-		document.querySelector(".zoom_image_popup .zoom_image").style.width = orgwdt + "px";
-	}
+    if(imgcurrwdt>orgwdt){
+        var newwdt = imgcurrwdt - (orgwdt/2);
+        if(newwdt>orgwdt){
+            ZOOM_STEP--;
+            document.querySelector(".zoom_image_popup .zoom_image").style.width = newwdt + "px";
+        }
+        else{
+            ZOOM_STEP=0;
+            document.querySelector(".zoom_image_popup .zoom_image").style.width = orgwdt + "px";
+        }
+    }
+    else{
+        ZOOM_STEP=0;
+        document.querySelector(".zoom_image_popup .zoom_image").style.width = orgwdt + "px";
+    }
 });
 //Close zoom popup button click event
 document.getElementById("btnclosezoom").addEventListener("click", function(){
