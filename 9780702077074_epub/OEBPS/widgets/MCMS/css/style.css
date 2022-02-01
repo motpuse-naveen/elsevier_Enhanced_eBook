@@ -238,7 +238,6 @@ i {
     bottom: 0px;
     right: 20px;
 }
-}
 .check.disabled, .check-try-again.disabled {
     pointer-events: none;
     background-color: #EDEDED;

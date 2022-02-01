@@ -115,39 +115,6 @@ figure.zoompop:before {
 	border: none;
     cursor: pointer;
 }
-.zoom_image_head .zoomleftmovebutton{
-	background: url('../images/left.png');
-    background-size: cover;
-	left: 0px;
-	top: 0px;
-	height: 24px;
-	padding: 10px;
-}
-.zoom_image_head .zoomrightmovebutton{
-	background: url('../images/right.png');
-    background-size: cover;
-	left: 30px;
-    top: 0px;
-    height: 24px;
-    padding: 10px;
-}
-.zoom_image_head .zoomupmovebutton{
-	background: url('../images/up.png');
-    background-size: cover;
-	left: 90px;
-    top: -8px;
-    width: 24px;
-    padding: 10px;
-}
-.zoom_image_head .zoomdownmovebutton{
-	background: url('../images/down.png');
-    background-size: cover;
-	left: 90px;
-    top: 10px;
-    width: 24px;
-    padding: 10px;
-}
-
 .zoom_image_head button img{
 	width: 20px;
 	padding: 5px 10px;

@@ -67,16 +67,12 @@
       <item id="media_css" href="Style/media.css" media-type="text/css"/>
       <item id="math_css" href="Style/math.css" media-type="text/css"/>
       <item id="id_js" href="Style/math.js" media-type="text/javascript"/>
-      <item id="common_v17_2_js" href="widgets/common_assets/scripts/common_v17_2.js" media-type="text/javascript"/>
+      <item id="common_v17_js" href="widgets/common_assets/scripts/common_v17.js" media-type="text/javascript"/>
       <item id="iframecommon_js" href="widgets/common_assets/scripts/iframe_common.js" media-type="text/javascript"/>
-      <item id="common_V17_2_css" href="widgets/common_assets/css/common_v17_2.css" media-type="text/css"/>
+      <item id="common_V17_css" href="widgets/common_assets/css/common_v17.css" media-type="text/css"/>
       <item id="zoominimage" href="widgets/common_assets/images/zoom-out.png" media-type="image/png"/>
       <item id="zoomoutimage" href="widgets/common_assets/images/zoom-in.png" media-type="image/png"/>
       <item id="zoompopupcloseimage" href="widgets/common_assets/images/close.png" media-type="image/png"/>
-      <item id="zoompopupleftimage" href="widgets/common_assets/images/left.png" media-type="image/png"/>
-      <item id="zoompopuprightimage" href="widgets/common_assets/images/right.png" media-type="image/png"/>
-      <item id="zoompopupupimage" href="widgets/common_assets/images/up.png" media-type="image/png"/>
-      <item id="zoompopupdownimage" href="widgets/common_assets/images/down.png" media-type="image/png"/>
       <item id="CharisSILB" href="Style/fonts/CharisSILB.ttf"
             media-type="application/vnd.ms-opentype"/>
       <item id="CharisSILBI" href="Style/fonts/CharisSILBI.ttf"
