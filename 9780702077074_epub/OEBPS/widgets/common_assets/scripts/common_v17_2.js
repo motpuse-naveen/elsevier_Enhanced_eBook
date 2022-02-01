@@ -1,4 +1,4 @@
-/*** Zoomable Image - START ***/
+/*** Zoomable Image - START 17.2***/
 const ZOOM_MAX = 8;
 var ZOOM_STEP = 0;
 function check_and_Add_zoomhtml(){
@@ -21,26 +21,6 @@ function check_and_Add_zoomhtml(){
 	 document.body.appendChild(zoomelement);
 	}
 }
-
-/*
-'<div class="zoomnavwrapperright"><button id="btnleftmovezoom" class="zoomleftmovebutton" title="Move Left"></button>' +
-'<button id="btnrightmovezoom" class="zoomrightmovebutton" title="Move Right"></button>' +
-'<button id="btnupmovezoom" class="zoomupmovebutton" title="Move Up"></button>' +
-'<button id="btndownmovezoom" class="zoomdownmovebutton" title="Move Down"></button></div>' +
-document.getElementById("btnleftmovezoom").addEventListener("click", function(){
-	document.getElementById('zoom_image_container').scrollLeft = document.getElementById('zoom_image_container').scrollLeft - 50;
-});
-document.getElementById("btnrightmovezoom").addEventListener("click", function(){
-	document.getElementById('zoom_image_container').scrollLeft = document.getElementById('zoom_image_container').scrollLeft + 50;
-});
-document.getElementById("btnupmovezoom").addEventListener("click", function(){
-	document.getElementById('zoom_image_container').scrollTop = document.getElementById('zoom_image_container').scrollTop - 50;
-});
-document.getElementById("btndownmovezoom").addEventListener("click", function(){
-	document.getElementById('zoom_image_container').scrollTop = document.getElementById('zoom_image_container').scrollTop + 50;
-});
-*/
-
 function htmlToElement(html) {
     var template = document.createElement('template');
     html = html.trim(); // Never return a text node of whitespace as the result
@@ -54,35 +34,22 @@ function zoom_popup(img){
 	var imgWdt = img.clientWidth;
 	var imgsrc = img.src;
 	document.querySelector(".zoom_image_popup .zoom_image").src = imgsrc;
-	document.querySelector(".zoom_image_popup .zoom_image").style.width = imgWdt + "px";
+    document.querySelector(".zoom_image_popup .zoom_image").classList.add("zoom-default");
+	document.querySelector(".zoom_image_popup .zoom_image").style.width = "";
 	document.querySelector(".zoom_image_popup .zoom_image").setAttribute("orgwdt", imgWdt);
 	document.querySelector(".zoom_image_popup").style.display = 'block';
 }
 
 function zoom_pulse_on(img){
-    var imgWdt = img.clientWidth;
-    img.style.width = (imgWdt - (imgWdt*5/100))+ "px";
-    img.setAttribute("orgwdt", imgWdt);
+    img.classList.add("pulse-effect");
 }
 function zoom_pulse_off(img){
-    var orgwdt = img.getAttribute("orgwdt");
-    img.style.width = orgwdt + "px";
+    img.classList.remove("pulse-effect");
 }
 
 //Add zoomhtml if not exist in dom
 check_and_Add_zoomhtml();
 
-//Attach zoom and disable right click on images in document
-/*var imageElms = document.querySelectorAll("figure img");
-imageElms.forEach(element => {
-	element.addEventListener("click", function(){
-		zoom_popup(this)
-	});
-    element.addEventListener("contextmenu", function(event){
-		event.preventDefault();
-		return false;
-	});
-});*/
 var imageZoomElms = document.querySelectorAll("figure.zoompop img");
 imageZoomElms.forEach(element => {
 	element.addEventListener("click", function(event){
@@ -102,32 +69,26 @@ imageZoomElms.forEach(element => {
 		return false;
 	});
 });
-/*
-imageElms.forEach(element => {
-    img = new Image();
-    img.onload = function () {
-        alert(this.width + " : " + this.height)
-    };
-    img.src = element.src;
-});
-*/
 
 //Update all images to add default height and width
+/*
 setTimeout(function(){
-	imageElms.forEach(element => {
+	imageZoomElms.forEach(element => {
 		var imgWdt = element.clientWidth;
         var imgHgt = element.clientHeight;
         element.setAttribute("orgwdt",imgWdt)
         element.setAttribute("orghgt",imgHgt)
 	});
 },500)
+*/
 
 
 //Zoom In button click event
 document.getElementById("btnzoomin").addEventListener("click", function(){
+    var imgcurrwdt = document.querySelector(".zoom_image_popup .zoom_image").clientWidth;
+    document.querySelector(".zoom_image_popup .zoom_image").classList.remove("zoom-default");
 	if(ZOOM_STEP<8){
 		ZOOM_STEP++;
-		var imgcurrwdt = document.querySelector(".zoom_image_popup .zoom_image").clientWidth;
 		var orgwdt = Number(document.querySelector(".zoom_image_popup .zoom_image").getAttribute("orgwdt"))
 		document.querySelector(".zoom_image_popup .zoom_image").style.width = imgcurrwdt + (orgwdt/2) + "px";
 	}
@@ -158,6 +119,7 @@ document.getElementById("btnclosezoom").addEventListener("click", function(){
 	enableScroll();
 	document.querySelector(".zoom_image_popup .zoom_image").src = "";
 	document.querySelector(".zoom_image_popup").style.display = 'none';
+    document.querySelector(".zoom_image_popup").style.width ='';
 });
 /*** Zoomable Image - END ***/
 

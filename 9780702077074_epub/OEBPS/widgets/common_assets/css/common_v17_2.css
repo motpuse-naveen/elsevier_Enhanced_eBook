@@ -1,4 +1,4 @@
-/*** Zoomable Image - START ***/
+/*** Zoomable Image - START  v17.2***/
 figure.zoompop{
 	position: relative;
 }
@@ -6,6 +6,12 @@ figure.zoompop img{
 	max-width: 100%;
 	cursor: pointer;
 	/*width: 100%;*/
+}
+figure.zoompop img.pulse-effect{
+	transform: scale(1.01);
+}
+.zoom_image_popup img.zoom_image.zoom-default{
+	max-width: 100%;
 }
 figure.zoompop{
 	margin: 0px;
