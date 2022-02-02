@@ -12,9 +12,10 @@ function check_and_Add_zoomhtml(){
 			  '<button id="btnzoomout" class="zoomoutbutton" title="Zoom-Out"></button>' +
 			  '<button id="btnclosezoom" class="zoomclosebutton" title="Close"></button>' +
 		   '</div>' +
-		   '<div id="zoom_image_container" class="zoom_image_container dragscroll">' +
+		   '<figure id="zoom_image_container" class="zoom_image_container dragscroll">' +
 			  '<img class="zoom_image" src=""/>' +
-		   '</div>' +
+              '<figcaption class="zoom_caption"></figcaption>' +
+		   '</figure>' +
 		'</div>' +
 	 '</section>' ;
 	 var zoomelement = htmlToElement(zoomhtml);
@@ -33,10 +34,14 @@ function zoom_popup(img){
 	ZOOM_STEP = 0;
 	var imgWdt = img.clientWidth;
 	var imgsrc = img.src;
+    var elmfigure = img.closest("figure");
+    var elmfigcap = elmfigure.querySelector("figcaption")
 	document.querySelector(".zoom_image_popup .zoom_image").src = imgsrc;
     document.querySelector(".zoom_image_popup .zoom_image").classList.add("zoom-default");
 	document.querySelector(".zoom_image_popup .zoom_image").style.width = "";
 	document.querySelector(".zoom_image_popup .zoom_image").setAttribute("orgwdt", imgWdt);
+
+    document.querySelector(".zoom_image_popup .zoom_caption").innerHTML = elmfigcap.innerHTML;
 	document.querySelector(".zoom_image_popup").style.display = 'block';
 }
 
@@ -118,6 +123,7 @@ document.getElementById("btnzoomout").addEventListener("click", function(){
 document.getElementById("btnclosezoom").addEventListener("click", function(){
 	enableScroll();
 	document.querySelector(".zoom_image_popup .zoom_image").src = "";
+    document.querySelector(".zoom_image_popup .zoom_caption").innerHTML = "";
 	document.querySelector(".zoom_image_popup").style.display = 'none';
     document.querySelector(".zoom_image_popup").style.width ='';
 });

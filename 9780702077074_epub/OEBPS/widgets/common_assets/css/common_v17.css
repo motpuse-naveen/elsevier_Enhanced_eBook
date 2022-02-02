@@ -58,7 +58,11 @@ figure.zoompop:before {
 	width: 100%;
 	height: 100%;
 	overflow: auto;
-	margin-top: 0px;
+	margin: 0px;
+}
+.zoom_image_container .zoom_caption{
+	padding: 10px 10px;
+    font-size: 14px;
 }
 .zoom_image_head{
 	text-align: center;
