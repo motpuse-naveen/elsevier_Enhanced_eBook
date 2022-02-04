@@ -43,6 +43,9 @@ function zoom_popup(img){
 
     document.querySelector(".zoom_image_popup .zoom_caption").innerHTML = elmfigcap.innerHTML;
 	document.querySelector(".zoom_image_popup").style.display = 'block';
+
+    document.getElementById("btnzoomout").classList.add("zoombtndisable");
+    document.getElementById("btnzoomin").classList.remove("zoombtndisable");
 }
 
 function zoom_pulse_on(img){
@@ -91,32 +94,54 @@ setTimeout(function(){
 //Zoom In button click event
 document.getElementById("btnzoomin").addEventListener("click", function(){
     var imgcurrwdt = document.querySelector(".zoom_image_popup .zoom_image").clientWidth;
+    if(ZOOM_STEP==0){
+        document.querySelector(".zoom_image_popup .zoom_image").setAttribute("orgwdt",imgcurrwdt)
+    }
     document.querySelector(".zoom_image_popup .zoom_image").classList.remove("zoom-default");
 	if(ZOOM_STEP<8){
 		ZOOM_STEP++;
 		var orgwdt = Number(document.querySelector(".zoom_image_popup .zoom_image").getAttribute("orgwdt"))
 		document.querySelector(".zoom_image_popup .zoom_image").style.width = imgcurrwdt + (orgwdt/2) + "px";
 	}
+    if(ZOOM_STEP==8){
+        //document.getElementById("btnzoomout").classList.add("zoombtndisable");
+        document.getElementById("btnzoomin").classList.add("zoombtndisable");
+    }
+    if(ZOOM_STEP>0){
+        document.getElementById("btnzoomout").classList.remove("zoombtndisable");
+    }
 });
 //Zoom Out button click event
 document.getElementById("btnzoomout").addEventListener("click", function(){
 	var imgcurrwdt = document.querySelector(".zoom_image_popup .zoom_image").clientWidth;
-	var orgwdt = Number(document.querySelector(".zoom_image_popup .zoom_image").getAttribute("orgwdt"))
-	var newwdt = imgcurrwdt - (orgwdt/2);
-    if(imgcurrwdt>orgwdt){
+    if(ZOOM_STEP==0){
+        document.querySelector(".zoom_image_popup .zoom_image").setAttribute("orgwdt",imgcurrwdt)
+    }
+    else{
+        var orgwdt = Number(document.querySelector(".zoom_image_popup .zoom_image").getAttribute("orgwdt"))
         var newwdt = imgcurrwdt - (orgwdt/2);
-        if(newwdt>orgwdt){
-            ZOOM_STEP--;
-            document.querySelector(".zoom_image_popup .zoom_image").style.width = newwdt + "px";
+        if(imgcurrwdt>orgwdt){
+            var newwdt = imgcurrwdt - (orgwdt/2);
+            if(newwdt>orgwdt){
+                ZOOM_STEP--;
+                document.querySelector(".zoom_image_popup .zoom_image").style.width = newwdt + "px";
+            }
+            else{
+                ZOOM_STEP=0;
+                document.querySelector(".zoom_image_popup .zoom_image").style.width = orgwdt + "px";
+            }
         }
         else{
             ZOOM_STEP=0;
             document.querySelector(".zoom_image_popup .zoom_image").style.width = orgwdt + "px";
         }
     }
+    if(ZOOM_STEP==0){
+        document.getElementById("btnzoomout").classList.add("zoombtndisable");
+        //document.getElementById("btnzoomin").classList.add("zoombtndisable");
+    }
     else{
-        ZOOM_STEP=0;
-        document.querySelector(".zoom_image_popup .zoom_image").style.width = orgwdt + "px";
+        document.getElementById("btnzoomin").classList.remove("zoombtndisable");
     }
 });
 //Close zoom popup button click event

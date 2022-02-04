@@ -86,7 +86,7 @@ h1.review-heading {
 	text-rendering: optimizeLegibility;
 }
 
-span.ans {
+button.ans {
 	color: #037bb5;
 	display: inline-block;
 	min-height: 1.6em;
@@ -96,26 +96,27 @@ span.ans {
 	margin: 0.3em 0;
 	padding-left: 1.2em;
 	background: url(../images/icon_arrow_show_blue.png) no-repeat 0 0.2em;
-	background-size: 1em auto;
+	background-size: 24px;
 	cursor: pointer;
-	padding: 5px 14px 4px 30px;
+	padding: 5px 14px 6px 40px;
 	border-radius: 6px;
-	background-position: 8px;
+	background-position: 8px center;
 	margin-left: -5px;
-	margin-top: 0px;
 	font-family: "Conv_SourceSansPro-Light", Verdana, Helvetica, sans;
+	border-style: none;
 }
 
-span.ans:hover {
+button.ans:hover {
 	background-color: #f2f7fb;
 }
 
 .show-ans {
-	background: url(../images/icon_arrow_hide_blue.png) no-repeat 0 0.2em !Important;
-	background-size: 1em auto !important;
-	padding: 5px 14px 4px 30px !important;
-	border-radius: 6px !important;
-	background-position: 8px !important;
+	background: url(../images/icon_arrow_hide_blue.png) no-repeat 0 0.2em !important;
+	background-size: 24px !important;
+	background-position: 8px center !important;
+}
+.show-ans:hover {
+	background-color: #f2f7fb !important;
 }
 
 .answer {
