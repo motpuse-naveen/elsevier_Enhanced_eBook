@@ -69,6 +69,7 @@
       <item id="id_js" href="Style/math.js" media-type="text/javascript"/>
       <item id="common_v17_js" href="widgets/common_assets/scripts/common_v17.js" media-type="text/javascript"/>
       <item id="iframecommon_js" href="widgets/common_assets/scripts/iframe_common.js" media-type="text/javascript"/>
+      <item id="iframecommon_css" href="widgets/common_assets/css/iframe_common.css" media-type="text/javascript"/>
       <item id="common_V17_css" href="widgets/common_assets/css/common_v17.css" media-type="text/css"/>
       <item id="zoominimage" href="widgets/common_assets/images/zoom-out.png" media-type="image/png"/>
       <item id="zoomoutimage" href="widgets/common_assets/images/zoom-in.png" media-type="image/png"/>
@@ -7884,17 +7885,22 @@
 <item id="widget_item024" href="widgets/Glossary/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
 <item id="widget_item025" href="widgets/Glossary/script/transcription.js" media-type="text/javascript"/>
 <item id="widget_item026" href="widgets/Glossary/xhtml/Glossary.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-<item id="widget_item028" href="widgets/Glossary/xhtml/transcription2.xhtml" media-type="application/xhtml+xml"/>
+<item id="widget_item027" href="widgets/Glossary/xhtml/transcription2.xhtml" media-type="application/xhtml+xml"/>
+<item id="widget_item028" href="widgets/Glossary/xhtml/transcription-link.xhtml" media-type="application/xhtml+xml"/>
 <item id="widget_item029" href="widgets/Guided_Tour/css/header_style.css" media-type="text/css"/>
 <item id="widget_item030" href="widgets/Guided_Tour/css/style.css" media-type="text/css"/>
 <item id="widget_item031" href="widgets/Guided_Tour/fonts/InklingSerifWeb-Regular.ttf" media-type="application/vnd.ms-opentype"/>
 <item id="widget_item032" href="widgets/Guided_Tour/fonts/InklingSerifWeb-Regular.woff" media-type="application/font-woff"/>
+<item id="widget_item032_1" href="widgets/Guided_Tour/fonts/InklingSerifWeb-Regular.eot" media-type="application/vnd.ms-fontobject"/>
 <item id="widget_item033" href="widgets/Guided_Tour/fonts/SourceSansPro-Bold.ttf" media-type="application/vnd.ms-opentype"/>
 <item id="widget_item034" href="widgets/Guided_Tour/fonts/SourceSansPro-Bold.woff" media-type="application/font-woff"/>
+<item id="widget_item034_1" href="widgets/Guided_Tour/fonts/SourceSansPro-Bold.eot" media-type="application/vnd.ms-fontobject"/>
 <item id="widget_item035" href="widgets/Guided_Tour/fonts/SourceSansPro-Light.ttf" media-type="application/vnd.ms-opentype"/>
 <item id="widget_item036" href="widgets/Guided_Tour/fonts/SourceSansPro-Light.woff" media-type="application/font-woff"/>
+<item id="widget_item036_1" href="widgets/Guided_Tour/fonts/SourceSansPro-Light.eot" media-type="application/vnd.ms-fontobject"/>
 <item id="widget_item037" href="widgets/Guided_Tour/fonts/SourceSansPro-Regular.ttf" media-type="application/vnd.ms-opentype"/>
 <item id="widget_item038" href="widgets/Guided_Tour/fonts/SourceSansPro-Regular.woff" media-type="application/font-woff"/>
+<item id="widget_item038_1" href="widgets/Guided_Tour/fonts/SourceSansPro-Regular.eot" media-type="application/vnd.ms-fontobject"/>
 <item id="widget_item039" href="widgets/Guided_Tour/images/guided_tour_refresh_button.png" media-type="image/png"/>
 <item id="widget_item040" href="widgets/Guided_Tour/images/guided_tour_refresh_line.png" media-type="image/png"/>
 <item id="widget_item041" href="widgets/Guided_Tour/images/image_figure_controls.png" media-type="image/png"/>
@@ -7960,6 +7966,7 @@
 <item id="widget_item101" href="widgets/Labels/fonts/SourceSansPro-Regular.ttf" media-type="application/vnd.ms-opentype"/>
 <item id="widget_item102" href="widgets/Labels/fonts/SourceSansPro-Regular.woff" media-type="application/font-woff"/>
 <item id="widget_item103" href="widgets/Labels/images/image_figure_test_yourself_btn.png" media-type="image/png"/>
+<item id="widget_item103_1" href="widgets/Labels/images/hotspot-mag-glass.png" media-type="image/png"/>
 <item id="widget_item104" href="widgets/Labels/images/navbar_minus.png" media-type="image/png"/>
 <item id="widget_item105" href="widgets/Labels/images/navbar_plus.png" media-type="image/png"/>
 <item id="widget_item106" href="widgets/Labels/images/normal-neuronal-firing.png" media-type="image/png"/>
@@ -8026,8 +8033,8 @@
 <item id="widget_item183" href="widgets/Streaming_video/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
 <item id="widget_item184" href="widgets/Streaming_video/script/jquery-ui.min.js" media-type="text/javascript"/>
 <item id="widget_item185" href="widgets/Streaming_video/script/slider-a11y-vertical.js" media-type="text/javascript"/>
-
-<item id="widget_item187" href="widgets/Streaming_video/xhtml/Streaming_video.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="widget_item186" href="https://static.us.elsevierhealth.com/standring_42_9780702077050/9780702077050_0001.mp4" media-type="video/mp4"/>
+<item id="widget_item187" href="widgets/Streaming_video/xhtml/Streaming_video.xhtml" properties="scripted remote-resources" media-type="application/xhtml+xml"/>
 <item id="widget_item187a" href="widgets/Streaming_video/xhtml/sintel-en.vtt" media-type="text/vtt"/>
 <item id="widget_item188" href="widgets/True_False/css/style.css" media-type="text/css"/>
 <item id="widget_item189" href="widgets/True_False/fonts/InklingSerifWeb-Regular.ttf" media-type="application/vnd.ms-opentype"/>
@@ -8085,6 +8092,7 @@
 <item id="widget_item241" href="widgets/Glossary/script/glossary-poptip.js" media-type="text/javascript"/>
 <item id="widget_item242" href="widgets/Guided_Tour/script/main.js" media-type="text/javascript"/>
 <item id="widget_item243" href="widgets/Glossary/images/glossry-img.png" media-type="image/png"/>
+<item id="widget_item243_1" href="XHTML/B9780702077050000033/images/glossry-img.png" media-type="image/png"/>
 <item id="widget_item244" href="widgets/Embedded_audio/audio/30_cc-shared-culture_EPUB_audio_asharedculture_soundtrack.mp3" media-type="audio/mpeg3"/>
    </manifest>
    <spine page-progression-direction="ltr" toc="ncx">

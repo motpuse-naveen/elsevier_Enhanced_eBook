@@ -40,8 +40,12 @@ function zoom_popup(img){
     document.querySelector(".zoom_image_popup .zoom_image").classList.add("zoom-default");
 	document.querySelector(".zoom_image_popup .zoom_image").style.width = "";
 	document.querySelector(".zoom_image_popup .zoom_image").setAttribute("orgwdt", imgWdt);
-
-    document.querySelector(".zoom_image_popup .zoom_caption").innerHTML = elmfigcap.innerHTML;
+    if(elmfigcap!=null && elmfigcap!=undefined){
+        document.querySelector(".zoom_image_popup .zoom_caption").innerHTML = elmfigcap.innerHTML;
+    }
+    else{
+        document.querySelector(".zoom_image_popup .zoom_caption").innerHTML = "";
+    }
 	document.querySelector(".zoom_image_popup").style.display = 'block';
 
     document.getElementById("btnzoomout").classList.add("zoombtndisable");
@@ -276,3 +280,13 @@ function enableScroll() {
 }));
 
 /*** Scroll Pan - END ***/
+
+/*** Disable Right click on image ***/
+var allImageElmts = document.querySelectorAll("figure img");
+allImageElmts.forEach(imgelement => {
+    imgelement.addEventListener("contextmenu", function(event){
+		event.preventDefault();
+		return false;
+	});
+});
+/*** End Disable right click ***/
