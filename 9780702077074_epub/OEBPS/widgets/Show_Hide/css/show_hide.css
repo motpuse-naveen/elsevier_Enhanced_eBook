@@ -19,46 +19,7 @@
 body{
 	color:var(--primary-text);
 	line-height: 1.2em;
-	font-size: 16px;
 }
-
-hgroup,
-figure.block,
-section {
-	display: block;
-}
-
-hgroup#covertitle {
-	margin-top: 4em;
-}
-
-hgroup#covertitle h2 {
-	margin-left: 8em;
-}
-
-h1,
-h2 {
-	font-weight: normal;
-}
-
-h1 {
-	margin-bottom: 0.3em;
-}
-
-h2 {
-	margin-top: 0em;
-	margin-left: 4em;
-	font-size: 95%;
-}
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-	color: inherit;
-}
-
-
 /*-----  ques Ans  -----*/
 .main-document-area {
 	background-color: var(--white);
@@ -66,10 +27,13 @@ a:active {
 	margin: 0 auto;
 }
 .review-main {
-	padding: 15px;
+	padding: 0.6em;
 	width: 100%;
-	max-width: 740px;
 	box-sizing: border-box;
+	text-indent: 0em;
+}
+.review-main.align-center{
+	max-width: 740px;
 	margin: 0 auto;
 }
 .review-main p{
@@ -146,25 +110,27 @@ button.ans:hover {
 	text-decoration: underline;
 }
 .show-ans {
-	background: url(../images/Collapse_N.svg) no-repeat;
-	background-position: 0em center;
-	background-size: 1.2em auto;
+	background: url(../images/Collapse_N.svg) no-repeat !important;
+	background-position: 0em center !important;
+	background-size: 1.2em auto !important;
 }
 .show-ans:hover {
-	background: url(../images/Collapse_hover_N.svg) no-repeat;
-	background-position: 0em center;
-	background-size: 1.2em auto;
+	background: url(../images/Collapse_hover_N.svg) no-repeat !important;
+	background-position: 0em center !important;
+	background-size: 1.2em auto !important;
 	text-decoration: underline;
 }
 button.ans:focus-visible{
 	outline: 2px solid var(--orange);
 }
 
-.answer {
+.review-main .answer {
 	display: none;
 	margin-left: -12px;
+	text-indent: 0em;
+	font-size: 100%;
 }
-.answer .c-ans{
+.review-main .answer .c-ans{
 	font-weight: 600;
 	margin: 10px 0px;
 }
