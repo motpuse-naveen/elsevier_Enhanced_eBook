@@ -1,0 +1,20 @@
+figure{
+	position: relative;
+}
+figure img{
+	max-width: 100%;
+	cursor: pointer;
+	/*width: 100%;*/
+}
+.fig-page-body
+{
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:10px;
+	margin-bottom:10px;
+	padding:0px;
+}
+
+.stop-scrolling {
+	overflow: hidden;
+}
