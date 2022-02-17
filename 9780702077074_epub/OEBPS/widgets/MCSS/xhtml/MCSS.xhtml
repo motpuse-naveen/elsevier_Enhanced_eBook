@@ -2,97 +2,68 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-   
-<meta charset="utf-8" />
-   
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-   
-<title>EPUB:MCQ</title>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+   <title>EPUB:MCQ</title>
+   <link rel="stylesheet" type="text/css" href="../../common_assets/css/variables.css"/>
+   <link rel="stylesheet" type="text/css" href="../../../Style/Elsevier_eBook.css" />
    <link rel="stylesheet" type="text/css" href="../css/style.css" />
-   
-<script src="../script/jquery-3.6.0.min.js"></script>
-   
-<script src="../js/QUIZ-1.js"></script></head>
-
+   <script src="../script/jquery-3.6.0.min.js"></script>
+   <script src="../js/QUIZ-1.js"></script>
+</head>
 <body>
-   
 <div class="main-document-area mcq" role="main">
-      
-<div class="sr-only" style="position: absolute; left: -9999px;" role="heading" aria-level="1">MCQ</div>
-      
-<div class="mcq_inner" role="application">
-         
-<div class="tab-content">
-            <!--Panel 1-->
-            
-<div class="tab-pane-main">
-               
-<div class="tab-pane active" id="q-1">
-                  
-<div class="content-heading">
-                     
-<div id="questionNumber" role="heading" aria-level="2" />
-                     
-<div id="questionName" />
-                     
-<div id="subheading2" />
-                     
-<div id="subheading3" />
-                  </div>
-                  
-<div class="ques-content">
-                     
-<ul class="Multiple-choice" aria-label="options" role="listbox" />
-                  </div>
-                  
-<div class="answer-controls d-flex mt-3">
-                     <label class="correct" id="answer_label" />
-                     
-<p id="Add_solution"><i>Rationale: Only tuberculosis (e) from the listed conditions is more
-                           associated
-                           with
-                           ethnicity.</i></p>
-                     
-<p id="need_help">Need help with this one? <span class="text-link" tabindex="0" id="show_ans" aria-label="Show Answer" role="button" aria-expanded="false">Show
-                           answer</span>
-                     </p>
-                     <button class="check disabled" id="mcq_button" aria-disabled="true" data-state="notAnswered" tabindex="-1">Check
-                        Answer</button>
-                  </div>
-               </div>
-            </div>
-            <!-- <div class="tab-pane" id="q-2"> -->
-            <footer role="none">
-               
-<div class="footer" role="navigation" aria-label="Pagination">
-                  
-<div class="arrow-mask left">
-                     
-<div class="arrow-left outer" role="button" aria-disabled="true" aria-label="previous" tabindex="0" />
-                  </div>
-                  
-<div class="mcq_toolbar_main">
-                     
-<div class="steps d-flex justify-content-center">
-                        
-<ul class="nav nav-tabs md-tabs nav-justified" aria-label="Navigation" role="listbox">
-                        </ul>
+   <div class="sr-only" style="position: absolute; left: -9999px;" role="heading" aria-level="1">MCQ</div>
+   <div class="mcq_inner text" role="application">
+      <div class="tab-content">
+         <div class="tab-pane-main">
+               <div class="tab-pane active" id="q-1">
+                     <div class="content-heading">
+                        <h2 id="questionNumber"></h2>
+                        <div id="questionName"></div>
+                        <div id="subheading2"></div>
+                        <div id="subheading3"></div>
+                     </div>      
+                     <div class="ques-content">
+                        <ul class="Multiple-choice" aria-label="options" role="listbox"></ul>
                      </div>
-                  </div>
-                  
-<div class="arrow-mask right">
-                     
-<div class="arrow-right outer" role="button" aria-label="next" tabindex="0" />
-                  </div>
+                     <div class="answer-controls d-flex mt-3">
+                           <label class="correct" id="answer_label"></label>
+                           <p id="Add_solution"><i>Rationale: Only tuberculosis (e) from the listed conditions is more
+                                                      associated
+                                                      with
+                                                      ethnicity.</i></p>
+                           <p id="need_help">Need help with this one? <span class="text-link" tabindex="0" id="show_ans" aria-label="Show Answer" role="button" aria-expanded="false">Show
+                                                      answer</span>
+                                                </p>
+                                                <button class="check disabled" id="mcq_button" aria-disabled="true" data-state="notAnswered" tabindex="-1">Check
+                                                   Answer</button>
+                     </div>
                </div>
-            </footer>
          </div>
+         <footer role="none">
+            <div class="footer" role="navigation" aria-label="Pagination">
+                  <div class="arrow-mask left">
+                     <div class="arrow-left outer" role="button" aria-disabled="true" aria-label="previous" tabindex="0"></div>
+                  </div>   
+                  <div class="mcq_toolbar_main">
+                        <div class="steps d-flex justify-content-center">
+                              <ul class="nav nav-tabs md-tabs nav-justified" aria-label="Navigation" role="listbox"></ul>
+                        </div>
+                  </div>   
+                  <div class="arrow-mask right">
+                     <div class="arrow-right outer" role="button" aria-label="next" tabindex="0"></div>
+                  </div>
+            </div>
+         </footer>
       </div>
-      
-<div id="ariaMessages" class="visually-hidden" aria-live="assertive" />
    </div>
+   <div id="ariaMessages" class="visually-hidden" aria-live="assertive"></div>
+</div>
    
 <script>
+      const correctFBText = "Correct."
+      const incorrectFBText = "Incorrect. Please try again."
       var paginationTabindex = 10001;
       var optionsIndex = 1;
       const tabs = document.querySelector(".tab-content");
@@ -322,7 +293,7 @@
             $('#answer_label').show();
             $('#Add_solution').hide();
             $('#need_help').show();
-            $('#answer_label').html('Not quite');
+            $('#answer_label').html(incorrectFBText);
             $('#answer_label').removeClass().addClass('not-quite');
          } else if (currentQuestion.state === 'correct') {
             $('.focus-input').each(function () {
@@ -342,7 +313,7 @@
             $('#answer_label').show();
             $('#Add_solution').show();
             $('#need_help').hide();
-            $('#answer_label').html("That's Correct!");
+            $('#answer_label').html(correctFBText);
             $('#answer_label').removeClass().addClass('correct');
          } else {
             $('.focus-input').removeClass().addClass('focus-input');
@@ -385,7 +356,7 @@
          let dataId = 'q-' + parseInt($('.tab-pane').attr('id'));
          if (id === currentQuestion.answer) {
             $(element).removeClass().addClass("focus-input last-child");
-            correctMsg.innerHTML = "That's Correct!";
+            correctMsg.innerHTML = correctFBText;
             $(element).parent().attr("data-correct", "true");
             $(element).attr("role", "img");
             updateAnswerIndicator("correct");
@@ -413,7 +384,7 @@
          } else {
             $(element).removeClass().addClass("focus-input wrong");
             correctMsg.classList.add("not-quite");
-            correctMsg.innerHTML = "Not quite";
+            correctMsg.innerHTML = incorrectFBText;
             updateAnswerIndicator("wrong");
             $('#mcq_button').html('Try Again');
             $('#mcq_button').attr('tabindex', '0');

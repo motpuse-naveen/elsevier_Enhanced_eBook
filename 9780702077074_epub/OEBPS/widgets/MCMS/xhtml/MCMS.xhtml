@@ -2,96 +2,67 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-   
-<meta charset="utf-8" />
-   
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-   
-<title>EPUB:MCQ</title>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+   <title>EPUB:MCQ</title>
+   <link rel="stylesheet" type="text/css" href="../../common_assets/css/variables.css"/>
+   <link rel="stylesheet" type="text/css" href="../../../Style/Elsevier_eBook.css" />
    <link rel="stylesheet" type="text/css" href="../css/style.css" />
-   
-<script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
-   
-<script src="../js/QUIZ.js"></script></head>
-
+   <script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
+   <script src="../js/QUIZ.js"></script>
+</head>
 <body>
-   
 <div class="main-document-area mcq" role="main">
-      
-<h1 class="sr-only" style="position: absolute; left: -9999px;" role="heading">MCQ</h1>
-      
-<div class="mcq_inner" role="application">
-         
-<div class="tab-content">
-            <!--Panel 1-->
-            
-<div class="tab-pane-main">
-               
-<div class="tab-pane active" id="q-1">
-                  
-<div class="content-heading">
-                     
-<h2 id="questionNumber" role="heading"></h2>
-                     
-<h3 id="questionName" role="none"></h3>
-                     
-<div id="subheading2"></div>
-                     
-<div id="subheading3"></div>
-                  </div>
-                  
-<div class="ques-content">
-                     
-<ul class="Multiple-choice" role="listbox" aria-label="Options" />
-                  </div>
-                  
-<div class="answer-controls d-flex mt-3">
-                     <label class="correct" id="answer_label" />
-                     
-<p id="Add_solution"><i>Rationale: Only tuberculosis (e) from the listed conditions is more
-                           associated
-                           with
-                           ethnicity.</i></p>
-                     
-<p id="need_help">Need help with this one? <span class="text-link" tabindex="0" id="show_ans" aria-label="Show Answer" role="button" aria-expanded="false">Show
-                           answer</span>
-                     </p>
-                     <button class="check disabled" id="mcq_button" data-state="notAnswered" tabindex="-1" title="Check Answer">Check Answer</button>
-                  </div>
+   <h1 class="sr-only" style="position: absolute; left: -9999px;" role="heading">MCQ</h1>
+   <div class="mcq_inner text" role="application">
+      <div class="tab-content">
+         <div class="tab-pane-main">
+            <div class="tab-pane active" id="q-1">
+               <div class="content-heading">
+                  <h2 id="questionNumber"></h2>
+                  <div id="questionName"></div>
+                  <div id="subheading2"></div>
+                  <div id="subheading3"></div>
+               </div>      
+               <div class="ques-content">
+                  <ul class="Multiple-choice" role="listbox" aria-label="Options"></ul>
+               </div>         
+               <div class="answer-controls d-flex mt-3">
+                  <label class="correct" id="answer_label"></label>
+                  <p id="Add_solution"><i>Rationale: Only tuberculosis (e) from the listed conditions is more
+                                       associated
+                                       with
+                                       ethnicity.</i></p>
+                  <p id="need_help">Need help with this one? <span class="text-link" tabindex="0" id="show_ans" aria-label="Show Answer" role="button" aria-expanded="false">Show
+                                       answer</span>
+                                 </p>
+                  <button class="check disabled" id="mcq_button" data-state="notAnswered" tabindex="-1" title="Check Answer">Check Answer</button>
                </div>
             </div>
-            <!-- <div class="tab-pane" id="q-2"> -->
-            <footer role="none">
-               
-<div class="footer" role="navigation" aria-label="Pagination">
-                  
-<div class="arrow-mask left">
-                     
-<div class="arrow-left outer" role="button" aria-label="previous" tabindex="0" />
-                  </div>
-                  
-<div class="mcq_toolbar_main">
-                     
-<div class="steps d-flex justify-content-center">
-                        
-<ul class="nav nav-tabs md-tabs nav-justified" aria-label="Navigation" role="listbox">
-                        </ul>
-                     </div>
-                  </div>
-                  
-<div class="arrow-mask right">
-                     
-<div class="arrow-right outer" role="button" aria-label="next" tabindex="0" />
-                  </div>
-               </div>
-            </footer>
          </div>
+         <footer role="none">
+            <div class="footer" role="navigation" aria-label="Pagination">
+               <div class="arrow-mask left">
+                  <div class="arrow-left outer" role="button" aria-label="previous" tabindex="0"></div>
+               </div>      
+               <div class="mcq_toolbar_main">
+                  <div class="steps d-flex justify-content-center">
+                     <ul class="nav nav-tabs md-tabs nav-justified" aria-label="Navigation" role="listbox"> </ul>
+                  </div>
+               </div>     
+               <div class="arrow-mask right">
+                     <div class="arrow-right outer" role="button" aria-label="next" tabindex="0"></div>
+               </div>
+            </div>
+         </footer>
       </div>
-      
-<div id="ariaMessages" class="visually-hidden" aria-live="assertive" />
    </div>
+   <div id="ariaMessages" class="visually-hidden" aria-live="assertive"></div>
+</div>
    
 <script>
+      const correctFBText = "Correct."
+      const incorrectFBText = "Incorrect. Please try again."
       var paginationTabindex = 10001;
       var optionsIndex = 1;
       const tabs = document.querySelector(".tab-content");
@@ -273,7 +244,7 @@
             $('#answer_label').show();
             $('#Add_solution').hide();
             $('#need_help').show();
-            $('#answer_label').html('Not quite');
+            $('#answer_label').html(incorrectFBText);
             $('#answer_label').removeClass().addClass('not-quite');
          } else if (currentQuestion.state === 'correct') {
             if (question == quiz.length) {
@@ -288,7 +259,7 @@
             $('#answer_label').show();
             $('#Add_solution').show();
             $('#need_help').hide();
-            $('#answer_label').html("That's Correct!");
+            $('#answer_label').html(correctFBText);
             $('#answer_label').removeClass().addClass('correct');
             unclickableOptions();
          } else {
@@ -377,7 +348,7 @@
             }
          });
          if (wrongAns === 0  &amp;&amp; check(currentQuestion.answer , selectOption)!== false) {
-            correctMsg.innerHTML = "That's Correct!";
+            correctMsg.innerHTML = correctFBText;
             $(element).parent().attr("data-correct", "true");
             $(element).attr("role", "img");
             updateAnswerIndicator("correct");
@@ -405,11 +376,11 @@
          else {
             if(currentQuestion.answer.length !== selectOption.length){
                correctMsg.classList.add("not-quite");
-               correctMsg.innerHTML = "Not quite Please select any "+currentQuestion.answer.length +" Option.";
+               correctMsg.innerHTML = "Incorrect. Please select any " + currentQuestion.answer.length + " Option.";
             }
             else{
                correctMsg.classList.add("not-quite");
-               correctMsg.innerHTML = "Not quite ";
+               correctMsg.innerHTML = incorrectFBText;
             }
             updateAnswerIndicator("wrong");
             $('#mcq_button').html('Try Again');

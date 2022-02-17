@@ -2,39 +2,7 @@
 	@namespace "http://www.w3.org/1999/xhtml";
 @namespace epub "http://www.idpf.org/2007/ops";*/
 
-@font-face {
-	font-family: 'Conv_SourceSansPro-Light';
-	src: local(''), url('../fonts/SourceSansPro-Light.woff') format('woff'), url('../fonts/SourceSansPro-Light.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Conv_InklingSerifWeb-Regular';
-	src: local(''), url('../fonts/InklingSerifWeb-Regular.woff') format('woff'), url('../fonts/InklingSerifWeb-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Conv_SourceSansPro-Regular';
-	src: local(''), url('../fonts/SourceSansPro-Regular.woff') format('woff'), url('../fonts/SourceSansPro-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Conv_SourceSansPro-Bold';
-	src: local(''), url('../fonts/SourceSansPro-Bold.woff') format('woff'), url('../fonts/SourceSansPro-Bold.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
 body {
-	font-family: "Conv_InklingSerifWeb-Regular", Georgia, serif;
-	font-weight: 100;
-	font-size: 18px;
-	line-height: 1.5;
 	margin: 0px;
 	padding: 0px;
 	width: 100%;
@@ -42,60 +10,17 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
-p {
-	padding: 0;
-	margin-bottom: 0px;
-}
-
-hgroup,
-figure.block,
-section {
-	display: block;
-}
-
-hgroup#covertitle {
-	margin-top: 4em;
-}
-
-hgroup#covertitle h2 {
-	margin-left: 8em;
-}
-
-h1,
-h2 {
-	font-weight: normal;
-}
-
-h1 {
-	margin-bottom: 0.3em;
-}
-
-h2 {
-	margin-top: 0em;
-	margin-left: 4em;
-	font-size: 95%;
-}
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-	color: inherit;
-}
-
 .main-document-area.mcq {
     height: 100vh;
     overflow: hidden;
-    font-family: "Conv_SourceSansPro-Regular";
 }
 .main-document-area {
-    background-color: white;
     position: relative;
-    /*max-width: 979px;*/
     margin: 0 auto 0;
 }
 .mcq .mcq_inner, .mcq .tab-content {
     height: 100%;
+    text-indent: 0em;
 }
 .mcq_inner .tab-pane-main {
     height: calc(100% - 85px);
@@ -109,7 +34,7 @@ a:active {
 }
 .mcq_inner .tab-pane-main .tab-pane {
     width: 100%;
-    max-width: 600px;
+    max-width: 740px;
     margin: auto;
     padding: 0;
 }
@@ -130,24 +55,24 @@ a:active {
     margin-top: 18px;
 }
 .mcq #questionNumber {
-    font-size: 14px;
-    color: #007cb6;
+    /*font-size: 14px;*/
+    color: var(--blue);
     font-weight: 600;
     margin-bottom: 5px;
 }
 #questionName {
-    font-size: 14px;
+    /*font-size: 14px;*/
     line-height: 20px;
     font-weight: 400;
-    color: #757575;
+    color: var(--primary-text);
     margin-bottom: 20px;
     margin-top: 0px;
 }
 .content-heading h5, .content-heading #subheading2, .content-heading #subheading3 {
-    font-size: 14px;
+    /*font-size: 14px;*/
     line-height: 20px;
     font-weight: 400;
-    color: #757575;
+    color: var(--primary-text);
     margin-bottom: 20px;
     margin-top: 0px;
 }
@@ -163,15 +88,15 @@ a:active {
     border-color: #CDCDCD;
     border-width: 1px 1px 0 1px;
     padding: 16px 60px 16px 16px;
-    font-size: 14px;
+    /*font-size: 14px;*/
     font-weight: 500;
     cursor: pointer;
-    color: #757575;
+    color: var(--primary-text);
     text-align: justify;
 }
 .focus-input.active {
-    outline: 2px solid #007cb6;
-    color: #007cb6;
+    outline: 2px solid var(--blue);
+    color: var(--blue);
     outline-offset: -1px;
 }
 .active, .slide-thumbnail:hover {
@@ -179,18 +104,18 @@ a:active {
 }
 
 .focus-input.wrong {
-    outline: 2px solid #cb272a;
+    outline: 2px solid var(--red);
     outline-offset: -1px;
-    color: #cb272a;
+    color: var(--red);
     position: relative;
 }
 .Multiple-choice .focus-input:last-child {
     border-width: 1px 1px 1px 1px;
 }
 .focus-input.last-child {
-    outline: 2px solid #63a83b;
+    outline: 2px solid var(--green);
     outline-offset: -1px;
-    color: #63a83b;
+    color: var(--green);
     position: relative;
     border-bottom-width: 1px;
 }
@@ -199,19 +124,25 @@ a:active {
 }
 
 .correct {
-    color: #63a83b;
+    color: var(--green);
     font-weight: 600;
-    font-size: 14px;
+    /*font-size: 14px;*/
 }
 .answer-controls p, .answer-controls-check p, .try-again p {
-    color: #757575;
+    color: var(--primary-text);
     font-weight: 500;
-    font-size: 14px;
+    /*font-size: 14px;*/
     margin-top: 0px;
 }
+.answer-controls #need_help{
+    color: var(--light-text);
+}
+.answer-controls #Add_solution{
+    margin-bottom: 0.5em;
+}
 
-i {
-    color: #000;
+i{
+    color: var(--primary-text);
 }
 .mcq button#mcq_button {
     border: 2px solid transparent;
@@ -220,14 +151,14 @@ i {
     border: none;
     outline: none;
     color: #FFF;
-    font-size: 14px;
+    /*font-size: 14px;*/
     text-transform: uppercase;
     letter-spacing: 0;
     font-weight: 400;
     padding: 8px 12px;
     cursor: pointer;
     display: inline-block;
-    background-color: #007cb6;
+    background-color: var(--blue);
     float: right;
     margin-top: 20px;
 }
@@ -244,7 +175,6 @@ i {
 }
 .disabled {
     pointer-events: none;
-    color: lightgray!important;
 }
 .focus-input.last-child:after {
     position: absolute;
@@ -262,8 +192,8 @@ i {
     line-height: 24px;
     padding: 0;
     box-sizing: border-box;
-    color: #63a83b;
-    font-size: 18px;
+    color: var(--green);
+    /*font-size: 18px;*/
 }
 .focus-input.wrong:after {
     position: absolute;
@@ -281,12 +211,12 @@ i {
     line-height: 24px;
     padding: 0;
     box-sizing: border-box;
-    color: #63a83b;
-    font-size: 18px;
+    color: var(--green);
+    /*font-size: 18px;*/
 }
 
 .text-link {
-    color: #007cb6;
+    color: var(--blue);
     cursor: pointer;
 }
 
@@ -366,8 +296,8 @@ i {
 }
 .step.active, .step.active:hover {
     color: #fff;
-    background: #007cb6;
-    border: 1px solid #007cb6;
+    background: var(--blue);
+    border: 1px solid var(--blue);
 }
 .active, .slide-thumbnail:hover {
     opacity: 1;
@@ -379,18 +309,18 @@ i {
     height: 26px;
     border-radius: 15px;
     cursor: pointer;
-    color: #757575;
+    color: var(--light-text);
     background: white;
     background-repeat: no-repeat;
     background-position: center;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 24px;
+    /*font-size: 14px;*/
+    line-height: 26px;
     border: 1px solid #E3E3E3;
 }
 .step:hover {
-    color: #007cb6;
-    border: 1px solid #007cb6;
+    color: var(--blue);
+    border: 1px solid var(--blue);
 }
 .step[data-correct="true"] {
     background-image: url(../images/check_normal.png);
@@ -400,8 +330,8 @@ i {
     font-size: 0px;
 }
 .step.active[data-correct="true"], .step.active[data-correct="true"]:hover {
-    background: #63a83b;
-    border: 1px solid #63a83b;
+    background: var(--green);
+    border: 1px solid var(--green);
     background-image: url(../images/assessment_check_white.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -410,19 +340,19 @@ i {
 }
 .step[data-correct="true"]:hover {
     background-size: 0px;
-    font-size: 14px;
-    border: 1px solid #63a83b;
-    color: #63a83b;
+    /*font-size: 14px;*/
+    border: 1px solid var(--green);
+    color: var(--green);
 }
 .not-quite {
-    color: #cb272a;
+    color: var(--red);
     font-weight: 600;
-    font-size: 14px;
+    /*font-size: 14px;*/
 }
 
 .step.active[data-correct="false"], .step.active[data-correct="false"]:hover {
-    background: #cb272a;
-    border: 1px solid #cb272a;
+    background: var(--red);
+    border: 1px solid var(--red);
     background-image: url(../images/false.png);
     background-position: center;
     background-size: 24px;
@@ -438,9 +368,9 @@ i {
 }
 .step[data-correct="false"]:hover {
     background-size: 0px;
-    font-size: 14px;
-    border: 1px solid #cb272a;
-    color: #cb272a;
+    /*font-size: 14px;*/
+    border: 1px solid var(--red);
+    color: var(--red);
 }
 
 
