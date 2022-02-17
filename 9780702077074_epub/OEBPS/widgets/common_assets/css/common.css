@@ -3,8 +3,6 @@ figure{
 }
 figure img{
 	max-width: 100%;
-	cursor: pointer;
-	/*width: 100%;*/
 }
 .fig-page-body
 {

@@ -63,14 +63,11 @@
             <item id="math_css" href="Style/math.css" media-type="text/css"/>
             <item id="id_js" href="Style/math.js" media-type="text/javascript"/>
             <item id="common_js" href="widgets/common_assets/scripts/common.js" media-type="text/javascript"/>
-            <item id="zoomable_image_js" href="widgets/common_assets/scripts/zoomable_image.js" media-type="text/javascript"/>
             <item id="iframecommon_js" href="widgets/common_assets/scripts/iframe_common.js" media-type="text/javascript"/>
             <item id="iframecommon_css" href="widgets/common_assets/css/iframe_common.css" media-type="text/javascript"/>
             <item id="variables_css" href="widgets/common_assets/css/variables.css" media-type="text/css"/>
             <item id="common_css" href="widgets/common_assets/css/common.css" media-type="text/css"/>
-            <item id="zoominimage" href="widgets/common_assets/images/zoom-out.png" media-type="image/png"/>
-            <item id="zoomoutimage" href="widgets/common_assets/images/zoom-in.png" media-type="image/png"/>
-            <item id="zoompopupcloseimage" href="widgets/common_assets/images/close.png" media-type="image/png"/>
+            <item id="common_closeimage" href="widgets/common_assets/images/close.png" media-type="image/png"/>
             <item id="CharisSILB" href="Style/fonts/CharisSILB.ttf" media-type="application/vnd.ms-opentype"/>
             <item id="CharisSILBI" href="Style/fonts/CharisSILBI.ttf" media-type="application/vnd.ms-opentype"/>
             <item id="CharisSILI" href="Style/fonts/CharisSILI.ttf" media-type="application/vnd.ms-opentype"/>
@@ -2829,6 +2826,7 @@
             <item id="widget_item156" href="widgets/Show_Hide/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
             <item id="widget_item156_1" href="widgets/Show_Hide/script/show_hide.js" media-type="text/javascript"/>
             <item id="widget_item157" href="widgets/Show_Hide/xhtml/Show_Hide.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+            <item id="widget_item157_1" href="widgets/Show_Hide/xhtml/empty_Show_Hide.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
             <item id="widget_item158" href="widgets/Slide_Show/css/header_style.css" media-type="text/css"/>
             <item id="widget_item159" href="widgets/Slide_Show/css/style.css" media-type="text/css"/>
             <item id="widget_item160" href="widgets/Slide_Show/fonts/InklingSerifWeb-Regular.ttf" media-type="application/vnd.ms-opentype"/>
