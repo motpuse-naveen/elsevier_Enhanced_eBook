@@ -1,7 +1,7 @@
 /*@charset "UTF-8";
 	@namespace "http://www.w3.org/1999/xhtml";
 @namespace epub "http://www.idpf.org/2007/ops";*/
-
+/*
 @font-face {
 	font-family: 'Conv_SourceSansPro-Light';
 	src: local(''), url('../fonts/SourceSansPro-Light.woff') format('woff'), url('../fonts/SourceSansPro-Light.ttf') format('truetype');
@@ -38,6 +38,11 @@ body {
 p {
 	padding: 0;
 	margin-bottom: 0px;
+}
+*/
+body{
+	color:var(--primary-text);
+	line-height: 1.2em;
 }
 
 hgroup,
@@ -286,11 +291,11 @@ sup {
 .dropdown-content, .dropdown-content .star-tooltip {
     position: absolute;
     background-color: #fff;
-    min-width: 160px;
+    min-width: 350px;
     box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
     z-index: 1;
     box-sizing: border-box;
-    width: 300px;
+    width: 350px;
     max-height: 400px;
     overflow: auto;
     padding: 20px;
