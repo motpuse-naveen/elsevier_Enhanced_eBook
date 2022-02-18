@@ -2810,7 +2810,7 @@
             <item id="widget_item127" href="widgets/MCSS/images/figure_arrow_mask_right.png" media-type="image/png"/>
             <item id="widget_item128" href="widgets/MCSS/images/image_figure_controls.png" media-type="image/png"/>
             <item id="widget_item129" href="widgets/MCSS/images/x.png" media-type="image/png"/>
-            <item id="widget_item130" href="widgets/MCSS/js/QUIZ-1.js" media-type="text/javascript"/>
+            <item id="widget_item130" href="widgets/MCSS/js/QUIZMCSS.js" media-type="text/javascript"/>
             <item id="widget_item131" href="widgets/MCSS/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
             <item id="widget_item132" href="widgets/MCSS/xhtml/MCSS.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
             <item id="widget_item149" href="widgets/Show_Hide/css/show_hide.css" media-type="text/css"/>
@@ -2908,7 +2908,7 @@
             <item id="widget_item234" href="widgets/MCMS/images/figure_arrow_mask_right.png" media-type="image/png"/>
             <item id="widget_item235" href="widgets/MCMS/images/image_figure_controls.png" media-type="image/png"/>
             <item id="widget_item236" href="widgets/MCMS/images/x.png" media-type="image/png"/>
-            <item id="widget_item237" href="widgets/MCMS/js/QUIZ.js" media-type="text/javascript"/>
+            <item id="widget_item237" href="widgets/MCMS/js/QUIZMCMS.js" media-type="text/javascript"/>
             <item id="widget_item238" href="widgets/MCMS/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
             <item id="widget_item239" href="widgets/MCMS/xhtml/MCMS.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
 
