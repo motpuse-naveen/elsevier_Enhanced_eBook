@@ -1,5 +1,4 @@
 $(".poptip_btn").on('click keydown', function (e) {
-    debugger;
     console.log(e);
     if ((e.type === 'keydown' && e.keyCode === 13) || e.type === 'click') {
         $(this).toggleClass('show-poptip');

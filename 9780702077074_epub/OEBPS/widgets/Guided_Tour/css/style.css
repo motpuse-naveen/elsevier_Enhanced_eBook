@@ -39,7 +39,7 @@
     align-items: center;
     position: relative;
     height: 100%;
-	transform: scale(1.2) !important;
+	/*transform: scale(1.2) !important;*/
 }
 .img-tour #image-map {
     margin-top: 0px;
@@ -49,22 +49,21 @@
     display: flex;
 	width: auto !important;
     height: auto !important;
+    /*transform: scale(1.2)*/
 }
 .slide7 #img {
-    max-width: 407px!important;
-    width: 407px!important;
-    height: 400px;
+    max-width: 490px!important;
+    width: 490px!important;
+    height: 482px;
 }
 .main-slider-area img {
     vertical-align: middle;
 }
-.tooltipInner{
-    padding: 2px;
-}
+
 .tooltip-up, .tooltip-down, .tooltip-left {
     position: absolute;
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     border: 3px solid var(--blue);
     background: white;
     color: var(--blue);
@@ -106,11 +105,9 @@
     left: 50%;
     transform: translate(-50%, 0);
 }
-.tooltip .pin-inner-txt {
-    font-size: 85%;
-}
 .tooltipInner{
     font-size: 100%;
+    padding: 4px;
 }
 .tooltipInner span{
     font-size: 100%;
@@ -118,7 +115,8 @@
 .tooltip .pin-inner-txt {
     font-weight: 400;
     text-align: left;
-    line-height: 1.45em;
+    line-height: 1.2em;
+    /*font-size: 85%;*/
 }
 .tooltip .pin-inner-txt p {
     margin: 0;

@@ -238,7 +238,7 @@
    }
    app.imageScaleChanged = function (scaleSliderValue) {
       currentSliderVal = parseInt(scaleSliderValue);
-      scaleImage(scaleSliderValue);
+      //scaleImage(scaleSliderValue);
       Utils.unableDisableZoomButtons();
    }
    app.reset = function (e) {
