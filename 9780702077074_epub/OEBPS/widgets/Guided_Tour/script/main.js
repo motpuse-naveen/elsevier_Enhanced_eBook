@@ -109,13 +109,8 @@
       });
       //tooltip direction
       var tooltipDirection;
-      
-
-      
       for (i=0; i<$(".pin").length; i++)
       {
-
-
          // set tooltip direction type - up or down             
          if ($(".pin").eq(i).hasClass('pin-down')) {
             tooltipDirection = 'tooltip-down';
@@ -134,7 +129,8 @@
             id: 'tooltip-'+(i+1),
             'tabindex': 0
          });
-         $toolTipAnchorWrapper.append(i+1);
+         //$toolTipAnchorWrapper.append(i+1);
+         $toolTipAnchorWrapper.append("?");
          $tooltipAnchor.html($(".pin").eq(i).html());
          $toolTipAnchorWrapper.append($tooltipAnchor);
          $tooltipAnchor.focusout(()=>{
@@ -146,11 +142,19 @@
 }    
 // show/hide the tooltip
    $('.tooltipInner').click(function(e) {
+         if(e.target.closest("div.tooltip.is-visible")!=null
+         && e.target.closest("div.tooltip.is-visible") !=undefined 
+         && $(e.target.closest("div.tooltip.is-visible")).length>0){
+            Utils.hideToolTip();
+            Utils.setImageBound();
+         }
+         else{
          Utils.hideToolTip();
          // $(this).children('.tooltip').fadeIn(100);
          var $toolTip = $(this).children('.tooltip');
          // console.log('sliderStepSize')
          Utils.showToolTip($toolTip);
+         }
          e.stopPropagation();
    });
    $('.tooltipInner').keydown(function(e) {
@@ -312,18 +316,18 @@
       return newZoom;
    }
    app.unableDisableZoomButtons = function () {
-           var $zoomInButton = $('.btn-plus');
-           var $zoomOutButton = $('.btn-minus');
-           if(currentSliderVal === maxSliderRange) {
-               $zoomInButton.addClass('disabled');
-               $zoomOutButton.removeClass('disabled');
-           } else if (currentSliderVal === minSliderRange) {
-               $zoomInButton.removeClass('disabled');
-               $zoomOutButton.addClass('disabled');
-           } else {
-               $zoomInButton.removeClass('disabled');
-               $zoomOutButton.removeClass('disabled');
-           }
+      var $zoomInButton = $('.btn-plus');
+      var $zoomOutButton = $('.btn-minus');
+      if(currentSliderVal === maxSliderRange) {
+         $zoomInButton.addClass('disabled');
+         $zoomOutButton.removeClass('disabled');
+      } else if (currentSliderVal === minSliderRange) {
+         $zoomInButton.removeClass('disabled');
+         $zoomOutButton.addClass('disabled');
+      } else {
+         $zoomInButton.removeClass('disabled');
+         $zoomOutButton.removeClass('disabled');
+      }
    }
    
    app.setImageBound = function () {
@@ -421,9 +425,10 @@
       Utils.getImageWrapper().draggable({
          handle: $('#img'),
          start: function (event, ui) {
-            Utils.hideToolTip();
+            //Utils.hideToolTip();
          },
          stop: function (event, ui) {
+            Utils.hideToolTip();
             Utils.setImageBound();
          },
          drag: function (event, ui) {

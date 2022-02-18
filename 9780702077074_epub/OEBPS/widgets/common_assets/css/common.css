@@ -3,6 +3,7 @@ figure{
 }
 figure img{
 	max-width: 100%;
+	max-height: inherit !important;
 }
 .fig-page-body
 {

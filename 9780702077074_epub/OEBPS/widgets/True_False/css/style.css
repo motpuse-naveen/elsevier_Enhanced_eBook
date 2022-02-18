@@ -87,7 +87,7 @@ body {
     border-style: solid;
     border-color: #CDCDCD;
     border-width: 1px 1px 0 1px;
-    padding: 16px 60px 16px 16px;
+    padding: 14px 60px 14px 16px;
     /*font-size: 14px;*/
     font-weight: 500;
     cursor: pointer;
@@ -314,7 +314,7 @@ i{
     background-repeat: no-repeat;
     background-position: center;
     font-weight: 500;
-    /*font-size: 14px;*/
+    font-size: 14px;
     line-height: 26px;
     border: 1px solid #E3E3E3;
 }
@@ -340,7 +340,7 @@ i{
 }
 .step[data-correct="true"]:hover {
     background-size: 0px;
-    /*font-size: 14px;*/
+    font-size: 14px;
     border: 1px solid var(--green);
     color: var(--green);
 }
@@ -368,7 +368,7 @@ i{
 }
 .step[data-correct="false"]:hover {
     background-size: 0px;
-    /*font-size: 14px;*/
+    font-size: 14px;
     border: 1px solid var(--red);
     color: var(--red);
 }

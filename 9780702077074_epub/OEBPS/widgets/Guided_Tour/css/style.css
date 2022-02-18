@@ -58,14 +58,17 @@
 .main-slider-area img {
     vertical-align: middle;
 }
+.tooltipInner{
+    padding: 2px;
+}
 .tooltip-up, .tooltip-down, .tooltip-left {
     position: absolute;
-    width: 30px;
-    height: 30px;
-    border: 3px solid #007cb6;
+    width: 26px;
+    height: 26px;
+    border: 3px solid var(--blue);
     background: white;
-    color: #007cb6;
-    font-size: 16px;
+    color: var(--blue);
+    /*font-size: 16px;*/
     font-weight: 700;
     border-radius: 16px;
     text-align: center;
@@ -84,9 +87,9 @@
     right: -1px;
     z-index: 999;
     padding: 10px;
-    color: #222;
+    color: var(--primary-text);
     background: #fff;
-    border: 3px solid #007cb6;
+    border: 3px solid var(--blue);
     box-sizing: border-box;
     box-shadow: 0px 1px 4px rgb(0 0 0 / 35%);
     cursor: auto;
@@ -104,21 +107,28 @@
     transform: translate(-50%, 0);
 }
 .tooltip .pin-inner-txt {
+    font-size: 85%;
+}
+.tooltipInner{
+    font-size: 100%;
+}
+.tooltipInner span{
+    font-size: 100%;
+}
+.tooltip .pin-inner-txt {
     font-weight: 400;
     text-align: left;
+    line-height: 1.45em;
 }
 .tooltip .pin-inner-txt p {
-    line-height: 1.45em;
-    font-size: 12px;
     margin: 0;
     padding: 0;
     font-weight: 400;
-    font-family: 'Conv_SourceSansPro-Regular', Verdana, Helvetica, sans-serif;
 }
 .tooltip .pin-inner-txt p b {
     font-size: 16px;
     font-weight: 700;
-    color: #007cb6;
+    color: var(--blue);
 }
 .tooltip-up:after, .tooltip-down:after, .tooltip-left:after {
     -webkit-transition: all 0.25s ease-out;
@@ -229,8 +239,8 @@ ul.thumbnail_slidr_inner {
     width: 30px;
     background: #fff;
     border: 1px solid #E6E6E6;
-    color: #a2a2a2;
-    font-size: 16px;
+    color: var(--light-text);
+    /*font-size: 16px;*/
     font-weight: 600;
     line-height: 22px;
     border-radius: 50%;
@@ -242,8 +252,8 @@ ul.thumbnail_slidr_inner {
 }
 
 .thumbnail_main .column.selected {
-    background: #007cb6!important;
-    border: 1px solid #007cb6!important;
+    background: var(--blue)!important;
+    border: 1px solid var(--blue)!important;
     color: #fff!important;
 }
 .main-slider-area .thumbnail_main .column {
@@ -266,22 +276,9 @@ ul.thumbnail_slidr_inner {
     width: 30px;
 }
 .main-slider-area.slide7 .thumbnail_main .column:hover {
-    border: 1px solid #007cb6;
-    color: #007cb6;
+    border: 1px solid var(--blue);
+    color: var(--blue);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 .visually-hidden {
     border: 0;
     padding: 0;
@@ -295,11 +292,9 @@ ul.thumbnail_slidr_inner {
     clip-path: inset(50%);
     white-space: nowrap;
 }
-
-
 @media screen and (min-width: 320px) and (max-width: 767px) {
 .slide7 #image-map {
-    transform: scale(0.8) !important;
+    /*transform: scale(0.8) !important;*/
 }
 
 }

@@ -2790,6 +2790,7 @@
             <item id="widget_item108" href="widgets/Labels/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
             <item id="widget_item109" href="widgets/Labels/script/jquery-ui.min.js" media-type="text/javascript"/>
             <item id="widget_item110" href="widgets/Labels/script/ui-touch-punch.js" media-type="text/javascript"/>
+            <item id="widget_item110_mainjs" href="widgets/Labels/script/main.js" media-type="text/javascript"/>
             <item id="widget_item111" href="widgets/Labels/xhtml/Labels.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
             <item id="widget_item112" href="widgets/MCSS/css/style.css" media-type="text/css"/>
             <item id="widget_item113" href="widgets/MCSS/fonts/InklingSerifWeb-Regular.ttf" media-type="application/vnd.ms-opentype"/>

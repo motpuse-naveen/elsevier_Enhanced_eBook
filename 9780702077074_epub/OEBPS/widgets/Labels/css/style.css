@@ -261,11 +261,13 @@ html .ui-button.ui-state-disabled:active {
 	color: #191919;
 	background-color: rgba(255, 255, 255, 0.8);
 	border-top: 1px solid #f7f7f7;
-	font-size: 14px;
+	/*font-size: 14px;*/
 	line-height: 16px;
 	text-align: center;
 	box-sizing: border-box;
+	/*
 	font-family: 'Conv_SourceSansPro-Regular', Verdana, Helvetica, sans-serif;
+	*/
 }
 
 .caption-container #caption {
@@ -461,7 +463,7 @@ span.hotspot2 {
 	width: auto !important;
 	height: auto !important;
 	display: inline-block;
-	transform: scale(0.92);
+	/*transform: scale(0.92);*/
 }
 
 .slide8 .tooltip-down,
@@ -470,17 +472,21 @@ span.hotspot2 {
 .pin {
 	display: none;
 }
-
+.tooltipInner{
+    padding: 2px;
+}
 .tooltip-up,
 .tooltip-down,
 .tooltip-left {
 	position: absolute;
-	width: 30px;
-	height: 30px;
+	width: 26px;
+	height: 26px;
 	border: 3px solid #007cb6;
 	background: white;
 	color: #007cb6;
+	/*
 	font-size: 16px;
+	*/
 	font-weight: 700;
 	border-radius: 16px;
 	text-align: center;
@@ -572,18 +578,24 @@ span.hotspot2 {
 	left: -1px;
 }
 
+.tooltipInner{
+    font-size: 100%;
+	padding: 2px;
+}
+.tooltipInner span{
+    font-size: 100%;
+}
+
 .tooltip .pin-inner-txt {
 	font-weight: 400;
 	text-align: left;
+	line-height: 1.45em;
 }
 
 .tooltip .pin-inner-txt p {
-	line-height: 1.45em;
-	font-size: 14px;
 	margin: 0;
 	padding: 0;
 	font-weight: 400;
-	font-family: 'Conv_SourceSansPro-Regular', Verdana, Helvetica, sans-serif;
 	outline: none;
 }
 
@@ -644,7 +656,7 @@ sup {
 }
 
 #questionName {
-	font-size: 14px;
+	/*font-size: 14px;*/
 	line-height: 20px;
 	font-weight: 400;
 	color: #757575;
