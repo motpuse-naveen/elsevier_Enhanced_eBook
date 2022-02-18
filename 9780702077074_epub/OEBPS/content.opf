@@ -2812,6 +2812,7 @@
             <item id="widget_item129" href="widgets/MCSS/images/x.png" media-type="image/png"/>
             <item id="widget_item130" href="widgets/MCSS/js/QUIZMCSS.js" media-type="text/javascript"/>
             <item id="widget_item131" href="widgets/MCSS/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
+            <item id="widget_item131_mainjs" href="widgets/MCSS/script/main.js" media-type="text/javascript"/>
             <item id="widget_item132" href="widgets/MCSS/xhtml/MCSS.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
             <item id="widget_item149" href="widgets/Show_Hide/css/show_hide.css" media-type="text/css"/>
             <item id="widget_item150" href="widgets/Show_Hide/fonts/InklingSerifWeb-Regular.ttf" media-type="application/vnd.ms-opentype"/>
@@ -2879,6 +2880,7 @@
             <item id="widget_item205" href="widgets/True_False/images/x.png" media-type="image/png"/>
             <item id="widget_item206" href="widgets/True_False/js/QUIZTRUE.js" media-type="text/javascript"/>
             <item id="widget_item207" href="widgets/True_False/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
+            <item id="widget_item207_main" href="widgets/True_False/script/main.js" media-type="text/javascript"/>
             <item id="widget_item208" href="widgets/True_False/xhtml/True_False.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
             <item id="widget_item209" href="widgets/Zoomable_Image/css/header_style.css" media-type="text/css"/>
             <item id="widget_item210" href="widgets/Zoomable_Image/css/style.css" media-type="text/css"/>
@@ -2910,6 +2912,7 @@
             <item id="widget_item236" href="widgets/MCMS/images/x.png" media-type="image/png"/>
             <item id="widget_item237" href="widgets/MCMS/js/QUIZMCMS.js" media-type="text/javascript"/>
             <item id="widget_item238" href="widgets/MCMS/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
+            <item id="widget_item238_mainjs" href="widgets/MCMS/script/main.js" media-type="text/javascript"/>
             <item id="widget_item239" href="widgets/MCMS/xhtml/MCMS.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
 
             <item id="widget_item241" href="widgets/Glossary/script/glossary-poptip.js" media-type="text/javascript"/>
