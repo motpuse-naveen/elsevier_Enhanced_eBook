@@ -2705,20 +2705,6 @@
             <item id="widget_item028" href="widgets/Glossary/xhtml/transcription-link.xhtml" media-type="application/xhtml+xml"/>
             <item id="widget_item029" href="widgets/Guided_Tour/css/header_style.css" media-type="text/css"/>
             <item id="widget_item030" href="widgets/Guided_Tour/css/style.css" media-type="text/css"/>
-
-            <item id="widget_item031" href="widgets/Guided_Tour/fonts/InklingSerifWeb-Regular.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item032" href="widgets/Guided_Tour/fonts/InklingSerifWeb-Regular.woff" media-type="application/font-woff"/>
-            <item id="widget_item032_1" href="widgets/Guided_Tour/fonts/InklingSerifWeb-Regular.eot" media-type="application/vnd.ms-fontobject"/>
-            <item id="widget_item033" href="widgets/Guided_Tour/fonts/SourceSansPro-Bold.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item034" href="widgets/Guided_Tour/fonts/SourceSansPro-Bold.woff" media-type="application/font-woff"/>
-            <item id="widget_item034_1" href="widgets/Guided_Tour/fonts/SourceSansPro-Bold.eot" media-type="application/vnd.ms-fontobject"/>
-            <item id="widget_item035" href="widgets/Guided_Tour/fonts/SourceSansPro-Light.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item036" href="widgets/Guided_Tour/fonts/SourceSansPro-Light.woff" media-type="application/font-woff"/>
-            <item id="widget_item036_1" href="widgets/Guided_Tour/fonts/SourceSansPro-Light.eot" media-type="application/vnd.ms-fontobject"/>
-            <item id="widget_item037" href="widgets/Guided_Tour/fonts/SourceSansPro-Regular.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item038" href="widgets/Guided_Tour/fonts/SourceSansPro-Regular.woff" media-type="application/font-woff"/>
-            <item id="widget_item038_1" href="widgets/Guided_Tour/fonts/SourceSansPro-Regular.eot" media-type="application/vnd.ms-fontobject"/>
-
             <item id="widget_item039_1" href="widgets/Guided_Tour/images/left-arrow-default.svg" media-type="image/svg+xml"/>
             <item id="widget_item039_2" href="widgets/Guided_Tour/images/left-arrow-disabled.svg" media-type="image/svg+xml"/>
             <item id="widget_item039_3" href="widgets/Guided_Tour/images/left-arrow-hover.svg" media-type="image/svg+xml"/>
@@ -2728,9 +2714,7 @@
             <item id="widget_item039_7" href="widgets/Guided_Tour/images/refresh-default.svg" media-type="image/svg+xml"/>
             <item id="widget_item039_8" href="widgets/Guided_Tour/images/refresh-disabled.svg" media-type="image/svg+xml"/>
             <item id="widget_item039_9" href="widgets/Guided_Tour/images/refresh-hover.svg" media-type="image/svg+xml"/>
-
             <item id="widget_item040" href="widgets/Guided_Tour/images/guided_tour_refresh_line.png" media-type="image/png"/>
-            
             <item id="widget_item042" href="widgets/Guided_Tour/images/immuno-img.png" media-type="image/png"/>
             <item id="widget_item043" href="widgets/Guided_Tour/images/navbar_minus.png" media-type="image/png"/>
             <item id="widget_item044" href="widgets/Guided_Tour/images/navbar_plus.png" media-type="image/png"/>
@@ -2788,10 +2772,6 @@
             <item id="widget_item096" href="widgets/Image_Slider/xhtml/Image_Slider.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
             <item id="widget_item097" href="widgets/Labels/css/header_style.css" media-type="text/css"/>
             <item id="widget_item098" href="widgets/Labels/css/style.css" media-type="text/css"/>
-            <item id="widget_item099" href="widgets/Labels/fonts/InklingSerifWeb-Regular.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item100" href="widgets/Labels/fonts/InklingSerifWeb-Regular.woff" media-type="application/font-woff"/>
-            <item id="widget_item101" href="widgets/Labels/fonts/SourceSansPro-Regular.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item102" href="widgets/Labels/fonts/SourceSansPro-Regular.woff" media-type="application/font-woff"/>
             <item id="widget_item103" href="widgets/Labels/images/image_figure_test_yourself_btn.png" media-type="image/png"/>
             <item id="widget_item103_1" href="widgets/Labels/images/hotspot-mag-glass.png" media-type="image/png"/>
             <item id="widget_item104" href="widgets/Labels/images/navbar_minus.png" media-type="image/png"/>
@@ -2804,14 +2784,6 @@
             <item id="widget_item110_mainjs" href="widgets/Labels/script/main.js" media-type="text/javascript"/>
             <item id="widget_item111" href="widgets/Labels/xhtml/Labels.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
             <item id="widget_item112" href="widgets/MCSS/css/style.css" media-type="text/css"/>
-            <item id="widget_item113" href="widgets/MCSS/fonts/InklingSerifWeb-Regular.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item114" href="widgets/MCSS/fonts/InklingSerifWeb-Regular.woff" media-type="application/font-woff"/>
-            <item id="widget_item115" href="widgets/MCSS/fonts/SourceSansPro-Bold.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item116" href="widgets/MCSS/fonts/SourceSansPro-Bold.woff" media-type="application/font-woff"/>
-            <item id="widget_item117" href="widgets/MCSS/fonts/SourceSansPro-Light.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item118" href="widgets/MCSS/fonts/SourceSansPro-Light.woff" media-type="application/font-woff"/>
-            <item id="widget_item119" href="widgets/MCSS/fonts/SourceSansPro-Regular.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item120" href="widgets/MCSS/fonts/SourceSansPro-Regular.woff" media-type="application/font-woff"/>
             <item id="widget_item121" href="widgets/MCSS/images/assessment_check_large.png" media-type="image/png"/>
             <item id="widget_item122" href="widgets/MCSS/images/assessment_check_white.png" media-type="image/png"/>
             <item id="widget_item123" href="widgets/MCSS/images/check_normal.png" media-type="image/png"/>
@@ -2833,11 +2805,7 @@
             <item id="widget_item131_mainjs" href="widgets/MCSS/script/main.js" media-type="text/javascript"/>
             <item id="widget_item132" href="widgets/MCSS/xhtml/MCSS.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
             <item id="widget_item149" href="widgets/Show_Hide/css/show_hide.css" media-type="text/css"/>
-            <item id="widget_item150" href="widgets/Show_Hide/fonts/InklingSerifWeb-Regular.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item151" href="widgets/Show_Hide/fonts/InklingSerifWeb-Regular.woff" media-type="application/font-woff"/>
-            <item id="widget_item152" href="widgets/Show_Hide/fonts/SourceSansPro-Light.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item153" href="widgets/Show_Hide/fonts/SourceSansPro-Light.woff" media-type="application/font-woff"/>
-
+            
             <item id="widget_item154" href="widgets/Show_Hide/images/Expand_N.svg" media-type="image/svg+xml"/>
             <item id="widget_item155" href="widgets/Show_Hide/images/Collapse_N.svg" media-type="image/svg+xml"/>
             <item id="widget_item154_1" href="widgets/Show_Hide/images/Expand_Hover_N.svg" media-type="image/svg+xml"/>
@@ -2849,10 +2817,12 @@
             <item id="widget_item157_1" href="widgets/Show_Hide/xhtml/empty_Show_Hide.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
             <item id="widget_item158" href="widgets/Slide_Show/css/header_style.css" media-type="text/css"/>
             <item id="widget_item159" href="widgets/Slide_Show/css/style.css" media-type="text/css"/>
+
             <item id="widget_item160" href="widgets/Slide_Show/fonts/InklingSerifWeb-Regular.ttf" media-type="application/vnd.ms-opentype"/>
             <item id="widget_item161" href="widgets/Slide_Show/fonts/InklingSerifWeb-Regular.woff" media-type="application/font-woff"/>
             <item id="widget_item162" href="widgets/Slide_Show/fonts/SourceSansPro-Regular.ttf" media-type="application/vnd.ms-opentype"/>
             <item id="widget_item163" href="widgets/Slide_Show/fonts/SourceSansPro-Regular.woff" media-type="application/font-woff"/>
+            
             <item id="widget_item164" href="widgets/Slide_Show/images/image_figure_controls.png" media-type="image/png"/>
             <item id="widget_item165" href="widgets/Slide_Show/images/navbar_minus.png" media-type="image/png"/>
             <item id="widget_item166" href="widgets/Slide_Show/images/navbar_plus.png" media-type="image/png"/>
@@ -2879,14 +2849,6 @@
             <item id="widget_item187" href="widgets/Streaming_video/xhtml/Streaming_video.xhtml" properties="scripted remote-resources" media-type="application/xhtml+xml"/>
             <item id="widget_item187a" href="widgets/Streaming_video/xhtml/sintel-en.vtt" media-type="text/vtt"/>
             <item id="widget_item188" href="widgets/True_False/css/style.css" media-type="text/css"/>
-            <item id="widget_item189" href="widgets/True_False/fonts/InklingSerifWeb-Regular.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item190" href="widgets/True_False/fonts/InklingSerifWeb-Regular.woff" media-type="application/font-woff"/>
-            <item id="widget_item191" href="widgets/True_False/fonts/SourceSansPro-Bold.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item192" href="widgets/True_False/fonts/SourceSansPro-Bold.woff" media-type="application/font-woff"/>
-            <item id="widget_item193" href="widgets/True_False/fonts/SourceSansPro-Light.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item194" href="widgets/True_False/fonts/SourceSansPro-Light.woff" media-type="application/font-woff"/>
-            <item id="widget_item195" href="widgets/True_False/fonts/SourceSansPro-Regular.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item196" href="widgets/True_False/fonts/SourceSansPro-Regular.woff" media-type="application/font-woff"/>
             <item id="widget_item197" href="widgets/True_False/images/assessment_check_large.png" media-type="image/png"/>
             <item id="widget_item198" href="widgets/True_False/images/assessment_check_white.png" media-type="image/png"/>
             <item id="widget_item199" href="widgets/True_False/images/check_normal.png" media-type="image/png"/>
@@ -2894,14 +2856,12 @@
             <item id="widget_item201" href="widgets/True_False/images/false_red.png" media-type="image/png"/>
             <item id="widget_item202" href="widgets/True_False/images/figure_arrow_mask_left.png" media-type="image/png"/>
             <item id="widget_item203" href="widgets/True_False/images/figure_arrow_mask_right.png" media-type="image/png"/>
-            
             <item id="widget_item204_1" href="widgets/True_False/images/left-arrow-default.svg" media-type="image/svg+xml"/>
             <item id="widget_item204_2" href="widgets/True_False/images/left-arrow-disabled.svg" media-type="image/svg+xml"/>
             <item id="widget_item204_3" href="widgets/True_False/images/left-arrow-hover.svg" media-type="image/svg+xml"/>
             <item id="widget_item204_4" href="widgets/True_False/images/right-arrow-default.svg" media-type="image/svg+xml"/>
             <item id="widget_item204_5" href="widgets/True_False/images/right-arrow-disabled.svg" media-type="image/svg+xml"/>
             <item id="widget_item204_6" href="widgets/True_False/images/right-arrow-hover.svg" media-type="image/svg+xml"/>
-
             <item id="widget_item205" href="widgets/True_False/images/x.png" media-type="image/png"/>
             <item id="widget_item206" href="widgets/True_False/js/QUIZTRUE.js" media-type="text/javascript"/>
             <item id="widget_item207" href="widgets/True_False/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
@@ -2918,14 +2878,6 @@
             <item id="widget_item217" href="widgets/Zoomable_Image/script/ui-touch-punch.js" media-type="text/javascript"/>
             <item id="widget_item218" href="widgets/Zoomable_Image/xhtml/Zoomable_Image.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
             <item id="widget_item219" href="widgets/MCMS/css/style.css" media-type="text/css"/>
-            <item id="widget_item220" href="widgets/MCMS/fonts/InklingSerifWeb-Regular.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item221" href="widgets/MCMS/fonts/InklingSerifWeb-Regular.woff" media-type="application/font-woff"/>
-            <item id="widget_item222" href="widgets/MCMS/fonts/SourceSansPro-Bold.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item223" href="widgets/MCMS/fonts/SourceSansPro-Bold.woff" media-type="application/font-woff"/>
-            <item id="widget_item224" href="widgets/MCMS/fonts/SourceSansPro-Light.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item225" href="widgets/MCMS/fonts/SourceSansPro-Light.woff" media-type="application/font-woff"/>
-            <item id="widget_item226" href="widgets/MCMS/fonts/SourceSansPro-Regular.ttf" media-type="application/vnd.ms-opentype"/>
-            <item id="widget_item227" href="widgets/MCMS/fonts/SourceSansPro-Regular.woff" media-type="application/font-woff"/>
             <item id="widget_item228" href="widgets/MCMS/images/assessment_check_large.png" media-type="image/png"/>
             <item id="widget_item229" href="widgets/MCMS/images/assessment_check_white.png" media-type="image/png"/>
             <item id="widget_item230" href="widgets/MCMS/images/check_normal.png" media-type="image/png"/>
