@@ -1,6 +1,6 @@
-$(".poptip_btn").on('click keydown', function (e) {
-    console.log(e);
-    if ((e.type === 'keydown' && e.keyCode === 13) || e.type === 'click') {
+$(".poptip_btn").on('click keydown', function (event) {
+    //console.log(event);
+    if ((event.type === 'keydown' && event.keyCode === 13) || event.type === 'click') {
         $(this).toggleClass('show-poptip');
         $('.tooltip-down, .tooltip-up').toggle();
         if ($(this).hasClass('show-poptip')) {
@@ -13,6 +13,8 @@ $(".poptip_btn").on('click keydown', function (e) {
         Utils.setImageBound();
         // console.log($(this).hasClass('show-poptip'));
     }
+    event.preventDefault();
+    event.stopPropagation();
 });
 
 $(document).ready(function () {
@@ -55,10 +57,10 @@ $(document).ready(function () {
     }
 
     // show/hide the tooltip
-    $('.tooltipInner').click(function (e) {
-        if (e.target.closest("div.tooltip.is-visible") != null
-            && e.target.closest("div.tooltip.is-visible") != undefined
-            && $(e.target.closest("div.tooltip.is-visible")).length > 0) {
+    $('.tooltipInner').click(function (event) {
+        if (event.target.closest("div.tooltip.is-visible") != null
+            && event.target.closest("div.tooltip.is-visible") != undefined
+            && $(event.target.closest("div.tooltip.is-visible")).length > 0) {
             Utils.hideToolTip();
             Utils.setImageBound();
         }
@@ -69,16 +71,18 @@ $(document).ready(function () {
             // console.log('sliderStepSize')
             Utils.showToolTip($toolTip);
         }
-        e.stopPropagation();
+        event.preventDefault();
+        event.stopPropagation();
     });
-    $('.tooltipInner').keydown(function (e) {
-        if ((e.keyCode === 13)) {
+    $('.tooltipInner').keydown(function (event) {
+        if ((event.keyCode === 13)) {
             Utils.hideToolTip();
             // $(this).children('.tooltip').fadeIn(100);
             var $toolTip = $(this).children('.tooltip');
             // console.log('sliderStepSize')
             Utils.showToolTip($toolTip);
-            e.stopPropagation();
+            event.preventDefault();
+            event.stopPropagation();
         }
     });
 });
@@ -150,8 +154,8 @@ $(document).ready(function () {
         app.$imageSlider.slider("value", scaleSliderValue);
         $("#sliderInputBox").val(scaleSliderValue);
     }
-    app.reset = function (e) {
-        if ((e.type === 'keydown' && e.keyCode === 13) || e.type === 'click') {
+    app.reset = function (event) {
+        if ((event.type === 'keydown' && event.keyCode === 13) || event.type === 'click') {
             app.hideToolTip();
             app.imageScaleChanged(0);
             app.setImageBound();

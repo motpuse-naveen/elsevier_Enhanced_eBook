@@ -226,6 +226,11 @@ i{
     right: 0px;
     bottom: 0;
 }
+.mcq footer .short_nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .mcq .arrow-mask.left {
     background: url(../images/figure_arrow_mask_left.png);
@@ -237,9 +242,9 @@ i{
     width: 30px;
     height: 30px;
     z-index: 204;
-    position: absolute;
+    /*position: absolute;
     top: 30px;
-    left: 28px;
+    left: 28px;*/
     cursor: pointer;
     border: 1px solid transparent;
 }
@@ -284,26 +289,26 @@ i{
     outline: none;
 }
 .arrow-mask {
-    position: absolute;
+    /*position: absolute;
     height: 90px;
-    width: 70px;
+    width: 70px;*/
 }
 .mcq_toolbar_main {
     overflow: hidden;
     padding: 0;
-    background: #f2f2f6;
+    /*background: #f2f2f6;*/
 }
 .mcq .arrow-mask.right {
     right: 0;
     z-index: 1;
     background: url(../images/figure_arrow_mask_right.png);
-    position: absolute;
+    /*position: absolute;
     right: 0px;
-    top: 0px;
+    top: 0px;*/
 }
 .arrow-mask.right {
-    position: absolute;
-    right: 0;
+    /*position: absolute;
+    right: 0;*/
 }
 .steps {
     background: #fff;
@@ -315,13 +320,16 @@ i{
     display: flex;
     list-style: none;
     text-align: center;
-    /* overflow: hidden; */
-    margin: 0px 22px;
-    position: relative;
+    /*position: relative;*/
     left: 0;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
 }
 .steps li.nav-item {
-    margin: 28px 4px;
+    margin: 10px 4px;
     line-height: 15px;
     outline: none;
     border: 1px solid transparent;

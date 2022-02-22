@@ -2727,7 +2727,7 @@
             <item id="widget_item039_6" href="widgets/Guided_Tour/images/right-arrow-hover.svg" media-type="image/svg+xml"/>
             <item id="widget_item039_7" href="widgets/Guided_Tour/images/refresh-default.svg" media-type="image/svg+xml"/>
             <item id="widget_item039_8" href="widgets/Guided_Tour/images/refresh-disabled.svg" media-type="image/svg+xml"/>
-            <item id="widget_item039_8" href="widgets/Guided_Tour/images/refresh-hover.svg" media-type="image/svg+xml"/>
+            <item id="widget_item039_9" href="widgets/Guided_Tour/images/refresh-hover.svg" media-type="image/svg+xml"/>
 
             <item id="widget_item040" href="widgets/Guided_Tour/images/guided_tour_refresh_line.png" media-type="image/png"/>
             
