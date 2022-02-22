@@ -2705,6 +2705,7 @@
             <item id="widget_item028" href="widgets/Glossary/xhtml/transcription-link.xhtml" media-type="application/xhtml+xml"/>
             <item id="widget_item029" href="widgets/Guided_Tour/css/header_style.css" media-type="text/css"/>
             <item id="widget_item030" href="widgets/Guided_Tour/css/style.css" media-type="text/css"/>
+
             <item id="widget_item031" href="widgets/Guided_Tour/fonts/InklingSerifWeb-Regular.ttf" media-type="application/vnd.ms-opentype"/>
             <item id="widget_item032" href="widgets/Guided_Tour/fonts/InklingSerifWeb-Regular.woff" media-type="application/font-woff"/>
             <item id="widget_item032_1" href="widgets/Guided_Tour/fonts/InklingSerifWeb-Regular.eot" media-type="application/vnd.ms-fontobject"/>
@@ -2717,9 +2718,19 @@
             <item id="widget_item037" href="widgets/Guided_Tour/fonts/SourceSansPro-Regular.ttf" media-type="application/vnd.ms-opentype"/>
             <item id="widget_item038" href="widgets/Guided_Tour/fonts/SourceSansPro-Regular.woff" media-type="application/font-woff"/>
             <item id="widget_item038_1" href="widgets/Guided_Tour/fonts/SourceSansPro-Regular.eot" media-type="application/vnd.ms-fontobject"/>
-            <item id="widget_item039" href="widgets/Guided_Tour/images/guided_tour_refresh_button.png" media-type="image/png"/>
+
+            <item id="widget_item039_1" href="widgets/Guided_Tour/images/left-arrow-default.svg" media-type="image/svg+xml"/>
+            <item id="widget_item039_2" href="widgets/Guided_Tour/images/left-arrow-disabled.svg" media-type="image/svg+xml"/>
+            <item id="widget_item039_3" href="widgets/Guided_Tour/images/left-arrow-hover.svg" media-type="image/svg+xml"/>
+            <item id="widget_item039_4" href="widgets/Guided_Tour/images/right-arrow-default.svg" media-type="image/svg+xml"/>
+            <item id="widget_item039_5" href="widgets/Guided_Tour/images/right-arrow-disabled.svg" media-type="image/svg+xml"/>
+            <item id="widget_item039_6" href="widgets/Guided_Tour/images/right-arrow-hover.svg" media-type="image/svg+xml"/>
+            <item id="widget_item039_7" href="widgets/Guided_Tour/images/refresh-default.svg" media-type="image/svg+xml"/>
+            <item id="widget_item039_8" href="widgets/Guided_Tour/images/refresh-disabled.svg" media-type="image/svg+xml"/>
+            <item id="widget_item039_8" href="widgets/Guided_Tour/images/refresh-hover.svg" media-type="image/svg+xml"/>
+
             <item id="widget_item040" href="widgets/Guided_Tour/images/guided_tour_refresh_line.png" media-type="image/png"/>
-            <item id="widget_item041" href="widgets/Guided_Tour/images/image_figure_controls.png" media-type="image/png"/>
+            
             <item id="widget_item042" href="widgets/Guided_Tour/images/immuno-img.png" media-type="image/png"/>
             <item id="widget_item043" href="widgets/Guided_Tour/images/navbar_minus.png" media-type="image/png"/>
             <item id="widget_item044" href="widgets/Guided_Tour/images/navbar_plus.png" media-type="image/png"/>
@@ -2808,7 +2819,14 @@
             <item id="widget_item125" href="widgets/MCSS/images/false_red.png" media-type="image/png"/>
             <item id="widget_item126" href="widgets/MCSS/images/figure_arrow_mask_left.png" media-type="image/png"/>
             <item id="widget_item127" href="widgets/MCSS/images/figure_arrow_mask_right.png" media-type="image/png"/>
-            <item id="widget_item128" href="widgets/MCSS/images/image_figure_controls.png" media-type="image/png"/>
+
+            <item id="widget_item128_1" href="widgets/MCSS/images/left-arrow-default.svg" media-type="image/svg+xml"/>
+            <item id="widget_item128_2" href="widgets/MCSS/images/left-arrow-disabled.svg" media-type="image/svg+xml"/>
+            <item id="widget_item128_3" href="widgets/MCSS/images/left-arrow-hover.svg" media-type="image/svg+xml"/>
+            <item id="widget_item128_4" href="widgets/MCSS/images/right-arrow-default.svg" media-type="image/svg+xml"/>
+            <item id="widget_item128_5" href="widgets/MCSS/images/right-arrow-disabled.svg" media-type="image/svg+xml"/>
+            <item id="widget_item128_6" href="widgets/MCSS/images/right-arrow-hover.svg" media-type="image/svg+xml"/>
+
             <item id="widget_item129" href="widgets/MCSS/images/x.png" media-type="image/png"/>
             <item id="widget_item130" href="widgets/MCSS/js/QUIZMCSS.js" media-type="text/javascript"/>
             <item id="widget_item131" href="widgets/MCSS/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
@@ -2876,7 +2894,14 @@
             <item id="widget_item201" href="widgets/True_False/images/false_red.png" media-type="image/png"/>
             <item id="widget_item202" href="widgets/True_False/images/figure_arrow_mask_left.png" media-type="image/png"/>
             <item id="widget_item203" href="widgets/True_False/images/figure_arrow_mask_right.png" media-type="image/png"/>
-            <item id="widget_item204" href="widgets/True_False/images/image_figure_controls.png" media-type="image/png"/>
+            
+            <item id="widget_item204_1" href="widgets/True_False/images/left-arrow-default.svg" media-type="image/svg+xml"/>
+            <item id="widget_item204_2" href="widgets/True_False/images/left-arrow-disabled.svg" media-type="image/svg+xml"/>
+            <item id="widget_item204_3" href="widgets/True_False/images/left-arrow-hover.svg" media-type="image/svg+xml"/>
+            <item id="widget_item204_4" href="widgets/True_False/images/right-arrow-default.svg" media-type="image/svg+xml"/>
+            <item id="widget_item204_5" href="widgets/True_False/images/right-arrow-disabled.svg" media-type="image/svg+xml"/>
+            <item id="widget_item204_6" href="widgets/True_False/images/right-arrow-hover.svg" media-type="image/svg+xml"/>
+
             <item id="widget_item205" href="widgets/True_False/images/x.png" media-type="image/png"/>
             <item id="widget_item206" href="widgets/True_False/js/QUIZTRUE.js" media-type="text/javascript"/>
             <item id="widget_item207" href="widgets/True_False/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
@@ -2908,7 +2933,14 @@
             <item id="widget_item232" href="widgets/MCMS/images/false_red.png" media-type="image/png"/>
             <item id="widget_item233" href="widgets/MCMS/images/figure_arrow_mask_left.png" media-type="image/png"/>
             <item id="widget_item234" href="widgets/MCMS/images/figure_arrow_mask_right.png" media-type="image/png"/>
-            <item id="widget_item235" href="widgets/MCMS/images/image_figure_controls.png" media-type="image/png"/>
+            
+            <item id="widget_item235_1" href="widgets/MCMS/images/left-arrow-default.svg" media-type="image/svg+xml"/>
+            <item id="widget_item235_2" href="widgets/MCMS/images/left-arrow-disabled.svg" media-type="image/svg+xml"/>
+            <item id="widget_item235_3" href="widgets/MCMS/images/left-arrow-hover.svg" media-type="image/svg+xml"/>
+            <item id="widget_item235_4" href="widgets/MCMS/images/right-arrow-default.svg" media-type="image/svg+xml"/>
+            <item id="widget_item235_5" href="widgets/MCMS/images/right-arrow-disabled.svg" media-type="image/svg+xml"/>
+            <item id="widget_item235_6" href="widgets/MCMS/images/right-arrow-hover.svg" media-type="image/svg+xml"/>
+            
             <item id="widget_item236" href="widgets/MCMS/images/x.png" media-type="image/png"/>
             <item id="widget_item237" href="widgets/MCMS/js/QUIZMCMS.js" media-type="text/javascript"/>
             <item id="widget_item238" href="widgets/MCMS/script/jquery-3.6.0.min.js" media-type="text/javascript"/>

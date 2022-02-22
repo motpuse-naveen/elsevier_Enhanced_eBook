@@ -9,7 +9,6 @@
          Utils.ariaAnnounce('Selected, '+$('#tooltip-'+activeToolTipNumber).find('p').text());
          autoDragPagination(activeToolTipNumber);
       }
-
       if (activeToolTipNumber >= 9) {
          $('.nextContainer a').addClass('disabled');
       } else {
@@ -94,12 +93,27 @@
          });
       //  tooltip pagination
       $('.thumbnail_main .column').on('click keyup', (e) => {
+         debugger;
          // console.log(e.type, e.keyCode);
          if ((e.type === 'keyup' && e.keyCode === 13) || e.type === 'click') {
             Utils.setActiveTooltipNumber($(e.currentTarget).attr('data-tooltipnumber').split('_')[1]);
             var toolTipId = 'tooltip-' + Utils.getActiveTooltipNumber();
             $('#'+toolTipId).parent().trigger('click');
             Utils.ariaAnnounce('Selected,' + $('#'+toolTipId).find('p').text());
+
+            
+            var activeToolTipNumber = Utils.getActiveTooltipNumber();
+            if (activeToolTipNumber >= 9) {
+               $('.nextContainer a').addClass('disabled');
+            } else {
+               $('.nextContainer a').removeClass('disabled');
+            }
+
+            if (activeToolTipNumber <= 1) {
+               $(".prevContainer a").addClass('disabled');
+            } else {
+               $('.prevContainer a').removeClass('disabled');
+            }
          }
       });
    // set the image-map width and height to match the img size
@@ -248,6 +262,8 @@
          app.setImageBound(); 
          $('.column').removeClass('selected');
          app.ariaAnnounce('Image has been reset.');
+         $(".refresh_btn").addClass("disabled")
+         $(".prevContainer a").addClass('disabled');
       }
    }
     app.showToolTip = function ($tooltip) {
@@ -255,7 +271,8 @@
       app.setActiveTooltipNumber($tooltip.attr('id').split('-')[1]);
       $(".column").removeClass('selected');
       $(".column[data-tooltipnumber='col_"+Utils.getActiveTooltipNumber()+"']").addClass('selected');
-	  ;//.addClass('selected');
+      $(".refresh_btn").removeClass("disabled")
+	  //;//.addClass('selected');
 	  console.log($(".column[data-tooltipnumber]"), Utils.getActiveTooltipNumber())
       // console.log(Utils.getActiveTooltipNumber());
       $imageWrapper.css({'left' : 0, 'top' : 0});

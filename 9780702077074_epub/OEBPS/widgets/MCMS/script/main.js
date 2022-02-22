@@ -417,6 +417,7 @@ window.onload = function () {
     answerIndicatot();
     $('#Add_solution').hide();
     $('#Add_solution').children().html(quiz[0].ansText);
+    $('.arrow-left').addClass('disabled')
 };
 $('#show_ans').on('click keydown', (function (e) {
     if ((e.type === 'keydown' && e.keyCode == 13) || e.type === 'click') {

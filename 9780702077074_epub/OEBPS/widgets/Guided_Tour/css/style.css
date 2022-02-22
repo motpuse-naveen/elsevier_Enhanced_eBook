@@ -186,14 +186,24 @@
     overflow: hidden;
 }
 .refreshContainer .refresh_btn {
-    margin-top: 5px;
-    margin-left: 5px;
-    width: 33px;
-    height: 33px;
-    background-image: url(../images/guided_tour_refresh_button.png);
-    background-size: 102px;
-    background-position: 7px 0;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/refresh-default.svg);
+    background-repeat: no-repeat;
+    background-position: 4px 4px;
     cursor: pointer;
+    border: 1px solid transparent;
+    margin-top: 5px;
+}
+.refreshContainer .refresh_btn.disabled{
+    background-image: url(../images/refresh-disabled.svg);
+}
+.refreshContainer .refresh_btn:hover{
+    background-image: url(../images/refresh-hover.svg);
+}
+.refreshContainer .refresh_btn:focus-visible {
+    background-image: url(../images/refresh-default.svg);
+    border: 1px solid var(--orange);
 }
 .refreshContainer:after {
     content: " ";
@@ -204,20 +214,40 @@
     background-image: url(../images/guided_tour_refresh_line.png);
     left: 44px;
     top: -3px;
+    margin: 0px 0px;
 }
 .prevContainer a, .nextContainer a {
-    width: 40px;
-    height: 40px;
-    background: url(../images/image_figure_controls.png) no-repeat;
-    background-size: 211px;
+    padding: 0px;
+    width: 30px;
+    height: 30px;
     display: block;
     cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    border: 1px solid transparent;
 }
 .prevContainer a {
-    background-position: -72px 0;
+    background-image: url(../images/left-arrow-default.svg);
+    background-position: 7px 3px;
+}
+.prevContainer a.disabled{
+    background-image: url(../images/left-arrow-disabled.svg);
+}
+.prevContainer a:hover{
+    background-image: url(../images/left-arrow-hover.svg);
 }
 .nextContainer a {
-    background-position: -102px 0;
+    background-image: url(../images/right-arrow-default.svg);
+    background-position: 9px 3px;
+}
+.nextContainer a.disabled{
+    background-image: url(../images/right-arrow-disabled.svg);
+}
+.nextContainer a:hover {
+    background-image: url(../images/right-arrow-hover.svg);
+}
+.prevContainer a:focus-visible, .nextContainer a:focus-visible {
+    border: 1px solid var(--orange);
 }
 .disabled {
     pointer-events: none;
@@ -235,29 +265,40 @@ ul.thumbnail_slidr_inner {
 .main-slider-area.slide7 .thumbnail_main .column {
     height: 30px;
     width: 30px;
-    background: #fff;
-    border: 1px solid #E6E6E6;
-    color: var(--light-text);
+    /*background: #fff;
+    border: 1px solid #E6E6E6;*/
+    color: var(--primary-text);
     /*font-size: 16px;*/
-    font-weight: 600;
+    /*font-weight: 600;*/
     line-height: 22px;
-    border-radius: 50%;
+    /*border-radius: 50%;
     -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
+    -webkit-border-radius: 50%;*/
     text-align: center;
     margin: 17px 3px;
     box-shadow: none;
+    border: 1px solid transparent;
 }
 
 .thumbnail_main .column.selected {
-    background: var(--blue)!important;
+    /*background: var(--blue)!important;
     border: 1px solid var(--blue)!important;
-    color: #fff!important;
+    color: #fff!important;*/
+    /*border-bottom: 2px solid var(--orange) !important;*/
+}
+.thumbnail_main .column.selected::before, .thumbnail_main .column:hover::before {
+    content: " ";
+    position: absolute;
+    top: 24px;
+    left: 6px;
+    background-color: var(--orange);
+    height: 2px;
+    width: 60%;
 }
 .main-slider-area .thumbnail_main .column {
     height: 40px;
     width: 40px;
-	border: 3px solid white;
+	/*border: 3px solid white;*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -273,9 +314,9 @@ ul.thumbnail_slidr_inner {
     height: 30px;
     width: 30px;
 }
-.main-slider-area.slide7 .thumbnail_main .column:hover {
-    border: 1px solid var(--blue);
-    color: var(--blue);
+.main-slider-area.slide7 .thumbnail_main .column:focus-visible, 
+.main-slider-area.slide7 .thumbnail_main .column div:focus-visible {
+    border: 1px solid var(--orange);
 }
 .visually-hidden {
     border: 0;

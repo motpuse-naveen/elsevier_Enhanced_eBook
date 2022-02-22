@@ -17,6 +17,6 @@ var glossaries = {
 	
 	l3: `<h4>Grouping of Transcription Factors According to Transactivation Domain</h4> 
 	<p><b>Peter Igarashi</b><br /> 
-	The following table groups some of the transcription factors (described in the text) on the basis of the type of transactivation domain (i.e., the domain that activates transcription).</p> <p><img src="./images/glossry-img.png" /></p>`
+	The following table groups some of the transcription factors (described in the text) on the basis of the type of transactivation domain (i.e., the domain that activates transcription).</p> <p><img src="../images/glossry-img.png" /></p>`
 
 }
