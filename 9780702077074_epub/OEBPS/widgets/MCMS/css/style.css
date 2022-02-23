@@ -9,7 +9,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
-
 .main-document-area.mcq {
     height: 100vh;
     overflow: hidden;
@@ -274,15 +273,15 @@ i{
     background-repeat: no-repeat;
     background-position: 9px 3px;
 }
-.arrow-left.outer:focus-visible {
+.arrow-left.outer:focus, .arrow-left.outer:focus-visible {
     background-image: url(../images/left-arrow-default.svg);
     border: 1px solid var(--orange);
-    outline: none;
+    outline: 1px solid var(--orange);
 }
-.arrow-right.outer:focus-visible {
+.arrow-right.outer:focus, .arrow-right.outer:focus-visible {
     background-image: url(../images/right-arrow-default.svg);
     border: 1px solid var(--orange);
-    outline: none;
+    outline: 1px solid var(--orange);
 }
 .arrow-mask {
     position: absolute;
@@ -292,7 +291,6 @@ i{
 .mcq_toolbar_main {
     overflow: hidden;
     padding: 0;
-    background: #f2f2f6;
 }
 .mcq .arrow-mask.right {
     right: 0;
@@ -354,13 +352,13 @@ i{
     height: 2px;
     width: 65%;
 }
-.steps .step:focus-visible {
+.steps .step:focus, .steps .step:focus-visible {
     border: 1px solid var(--orange);
-    outline: none;
+    outline: 1px solid var(--orange);
 }
-.steps li.nav-item:focus-visible {
+.steps li.nav-item:focus, .steps li.nav-item:focus-visible {
     border: 1px solid var(--orange);
-    outline: none;
+    outline: 1px solid var(--orange);
 }
 .step[data-correct="true"] {
     background-image: url(../images/check_normal.png);
@@ -422,4 +420,9 @@ i{
     pointer-events: none;
     background-color: #EDEDED;
     color: #BFBFBF;
+}
+
+.footer *:focus {
+    border: 1px solid var(--orange) !important;
+    outline: none !important;
 }

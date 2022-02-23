@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Video Player Test</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="../css/shared-culture.css" />
+        <link rel="stylesheet" type="text/css" href="../script/ableplayer.min.css"/>
+        <!-- Dependencies -->
+        <script src="../script/jquery-3.6.0.min.js"></script>
+        <script src="../script/js.cookie.js"></script>
+
+        <!-- GEMP -->
+
+        <script src="//sites.elsevier.com/JS_library/misc/elsevierjsplayer.min.js"> </script>
+
+        
+
+    </head>
+    <body>
+    <div class="gemp_player">
+        <section class="base">
+            <hgroup>
+                <h1>creative commons</h1>
+                <h2>a shared culture</h2>
+            </hgroup>
+                <!-- height="240" width="360" -->
+                <video controls="controls" id="video2" preload="auto" width="480" height="360"  data-skin="2020" data-speed-icons="arrows">
+                    <source src="https://static.us.elsevierhealth.com/Matsen_6_9780323698368/9780323698368_0002.mp4" type="video/mp4"/>
+                    <track src="https://static.us.elsevierhealth.com/Matsen_6_9780323698368/9780323698368_0002.vtt" kind="subtitles" srclang="en" label="English"/>
+                    
+                    <div class="errmsg">
+                        <p>Your Reading System does not support (this) video.</p>
+                        <pre><code>
+&lt;video id="video1" controls="controls"&gt;
+  &lt;source src="../video/shared-culture.mp4" type="video/mp4"/&gt;
+  &lt;source src="../video/shared-culture.webm" type="video/webm"/&gt;
+&lt;/video&gt;
+                        </code></pre>
+                    </div>
+                </video>
+        </section>
+    </div>
+        <script>
+            //<![CDATA[
+            elsevierjsplayer.init();
+            //]]>
+        </script>
+    </body>
+</html>

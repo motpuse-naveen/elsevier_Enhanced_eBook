@@ -81,9 +81,10 @@ $(document).ready(function () {
             var $toolTip = $(this).children('.tooltip');
             // console.log('sliderStepSize')
             Utils.showToolTip($toolTip);
-            event.preventDefault();
-            event.stopPropagation();
+            
         }
+        event.preventDefault();
+        event.stopPropagation();
     });
 });
 
@@ -373,4 +374,12 @@ $('.btn-range').click(function () {
     $('#imageSlider .ui-slider-handle').attr({
         'aria-label': 'Image scale is ' + parseInt(rangedZoom),
     });
+});
+
+var imageElms = document.querySelectorAll("figure img");
+imageElms.forEach(element => {
+	element.addEventListener("click", function(event){
+		event.preventDefault();
+		return false;
+	});
 });

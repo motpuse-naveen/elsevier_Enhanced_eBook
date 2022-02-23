@@ -50,6 +50,7 @@
 	width: auto !important;
     height: auto !important;
     /*transform: scale(1.2)*/
+    transform: scale(0.96);
 }
 .slide7 #img {
     max-width: 490px!important;
@@ -331,9 +332,24 @@ ul.thumbnail_slidr_inner {
     clip-path: inset(50%);
     white-space: nowrap;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-.slide7 #image-map {
-    /*transform: scale(0.8) !important;*/
+.thumbnail_main *:focus {
+    border: 1px solid var(--orange) !important;
+    outline: none !important;
 }
 
+@media screen and (min-width: 320px) and (max-width: 560px) {
+    .slide7 #image-map {
+        /*transform: scale(0.8) !important;*/
+    }
+    .img-tour #image-map{
+        transform: scale(0.8)
+    }
+}
+@media screen and (min-width: 561px) and (max-width: 767px) {
+    .slide7 #image-map {
+        /*transform: scale(0.8) !important;*/
+    }
+    .img-tour #image-map{
+        transform: scale(0.9)
+    }
 }

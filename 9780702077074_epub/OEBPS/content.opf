@@ -2835,6 +2835,8 @@
             <item id="widget_item173" href="widgets/Slide_Show/script/ui-touch-punch.js" media-type="text/javascript"/>
             <item id="widget_item174" href="widgets/Slide_Show/xhtml/Slide_Show.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
             <item id="widget_item175" href="widgets/Streaming_video/css/style.css" media-type="text/css"/>
+            <item id="widget_item175_1" href="widgets/Streaming_video/css/shared-culture.css" media-type="text/css"/>
+            <item id="widget_item175_2" href="widgets/Streaming_video/script/ableplayer.min.css" media-type="text/css"/>
             <item id="widget_item176" href="widgets/Streaming_video/fonts/InklingSerifWeb-Regular.ttf" media-type="application/vnd.ms-opentype"/>
             <item id="widget_item177" href="widgets/Streaming_video/fonts/InklingSerifWeb-Regular.woff" media-type="application/font-woff"/>
             <item id="widget_item178" href="widgets/Streaming_video/fonts/SourceSansPro-Regular.ttf" media-type="application/vnd.ms-opentype"/>
@@ -2843,10 +2845,13 @@
             <item id="widget_item181" href="widgets/Streaming_video/images/video-img.png" media-type="image/png"/>
             <item id="widget_item182" href="widgets/Streaming_video/images/web_volume_dk.png" media-type="image/png"/>
             <item id="widget_item183" href="widgets/Streaming_video/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
+            <item id="widget_item183_1" href="widgets/Streaming_video/script/js.cookie.js" media-type="text/javascript"/>
             <item id="widget_item184" href="widgets/Streaming_video/script/jquery-ui.min.js" media-type="text/javascript"/>
             <item id="widget_item185" href="widgets/Streaming_video/script/slider-a11y-vertical.js" media-type="text/javascript"/>
             <item id="widget_item186" href="https://static.us.elsevierhealth.com/standring_42_9780702077050/9780702077050_0001.mp4" media-type="video/mp4"/>
+            <item id="widget_item186_1" href="//sites.elsevier.com/JS_library/misc/elsevierjsplayer.min.js" media-type="text/javascript"/>
             <item id="widget_item187" href="widgets/Streaming_video/xhtml/Streaming_video.xhtml" properties="scripted remote-resources" media-type="application/xhtml+xml"/>
+            <item id="widget_item187_1" href="widgets/Streaming_video/xhtml/p10.xhtml" properties="scripted remote-resources" media-type="application/xhtml+xml"/>
             <item id="widget_item187a" href="widgets/Streaming_video/xhtml/sintel-en.vtt" media-type="text/vtt"/>
             <item id="widget_item188" href="widgets/True_False/css/style.css" media-type="text/css"/>
             <item id="widget_item197" href="widgets/True_False/images/assessment_check_large.png" media-type="image/png"/>

@@ -292,7 +292,7 @@ $(document).ready(function () {
          var newTop = toolTipoffset.top;
          $imageOffset = $imageWrapper.offset();
          if (toolTipoffset.right > winWidth) {
-            newLeft = $imageOffset.left - ((toolTipoffset.right - winWidth) - 50);
+            newLeft = $imageOffset.left - ((toolTipoffset.right - (winWidth - 50)));
             isLeftUpdated = true;
          }
          if (toolTipoffset.left < 50) {
@@ -456,3 +456,11 @@ function createDraggable() {
       }
    });
 }
+
+var imageElms = document.querySelectorAll("figure img");
+imageElms.forEach(element => {
+	element.addEventListener("click", function(event){
+		event.preventDefault();
+		return false;
+	});
+});
