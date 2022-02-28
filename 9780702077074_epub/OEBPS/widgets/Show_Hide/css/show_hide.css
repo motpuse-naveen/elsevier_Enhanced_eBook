@@ -129,3 +129,11 @@ button.ans:focus-visible{
 	padding: 0;
 	list-style-type: none;
 }
+
+.c-ans-details ul[type="bullet"]{
+	list-style-type:disc;
+	padding-inline-start: 20px
+}
+.c-ans-details ul[type="bullet"] li {
+    margin-bottom: 0.5em;
+}
