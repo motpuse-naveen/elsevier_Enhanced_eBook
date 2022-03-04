@@ -81,6 +81,26 @@ body {
     text-align: center;
     padding-left: 0px;
 }
+.Multiple-choice[styletype="st-upper-alpha"]{
+    list-style-type: upper-alpha;
+    margin-left: 1.5em;
+}
+.Multiple-choice[styletype="st-lower-alpha"]{
+    list-style-type: lower-alpha;
+    margin-left: 1.5em;
+}
+.Multiple-choice[styletype="st-upper-roman"]{
+    list-style-type: upper-roman;
+    margin-left: 1.5em;
+}
+.Multiple-choice[styletype="st-lower-roman"]{
+    list-style-type: lower-roman;
+    margin-left: 1.5em;
+}
+.Multiple-choice[styletype="st-decimal"]{
+    list-style-type: decimal;
+    margin-left: 1.5em;
+}
 
 .focus-input {
     background: #fff;

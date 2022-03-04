@@ -232,9 +232,6 @@ i {
     display: inline-block;
     cursor: pointer;
 }
-.dropdown.star-tooltip {
-    color: #80a2be;
-}
 .transcription .dropdown {
     background: url(../images/icon_definition_blue.png) right center no-repeat;
     height: 18px;
@@ -251,7 +248,11 @@ i {
 .star.dropdown.def-img.star-tooltip:before {
     content: '*';
     background: none;
-    color: #fff !important;
+}
+.anychar.dropdown.def-img.anychar-tooltip {
+    background: none;
+    position: relative;
+    left: -6px;
 }
 sup {
     line-height: 14px;

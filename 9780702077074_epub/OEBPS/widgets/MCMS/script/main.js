@@ -155,6 +155,12 @@ function getNewQuestion(question) {
         $('#subheading3').hide();
         optionsIndex++
     }
+    if(currentQuestion.optionStyleType!=undefined && currentQuestion.optionStyleType!=null && currentQuestion.optionStyleType!=""){
+        optionContainer.setAttribute("styletype",currentQuestion.optionStyleType);
+    }
+    else{
+        optionContainer.removeAttribute("styletype");
+    }
     var optionlen = currentQuestion.option.length;
     for (var i = 0; i < optionlen; i++) {
         availableOption.push(i);
@@ -225,6 +231,8 @@ function getNewQuestion(question) {
             $("ul").find(`[data-id='${userAns}']`).removeClass().addClass('focus-input wrong');
         }
     });
+    MathJax.typesetClear()
+    MathJax.typeset();
     questionCounter++;
 }
 function addActiveClass(el) {

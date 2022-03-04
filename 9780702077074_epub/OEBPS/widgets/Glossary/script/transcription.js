@@ -74,6 +74,8 @@ $(document).ready(function (){
                         var scrollTop = $(window).scrollTop();
                         $(window).scrollTop(scrollTop + (dimens.eleBox.top - 20 ));
                     }
+                    MathJax.typeset();
+                    //MathJax.typesetPromise()
                 }
                 var data = null;
                 if (res.data) {

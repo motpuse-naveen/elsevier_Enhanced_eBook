@@ -191,6 +191,12 @@ function getNewQuestion(question) {
         $('#subheading3').hide();
         optionsIndex++
     }
+    if(currentQuestion.optionStyleType!=undefined && currentQuestion.optionStyleType!=null && currentQuestion.optionStyleType!=""){
+        optionContainer.setAttribute("styletype",currentQuestion.optionStyleType);
+    }
+    else{
+        optionContainer.removeAttribute("styletype");
+    }
     //get the position of questionIndex from the availableQuestion
     // var index1 = quiz.indexOf(questionIndex);
     // //remove the questionIndex from the availableQuestion;
@@ -269,6 +275,8 @@ function getNewQuestion(question) {
             $(this).addClass('active');
         }
     });
+    MathJax.typesetClear()
+    MathJax.typeset();
     questionCounter++;
 }
 function addActiveClass(el) {
@@ -432,6 +440,7 @@ window.onload = function () {
     $('#Add_solution').hide();
     $('#Add_solution').children().html(quiz[0].ansText);
     $('.arrow-left').addClass('disabled')
+    
 };
 $('#show_ans').on('click keydown', (function (e) {
     if ((e.type === 'keydown' && e.keyCode == 13) || e.type === 'click') {

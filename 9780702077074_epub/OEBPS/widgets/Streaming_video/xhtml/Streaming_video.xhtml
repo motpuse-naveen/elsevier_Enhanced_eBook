@@ -12,15 +12,27 @@
    </head>
    <body>
       <div role="main">
-      <div class="video-area" role="application">
-         <div class="sr-only" style="position: absolute; left: -9999px;" role="heading" aria-level="1">Mitosis in a cell</div>
-         <video controls="controls"  controlslist="nodownload">
-            <source src="https://static.us.elsevierhealth.com/standring_42_9780702077050/9780702077050_0001.mp4" type="video/mp4" />
-            
-            <track src="sintel-en.vtt" kind="subtitles" srclang="en" label="English" />
-        </video>
-      </div>
-      <div id="ariaMessages" class="visually-hidden" aria-live="assertive" />
+         <div class="video-area" role="application">
+            <div class="sr-only" style="position: absolute; left: -9999px;" role="heading" aria-level="1">Mitosis in a cell</div>
+            <video controls="controls"  controlslist="nodownload">
+               <source src="https://static.us.elsevierhealth.com/standring_42_9780702077050/9780702077050_0001.mp4" type="video/mp4" />
+               
+               <track src="sintel-en.vtt" kind="subtitles" srclang="en" label="English" />
+         </video>
+         </div>
+         <div id="ariaMessages" class="visually-hidden" aria-live="assertive"></div>
       </div>
    </body>
+   <script>
+      var allImageElmts = document.querySelectorAll("video");
+      allImageElmts.forEach(imgelement => {
+         imgelement.addEventListener("contextmenu", function(event){
+            event.preventDefault();
+            return false;
+         });
+      });
+      document.addEventListener("contextmenu", function (e){
+         e.preventDefault();
+      }, false);
+   </script>
 </html>
