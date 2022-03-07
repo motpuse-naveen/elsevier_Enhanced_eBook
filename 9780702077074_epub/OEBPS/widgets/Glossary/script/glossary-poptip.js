@@ -22,6 +22,6 @@ var glossaries = {
     <span><math><mi>c</mi><mo>=</mo><msqrt><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></msqrt></math></span>
     <span><math><mi>y</mi><mo>=</mo><mroot><msup><mi>x</mi><mn>2</mn></msup><mn>3</mn></mroot></math></span></p>`,
 
-    l5: `<p>-N indicates any nucleotide; S indicates G or C. <span>$$E=mc^2$$</span></p>`,
+    l5: `<p>*N indicates any nucleotide; S indicates G or C. <span>$$E=mc^2$$</span></p>`,
 
 }
