@@ -31,5 +31,17 @@
       </div>
       <div id="ariaMessages" class="visually-hidden" aria-live="assertive" />
       </div>
+      <script>
+         var allImageElmts = document.querySelectorAll("video");
+         allImageElmts.forEach(imgelement => {
+            imgelement.addEventListener("contextmenu", function(event){
+               event.preventDefault();
+               return false;
+            });
+         });
+         document.addEventListener("contextmenu", function (e){
+            e.preventDefault();
+         }, false);
+      </script>
    </body>
 </html>

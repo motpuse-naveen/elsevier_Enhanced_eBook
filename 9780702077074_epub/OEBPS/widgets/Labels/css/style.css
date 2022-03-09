@@ -469,6 +469,7 @@ span.hotspot2 {
 .slide8 .tooltip-down,
 .slide8 .tooltip-up,
 .slide8 .tooltip-left,
+.slide8 .tooltip-right,
 .pin {
 	display: none;
 }
@@ -477,7 +478,8 @@ span.hotspot2 {
 }
 .tooltip-up,
 .tooltip-down,
-.tooltip-left {
+.tooltip-left,
+.tooltip-right {
 	position: absolute;
 	width: 30px;
 	height: 30px;
@@ -494,7 +496,8 @@ span.hotspot2 {
 
 .tooltip-up:after,
 .tooltip-down:after,
-.tooltip-left:after {
+.tooltip-left:after,
+.tooltip-right:after {
 	-webkit-transition: all 0.25s ease-out;
 	-moz-transition: all 0.25s ease-out;
 	-ms-transition: all 0.25s ease-out;
@@ -511,7 +514,22 @@ span.hotspot2 {
 	bottom: -14px;
 }
 
+
 .tooltip-up:after {
+	top: 50%;
+    margin-top: -13.5px;
+    right: 21px;
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    -webkit-transform-origin: right top;
+    -moz-transform-origin: right top;
+    -ms-transform-origin: right top;
+    transform-origin: right top;
+    left: unset;
+}
+.tooltip-right:after {
 	top: 50%;
 	margin-top: -8.5px;
 	right: 0;
@@ -566,6 +584,13 @@ span.hotspot2 {
 	top: unset;
 	right: unset;
 	bottom: -1px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.tooltip-up .tooltip {
+	top: -1px;
+	right: unset;
+	bottom: unset;
 	left: 50%;
 	transform: translate(-50%, 0);
 }
@@ -676,4 +701,7 @@ span.hotspot2 {
 }
 .zoom_image_popup{
 	z-index:999;
+}
+.tooltipInner.maxzindex{
+	z-index: 10 !important;
 }

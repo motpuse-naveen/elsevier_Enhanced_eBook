@@ -6,6 +6,9 @@ allImageElmts.forEach(imgelement => {
 		return false;
 	});
 });
+document.addEventListener("contextmenu", function (e){
+    e.preventDefault();
+}, false);
 /*** End Disable right click ***/
 
 

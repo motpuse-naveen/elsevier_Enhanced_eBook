@@ -128,13 +128,24 @@ $(document).ready(function () {
    var tooltipDirection;
    for (i = 0; i < $(".pin").length; i++) {
       // set tooltip direction type - up or down             
-      if ($(".pin").eq(i).hasClass('pin-down')) {
+      /*if ($(".pin").eq(i).hasClass('pin-down')) {
          tooltipDirection = 'tooltip-down';
       } else if ($(".pin").eq(i).hasClass('pin-left')) {
          tooltipDirection = 'tooltip-left';
       } else {
          tooltipDirection = 'tooltip-up';
-      }
+      }*/
+      if ($(".pin").eq(i).hasClass('pin-down')) {
+         tooltipDirection = 'tooltip-down';
+     } else if ($(".pin").eq(i).hasClass('pin-left')) {
+         tooltipDirection = 'tooltip-left';
+     } else if ($(".pin").eq(i).hasClass('pin-right')) {
+         tooltipDirection = 'tooltip-right';
+     } else if ($(".pin").eq(i).hasClass('pin-up')) {
+         tooltipDirection = 'tooltip-up';
+     } else {
+         tooltipDirection = 'tooltip-right';
+     }
       var $toolTipAnchorWrapper = $('<div>', {
          'style': "left:" + $(".pin").eq(i).data('xpos') + "px;top:" + $(".pin").eq(i).data('ypos') + "px",
          'class': tooltipDirection + ' tooltipInner',
@@ -236,6 +247,7 @@ $(document).ready(function () {
       if ($visibleToolbar.length) {
          $visibleToolbar.fadeOut(30);
          $visibleToolbar.removeClass('is-visible');
+         $visibleToolbar.closest(".tooltipInner").removeClass('maxzindex');
       }
    }
    app.getImageWrapper = function () {
@@ -317,6 +329,7 @@ $(document).ready(function () {
          $tooltip.fadeIn(500);
          $tooltip.find('p').focus();
          $tooltip.addClass('is-visible');
+         $tooltip.closest(".tooltipInner").addClass('maxzindex');
       }, 200);
    }
    app.getNewScaleByDirection = function (direction) {
