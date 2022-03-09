@@ -64,7 +64,6 @@
             <item id="id_js" href="Style/math.js" media-type="text/javascript"/>
             <item id="common_js" href="widgets/common_assets/scripts/common.js" media-type="text/javascript"/>
             <item id="iframecommon_js" href="widgets/common_assets/scripts/iframe_common.js" media-type="text/javascript"/>
-            <item id="mathjax_js" href="widgets/common_assets/scripts/tex-mml-chtml.js" media-type="text/javascript"/>
             <item id="iframecommon_css" href="widgets/common_assets/css/iframe_common.css" media-type="text/css"/>
             <item id="variables_css" href="widgets/common_assets/css/variables.css" media-type="text/css"/>
             <item id="common_css" href="widgets/common_assets/css/common.css" media-type="text/css"/>

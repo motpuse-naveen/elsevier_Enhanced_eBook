@@ -244,6 +244,8 @@ i {
     background: none;
     position: relative;
     left: -6px;
+    display: inline;
+    padding-right: 5px;
 }
 .star.dropdown.def-img.star-tooltip:before {
     content: '*';
@@ -253,6 +255,8 @@ i {
     background: none;
     position: relative;
     left: -6px;
+    display: inline;
+    padding-right: 5px;
 }
 sup {
     line-height: 14px;
@@ -360,6 +364,8 @@ span.text-highlighter::after {
 }
 .dropdown-content{
     bottom: 24px!important;
+    text-indent: initial;
+    border: 1px solid #E6E6E6;
 }
 html {
     scroll-behavior: smooth;
