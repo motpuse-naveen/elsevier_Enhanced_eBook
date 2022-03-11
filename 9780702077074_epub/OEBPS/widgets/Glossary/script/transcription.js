@@ -2,12 +2,26 @@ $(document).ready(function (){
     var $bubbleTips = $('[data-dfn]');
     $bubbleTips.on('click keydown', function (e) {
         // console.log(e.type, e.keyCode)
+        debugger;
+        var dfnCode = $(e.target).attr('data-dfn');
         if ((e.type === 'keydown' && e.keyCode === 13) || e.type === 'click') {
             if (!$('.dropdown-content').is(':visible')) {
-                var dfnCode = $(e.target).attr('data-dfn');
                 Utils.getTooltip(dfnCode, $(e.target));
             } else {
+                var closestdropdwn = $('.dropdown-content:visible').closest(".dropdown");
+                var openanotherpoptip = false;
+                if(closestdropdwn!=undefined){
+                    var in_openDef = closestdropdwn.attr("data-dfn")
+                    if(in_openDef!=undefined){
+                        if(in_openDef != dfnCode){
+                            openanotherpoptip = true;
+                        }
+                    }
+                }
                 $('.dropdown-content').hide();
+                if(openanotherpoptip){
+                    Utils.getTooltip(dfnCode, $(e.target));
+                }
             }
         }
     });

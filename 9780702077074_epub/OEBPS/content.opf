@@ -62,6 +62,7 @@
             <item id="media_css" href="Style/media.css" media-type="text/css"/>
             <item id="math_css" href="Style/math.css" media-type="text/css"/>
             <item id="id_js" href="Style/math.js" media-type="text/javascript"/>
+            <item id="common_jquery_reference" href="widgets/common_assets/scripts/jquery-3.6.0.min.js" media-type="text/javascript"/>
             <item id="common_js" href="widgets/common_assets/scripts/common.js" media-type="text/javascript"/>
             <item id="iframecommon_js" href="widgets/common_assets/scripts/iframe_common.js" media-type="text/javascript"/>
             <item id="iframecommon_css" href="widgets/common_assets/css/iframe_common.css" media-type="text/css"/>
@@ -2749,6 +2750,8 @@
             <item id="widget_item073" href="widgets/Hotspot/script/jquery-ui.min.js" media-type="text/javascript"/>
             <item id="widget_item074" href="widgets/Hotspot/script/slider-a11y.js" media-type="text/javascript"/>
             <item id="widget_item075" href="widgets/Hotspot/script/ui-touch-punch.js" media-type="text/javascript"/>
+            <item id="widget_item075_11" href="widgets/Hotspot/script/hotspot.js" media-type="text/javascript"/>
+            <item id="widget_item075_22" href="widgets/Hotspot/script/hotspot_data.js" media-type="text/javascript"/>
             <item id="widget_item076" href="widgets/Hotspot/xhtml/Hotspot.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
             <item id="widget_item077" href="widgets/Image_Slider/css/header_style.css" media-type="text/css"/>
             <item id="widget_item078" href="widgets/Image_Slider/css/style.css" media-type="text/css"/>

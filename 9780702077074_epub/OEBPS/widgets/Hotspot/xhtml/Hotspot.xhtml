@@ -1,443 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <!--Streaming_Video Template Unique ID: -->
+<!--Streaming_Video Template Unique ID: -->
+
 <head>
-	
-<meta charset="utf-8" />
-	
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	
-<title> EPUB:  Hotspot</title>
-	<link rel="stylesheet" type="text/css" href="../css/style.css" />
-	<link rel="stylesheet" type="text/css" href="../css/header_style.css" />
-	
-    <link rel="stylesheet" type="text/css" href="../../common_assets/css/iframe_common.css"/>
-	
-<script src="../script/jquery-3.6.0.min.js"></script>
-	
-<script src="../script/jquery-ui.min.js"></script>
-	
-<script src="../script/ui-touch-punch.js"></script>
-    
-<script src="../script/slider-a11y.js"></script></head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title> EPUB: Hotspot</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/header_style.css" />
+    <link rel="stylesheet" type="text/css" href="../../common_assets/css/iframe_common.css" />
+    <script src="../script/jquery-3.6.0.min.js"></script>
+    <script src="../script/jquery-ui.min.js"></script>
+    <script src="../script/ui-touch-punch.js"></script>
+    <script src="../script/slider-a11y.js"></script>
+</head>
+
 <body>
 	
-<div class="header" role="banner">
-        
-        
-<div class="main zoom-slider">
-            <button class="btn-minus btn-range1" data-dir="minus" type="button" id="zoomOut" aria-label="Zoom out">-</button>
-            
-<div class="aria-widget-slider">
-                
-<div class="rail" style="width: 90px;">
-                
-<div id="imageSlider1" role="slider" tabindex="0" class="thumb" aria-valuemin="0" aria-valuenow="0" aria-valuemax="150" aria-label="Image Scale is 0%" />
+    <div class="header" role="banner">
+        <div class="main zoom-slider">
+            <button class="btn-minus btn-range1" data-dir="minus" type="button" id="zoomOut"
+                aria-label="Zoom out">-</button>
+            <div class="aria-widget-slider">
+                <div class="rail" style="width: 90px;">
+                    <div id="imageSlider1" role="slider" tabindex="0" class="thumb" aria-valuemin="0" aria-valuenow="0"
+                        aria-valuemax="150" aria-label="Image Scale is 0%"></div>
                 </div>
-                
-<div class="value">0</div>
-             </div>
-            <button class="btn-plus btn-range1" data-dir="plus" id="zoomIn" type="button" aria-label="Zoom In">+</button>
+                <div class="value">0</div>
+            </div>
+            <button class="btn-plus btn-range1" data-dir="plus" id="zoomIn" type="button"
+                aria-label="Zoom In">+</button>
         </div>
     </div>
-	
-<div class="hotspot-slider-area main-image-area" role="main" id="main-image-area">
-      
-<div class="sr-only" style="position: absolute; left: -9999px;" role="heading" aria-level="1">The arrangement of the axon </div> 
-		
-<div class="inner-image-area hotspot-zoom" id="inner-image-area">
-			
-<div class="slides inner-slide-area zoomimg">
-				<span class="hotspot_slide_wrap2">
-					<span tabindex="0" aria-label="click on image A for caption" role="button" title="hotspot 1" data-hotspot="3" />
-					<span tabindex="0" aria-label="click on image B for caption" role="button" title="hotspot 2" data-hotspot="4" />
-					<img src="../images/hotspot_1.png" alt="" />
-				</span>
-			</div>
-			
-<div class="slides inner-slide-area">
-				<span class="hotspot_slide_wrap1">
-					<span tabindex="0" role="button" aria-label="Main Image" title="hotspot 3" data-hotspot="1" />
-					<span tabindex="0" role="button" aria-label="click on image A for caption" data-hotspot="3" />
-					<span tabindex="0" role="button" aria-label="click on image B for caption" data-hotspot="4" />
-					<img src="../images/hotspot_main.png" alt="" /> 
-				</span>
-			</div>
-			
+
+    <div class="hotspot-slider-area main-image-area" role="main" id="main-image-area">
+        <div class="sr-only" style="position: absolute; left: -9999px;" role="heading" aria-level="1">The arrangement of
+            the axon </div>
+        <div class="inner-image-area hotspot-zoom" id="inner-image-area">
+            <div class="slides inner-slide-area zoomimg">
+                <span class="hotspot_slide_wrap2">
+                    <span class="hotspot" tabindex="0" aria-label="click on image A for caption" role="button" title="hotspot 1" data-hotspot="3"></span>
+                    <span class="hotspot" tabindex="0" aria-label="click on image B for caption" role="button" title="hotspot 2" data-hotspot="4"></span>
+                    <img src="../images/hotspot_1.png" alt="" />
+                </span>
+            </div>
+            <div class="slides inner-slide-area">
+                <span class="hotspot_slide_wrap1">
+                    <span class="hotspot" tabindex="0" role="button" aria-label="Main Image" title="hotspot 3" data-hotspot="1"></span>
+                    <span class="hotspot" tabindex="0" role="button" aria-label="click on image A for caption" data-hotspot="3"></span>
+                    <span class="hotspot" tabindex="0" role="button" aria-label="click on image B for caption" data-hotspot="4"></span>
+                    <img src="../images/hotspot_main.png" alt="" />
+                </span>
+            </div>
             <div class="slides inner-slide-area">
                 <figure class="hotspot2">
                     <img src="../images/hotspot_2.png" alt="hotspot 3" tabindex="0" />
                 </figure>
-                </div>
-			              
-<div class="slides inner-slide-area">
-			<figure class="hotspot2">
-				<img src="../images/hotspot_3.png" alt="hotspot 4" tabindex="0" />
-            </figure>
-			</div>
-		</div>
-		
-<div class="caption-container">
-	<div class="caption-container-inner">
-		<p id="caption" />
-	</div>
-</div>
-		
-<div class="hotspot_thumbnail_main">
-			
-<div class="column" role="button" data-hotspot="2" tabindex="0" id="1" title=""> 
-				<img src="../images/tree_button_icon.png" alt="Tree View Button" />
-			</div>
-			
-<div class="column" role="button" data-hotspot="1" id="2" title=""> 
-				<img src="../images/hotspot_thumbnail2.png" alt="Hotspot Thumbnail 1" />
-			</div>
-			
-<div class="column" role="button" data-hotspot="3" id="3" title="A transverse electron microscope section through the centre of a node of Ranvier, with numerous finger-like processes of adjacent Schwann cells converging towards the nodal axolemma. Many microtubules and neurofilaments are visible within the axoplasm."> 
-				<img src="../images/hotspot_thumbnail4.png" alt="Hotspot Thumbnail 2" />
-			</div>
-			
-<div class="column" role="button" data-hotspot="4" id="4" title="The arrangement of the axon, myelin sheath and Schwann cell cytoplasm at the node of Ranvier, in the paranodal bulbs and in the juxtaparanodal region. The axon is myelinated by a Schwann cell surrounded by a basal lamina (BL). Only a portion of the internode, which is located beneath the compact myelin (CM) sheath, is shown. A spiral of paranodal (green) and juxtaparanodal (blue) proteins extends into the internode; this spiral is apposed to the inner mesaxon of the myelin sheath (not shown). K+ channels and Caspr2 are concentrated in the juxtaparanodal region. In the paranodal region, the compact myelin sheath opens up into a series of paranodal cytoplasmic loops (PNL) that invaginate and closely appose the axon, forming a series of septum-like junctions that spiral around the axon. Caspr, contactin and an isoform of neurofascin (NF155) are concentrated in this region. At the node, numerous microvilli (MV) project from the outer collar of the Schwann cell to contact the axolemma. The axon is enormously enriched in intramembranous particles at the node that correspond to Na+ channels (Na+ ch). Ankyrin G (ank G) isoforms and the cell adhesion molecules NrCAM and NF186 are also concentrated in this region."> 
-				<img src="../images/hotspot_thumbnail3.png" alt="Hotspot Thumbnail 3" />
-			</div>
-		</div>
-	</div>
-	
-<div id="ariaMessages" class="visually-hidden" aria-live="assertive" />
+            </div>
+            <div class="slides inner-slide-area">
+                <figure class="hotspot2">
+                    <img src="../images/hotspot_3.png" alt="hotspot 4" tabindex="0" />
+                </figure>
+            </div>
+        </div>
+        <div class="caption-container">
+            <div class="caption-container-inner">
+                <p id="caption"></p>
+            </div>
+        </div>
+        <div class="hotspot_thumbnail_main">
+            <div class="column" role="button" data-hotspot="2" tabindex="0" id="1" title="">
+                <img src="../images/tree_button_icon.png" alt="Tree View Button" />
+            </div>
+            <div class="column" role="button" data-hotspot="1" id="2" title="">
+                <img src="../images/hotspot_thumbnail2.png" alt="Hotspot Thumbnail 1" />
+            </div>
+            <div class="column" role="button" data-hotspot="3" id="3"
+                title="A transverse electron microscope section through the centre of a node of Ranvier, with numerous finger-like processes of adjacent Schwann cells converging towards the nodal axolemma. Many microtubules and neurofilaments are visible within the axoplasm.">
+                <img src="../images/hotspot_thumbnail4.png" alt="Hotspot Thumbnail 2" />
+            </div>
+            <div class="column" role="button" data-hotspot="4" id="4"
+                title="The arrangement of the axon, myelin sheath and Schwann cell cytoplasm at the node of Ranvier, in the paranodal bulbs and in the juxtaparanodal region. The axon is myelinated by a Schwann cell surrounded by a basal lamina (BL). Only a portion of the internode, which is located beneath the compact myelin (CM) sheath, is shown. A spiral of paranodal (green) and juxtaparanodal (blue) proteins extends into the internode; this spiral is apposed to the inner mesaxon of the myelin sheath (not shown). K+ channels and Caspr2 are concentrated in the juxtaparanodal region. In the paranodal region, the compact myelin sheath opens up into a series of paranodal cytoplasmic loops (PNL) that invaginate and closely appose the axon, forming a series of septum-like junctions that spiral around the axon. Caspr, contactin and an isoform of neurofascin (NF155) are concentrated in this region. At the node, numerous microvilli (MV) project from the outer collar of the Schwann cell to contact the axolemma. The axon is enormously enriched in intramembranous particles at the node that correspond to Na+ channels (Na+ ch). Ankyrin G (ank G) isoforms and the cell adhesion molecules NrCAM and NF186 are also concentrated in this region.">
+                <img src="../images/hotspot_thumbnail3.png" alt="Hotspot Thumbnail 3" />
+            </div>
+        </div>
+    </div>
 
-
-<script>
-     // Utility Functions
-     (function (app){
-        var maxSliderRange = 150;
-        var minSliderRange = 0;
-        var currentScale = 1;
-        var totalSteps = 6;
-        var sliderStepSize = maxSliderRange / totalSteps;
-        var $imageWrapper = $('#inner-image-area');
-        var $img = $(".zoomimg");
-        var currentSliderVal = 0;
-        app.announcementRange = {min: 0, max: 100};
-        app.sliderRange = {min: minSliderRange, max: maxSliderRange};
-        var sliders = document.getElementById('imageSlider1');
-        app.sliderObj = new SliderA11y(sliders);
-        var isSliderInit = false;
-        app.sliderObjInit = function() {
-            if (!isSliderInit) {
-                app.sliderObj.init();
-            }
-        }
-        app.isOpenedOnMobile = function () {
-			let details = navigator.userAgent;
-			let regexp = /android|iphone|kindle|ipad/i;
-			return regexp.test(details);
-		}
-        function scaleImage(scaleSliderVal) {
-            currentScale = parseFloat(1) + ((parseInt(scaleSliderVal) * 0.01)*4);
-            $imageWrapper.css('transform', 'scale(' + currentScale + ')');
-            $('#imageSlider1').attr('aria-label', 'Image scale is ' + parseInt(app.changeRange(currentSliderVal)) + '%');
-        }
-        app.getImageWrapper = function () {
-            return $imageWrapper;
-        }
-        app.$imageSlider = $("#imageSlider1");
-        app.getSliderMaxRange = function () {
-            return maxSliderRange;
-        }
-        app.getSliderMinRange = function () {
-            return minSliderRange;
-        }
-        app.isZoomed = function () {
-            return currentSliderVal &gt; 0;
-        }
-        app.getCurrentScale = function () {
-            return currentScale;
-        }
-        app.imageScaleChanged = function (scaleSliderValue) {
-            if (scaleSliderValue &lt;= 0 ) {
-                $('.zoomimg').css({
-                    'height': '100% ',
-                    'width': '90% ',
-                });
-            } else {
-                $('.zoomimg').css({
-                    'height': 'auto',
-                    'width': 'auto',
-                });
-            }
-            currentSliderVal = parseInt(scaleSliderValue);             
-            scaleImage(scaleSliderValue);
-            Utils.unableDisableZoomButtons();
-        }
-        app.getNewScaleByDirection = function (direction) {
-                var newZoom = currentSliderVal;
-                if (direction == "plus")  {
-                    if ((newZoom + sliderStepSize) &lt;= maxSliderRange) { 
-                        newZoom += sliderStepSize;
-                    } else {
-                        newZoom = maxSliderRange;
-                    }
-                } else {
-                    if ((newZoom - sliderStepSize) &gt; minSliderRange) {
-                        newZoom -= sliderStepSize;    
-                    } else {
-                        newZoom = minSliderRange;
-                    }
-                }
-                return newZoom;
-        }
-        app.unableDisableZoomButtons = function () {
-                var $zoomInButton = $('.btn-plus');
-                var $zoomOutButton = $('.btn-minus');
-                if(currentSliderVal === maxSliderRange) {
-                    $zoomInButton.addClass('disabled');
-                    $zoomOutButton.removeClass('disabled');
-                } else if (currentSliderVal === minSliderRange) {
-                    $zoomInButton.removeClass('disabled');
-                    $zoomOutButton.addClass('disabled');
-                } else {
-                    $zoomInButton.removeClass('disabled');
-                    $zoomOutButton.removeClass('disabled');
-                }
-        }
-        
-        app.setImageBound = function () {
-                var $imgParPos = {left: parseInt($imageWrapper.css('left')), top: parseInt($imageWrapper.css('top'))};
-                // var $imgBoundingBox = $img[0].getBoundingClientRect();
-                var $imgBoundingBox = $('.zoomimg')[0].getBoundingClientRect();
-                var $windowWidth = $(window).width();
-                var $windowHeight = $(window).height();
-                var newTop = $imgParPos.top;
-                var newLeft = $imgParPos.left
-                if ($imgParPos.left &gt; ($imgBoundingBox.width / 2) - ($windowWidth/2)) {
-                    newLeft = ($imgBoundingBox.width / 2) - ($windowWidth/2);
-                }
-                if ($imgParPos.left &lt; 0 &amp;&amp; Math.abs($imgParPos.left) &gt; ($imgBoundingBox.width / 2) - ($windowWidth/2)) {
-                    newLeft = 0 - (($imgBoundingBox.width / 2) - ($windowWidth/2));
-                }
-                if ($imgParPos.top &gt; ($imgBoundingBox.height / 2) - ($windowHeight/2)) {
-                    newTop = ($imgBoundingBox.height / 2) - ($windowHeight/2);
-                }
-                if ($imgParPos.top &lt; 0 &amp;&amp; Math.abs($imgParPos.top) &gt; ($imgBoundingBox.height / 2) - ($windowHeight/2)) {
-                    newTop = 0 - (($imgBoundingBox.height / 2) - ($windowHeight/2));
-                }
-                if($imgBoundingBox.width &lt; $(window).width()) {
-                    newLeft = 0
-                } 
-                if($imgBoundingBox.height &lt; $(window).height()) {
-                    newTop = 0;
-                }
-                $imageWrapper.stop().animate({'top': newTop, 'left': newLeft}, 400);
-            }
-            app.ariaAnnounce = function (msg) {
-            console.log(msg);
-                if (msg) {
-                    $('#ariaMessages').html(msg);
-                }
-                setTimeout(function () {
-                    $('#ariaMessages').html("");
-                }, 5000);
-            };
-            app.changeRange = function (OldValue) {
-                OldMax = maxSliderRange;
-                OldMin = minSliderRange;
-                NewMax = 100;
-                NewMin = minSliderRange;
-                OldRange = (OldMax - OldMin)  
-                NewRange = (NewMax - NewMin)  
-                NewValue = (((OldValue - OldMin) * NewRange) / OldRange) + NewMin;
-                NewValue = (((OldValue - OldMin) * NewRange) / OldRange) + NewMin;
-                return Math.round(NewValue);
-            }
-        })(Utils = Utils || {});
-    var Utils;
-    // Utility Functions End
-    $(document).ready(function(){
-        $('.zoomimg').css({
-            height: '100%',
-            width: '90%'
-        });
-        $('[data-hotspot]').on('click keydown tourchstart', currentSlide);
-        Utils.sliderObjInit();
-         $('.btn-range1').on('click keydown', function(e) {
-             if ((e.type === 'keydown' &amp;&amp; (e.keyCode === '32' || e.keyCode === '13')) || e.type === 'click') {
-                var direction = $(this).data("dir");
-                var newZoom = Utils.getNewScaleByDirection(direction);
-                Utils.setImageBound();
-                Utils.sliderObj.moveSliderTo(newZoom);
-                //  Utils.imageScaleChanged(newZoom);
-                var msg = "Image Zoomed ";
-                msg += direction === "plus" ? "In " : "Out ";
-                var rangedZoom = Utils.changeRange(newZoom);
-                msg += rangedZoom +"%";
-                Utils.ariaAnnounce(msg);
-            }
-         });
-         var isSliderDown = false;
-         $(".rail, #imageSlider1").mousedown(()=&gt;{
-            isSliderDown = true;
-         });
-         $(window).on('mouseup', (e)=&gt;{
-             if (isSliderDown) {
-                 if ($(e.target).hasClass('rail')) {
-                     setTimeout(() =&gt; {
-                        Utils.setImageBound();        
-                     }, 100);
-                 } else{
-                    Utils.setImageBound();
-                 }
-                 isSliderDown = false;
-             }
-         });
-    });
-   function manageBreadcrumbs(activeId) {
-      var showbreadcrumbsIds = [];
-      switch(activeId) {
-         case 1:
-            showbreadcrumbsIds = [1,2];
-            break;
-         case 2:
-            showbreadcrumbsIds = [0];
-            break;
-         case 3:
-            showbreadcrumbsIds = [1, 2, 3];
-            break;
-         case 4:
-            showbreadcrumbsIds = [1, 2, 4];
-            break;
-      }
-      [1,2,3,4].forEach((ele, i)=&gt;{
-         if (showbreadcrumbsIds.indexOf(ele) === -1) {
-            $(".hotspot_thumbnail_main ").find("#" + ele).hide();
-         } else {
-            $(".hotspot_thumbnail_main ").find("#" + ele).show();
-         }
-      })
-   }
-	var slideIndex = 1;
-	showSlides(slideIndex);
-	function plusSlides(n) {
-	  showSlides(slideIndex += n);
-	}
-	function currentSlide(e) {
-      var n = parseInt($(e.currentTarget).attr('data-hotspot'));
-      if (e) {
-         if ((e.type === 'keydown' &amp;&amp; e.keyCode === 13) || e.type === 'click') {
-            showSlides(slideIndex = n, e);
-            manageBreadcrumbs(n);
-         } 
-      }
-      else {
-         showSlides(slideIndex = n);
-         manageBreadcrumbs(n);
-      }
-      setTimeout(() =&gt; {
-          Utils.setImageBound();
-      }, 500);
-	}
-	function showSlides(n, byEvent) {
-	  var i;
-	  var slides = document.getElementsByClassName("slides");
-	  var dots = document.getElementsByClassName("column");
-	  var captionText = document.getElementById("caption");
-	  if (n &gt; slides.length) {slideIndex = 1}
-	  if (n &lt; 1) {slideIndex = slides.length}
-	  for (i = 0; i &lt; slides.length; i++) {
-		  slides[i].style.display = "none";
-          slides[i].className = slides[i].className.replace(" zoomimg", "");
-	  }
-	  for (i = 0; i &lt; dots.length; i++) {
-		  dots[i].className = dots[i].className.replace(" active", "");
-	  }
-	  slides[slideIndex-1].style.display = "flex";
-      slides[slideIndex-1].classList.add("zoomimg");
-	  var element = document.getElementById(slideIndex.toString());
-	  element.classList.add("active");
-	  captionText.innerHTML = dots[slideIndex-1].title;
-     if (byEvent) {
-        // console.log(byEvent.pageX, byEvent.pageY);
-        var imgBox = $(slides[slideIndex-1])[0].getBoundingClientRect();
-        var imgLeft = imgBox.left;
-        var imgTop = imgBox.top;
-        var newLeft = byEvent.pageX - (parseInt($("#inner-image-area").width())/2);
-        var newTop = byEvent.pageY - (parseInt($("#inner-image-area").height())/2);
-        // console.log(byEvent.currentTarget)
-        if (!$(byEvent.currentTarget).hasClass('column')) {
-            $("#inner-image-area").css({
-                'left': newLeft,
-                'top': newTop,
-                'opacity': 0,
-                'transform': 'scale(0)' 
-            });
-            $("#inner-image-area").animate({
-                left: 0,
-                top: 0,
-                'opacity': 1,
-                'transform': 'scale(1)' 
-            }, 400, 'easeOutCubic');
-        }
-        if (n === 2) { 
-         $(".hotspot_slide_wrap1").find('span:first').focus();
-        }
-        if (n === 1) { 
-         $(".hotspot_slide_wrap2").find('span:first').focus();
-        }
-     }
-	  if (captionText.innerHTML) {
-		  $(".caption-container").show();
-     } else {
-        $(".caption-container").hide();
-     }
-     Utils.sliderObj.moveSliderTo(0);
-	}
-    
-        
-        let element = document.getElementById('inner-image-area');
-        $(document).ready(function () {
-            manageBreadcrumbs(1);
-            resize();
-            createDraggable();
-            if (Utils.isOpenedOnMobile()) {
-                $(".hotspot_slide_wrap1").parent().attr('tabindex', 0);
-            } else {
-                $(".hotspot_slide_wrap1").parent().removeAttr('tabindex');
-            }
-        });
-        window.addEventListener("resize", resize);
-        function resize() {
-            if (!Utils.isZoomed()) {
-                if ($(window).width() &lt;= 640) {
-                    Utils.getImageWrapper().find('.zoomimg').addClass('resp');
-                } else {
-                    Utils.getImageWrapper().find('.zoomimg').removeClass('resp');
-                }
-            } else {
-                Utils.getImageWrapper().find('.zoomimg').removeClass('resp');
-            }
-            // Utils.setImageBound();
-            createDraggable()
-        }
-        Utils.getImageWrapper().dblclick(function () {
-            if (!$('.btn-plus').hasClass('disabled')) {
-                $('.btn-plus').trigger('click');
-            }
-        });
-        
-        function createDraggable() {
-            $('#main-image-area').droppable({
-                tolerance: 'fit'
-            });
-            Utils.getImageWrapper().draggable({
-                start: function (event, ui) {
-                },
-                stop: function (event, ui) {
-                    Utils.setImageBound();
-                },
-                drag: function (event, ui) {
-                }
-            });
-        }
-    </script>
+    <div id="ariaMessages" class="visually-hidden" aria-live="assertive"></div>
+    <script src="../script/hotspot_data.js"></script>
+    <script src="../script/hotspot.js"></script>
     <script src="../../common_assets/scripts/iframe_common.js"></script>
 </body></html>
