@@ -10,12 +10,13 @@ const main_hotspot_positions = [
         "right": "9.5%",
         "width": "13%",
         "height": "107%"
-    }
+    },
+    
 ]
 
 const tree_hotspot_positions = [
     {
-        "left": "35%",
+        "left": "50%",
         "top": "2%",
         "width": "30%",
         "height": "30%"

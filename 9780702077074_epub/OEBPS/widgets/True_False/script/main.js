@@ -216,6 +216,7 @@ function getNewQuestion(question) {
         $('#mcq_button').removeClass('disabled');
         $('#mcq_button').attr('tabindex', '0');
         $('#answer_label').show();
+        $('#Add_solution').children().html(currentQuestion.ansText);
         $('#Add_solution').show();
         $('#need_help').hide();
         $('#answer_label').html(correctFBText);
@@ -278,6 +279,7 @@ function getResult(element) {
         unclickableOptions();
         $('#answer_label').show();
         $('#need_help').hide();
+        $('#Add_solution').show();
         $('#Add_solution').show();
         $('.tab-pane ').attr('data-state', 'correct');
         currentQuestion.state = 'correct';
@@ -403,8 +405,9 @@ window.onload = function () {
 };
 $('#show_ans').on('click keydown', (function (e) {
     if ((e.type === 'keydown' && e.keyCode == 13) || e.type === 'click') {
-        $('#Add_solution').show();
         let currentQuestion = parseInt($('.tab-pane').attr('id')) - 1;
+        $('#Add_solution').children().html(quiz[currentQuestion].ansText);
+        $('#Add_solution').show();
         $('#mcq_button').html('Try Again');
         $('#mcq_button').removeClass('disabled');
         $('#mcq_button').attr('title', 'Try Again');

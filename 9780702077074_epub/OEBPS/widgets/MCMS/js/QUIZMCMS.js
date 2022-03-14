@@ -22,6 +22,27 @@ var quiz = [
         userAnswered: []
     },
     {
+        q: `Which of the following conditions causing cough is most prevalent in the immigrant population?`,
+        q2: ``,
+        q3: [],
+        option: [`Chronic bronchitis`, `Asthma`, `Heart failure`, `Pneumonia`, `Tuberculosis`],
+        optionStyleType: `st-upper-alpha`,
+        answer: [4],
+        ansText: `Rationale: Only tuberculosis (e) from the listed conditions is more associated with ethnicity.`,
+        state: `notAnswered`,
+        userAnswered: ``
+    },
+    {
+        q: "Mrs Jones visits your pharmacy complaining of having a dry cough for the last 7 days. After questioning, you decide it is a simple viral infection and recommend simple linctus. If symptoms persist, after how many further days would referral to the physician be appropriate 14 days is",
+        q2: "",
+        q3: [],
+        option: ["True" , "False"],
+        answer: [0],
+        ansText:"Rationale: Conditional referrals are important for safety netting purposes. Acute cough is defined as 3 weeks or less, so in this case giving 14 days as the referral point is correct as the person has had the cough for just 7 days.", 
+        state: 'notAnswered',
+        userAnswered: []
+    },
+    {
         q: `Mrs Jones visits your pharmacy complaining of having a dry cough for the last 7 days. After questioning, you decide it is a simple viral infection and recommend simple linctus. If symptoms persist, after how many further days would referral to the physician be appropriate?`,
         q2: ``,
         q3: [],

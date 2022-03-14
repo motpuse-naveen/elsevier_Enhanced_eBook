@@ -246,6 +246,7 @@ i {
     left: -6px;
     display: inline;
     padding-right: 5px;
+    padding-left: 5px;
 }
 .star.dropdown.def-img.star-tooltip:before {
     content: '*';
@@ -257,6 +258,7 @@ i {
     left: -6px;
     display: inline;
     padding-right: 5px;
+    padding-left: 5px;
 }
 sup {
     line-height: 14px;
