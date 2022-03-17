@@ -2848,6 +2848,7 @@
             <item id="widget_item181" href="widgets/Streaming_video/images/video-img.png" media-type="image/png"/>
             <item id="widget_item182" href="widgets/Streaming_video/images/web_volume_dk.png" media-type="image/png"/>
             <item id="widget_item183" href="widgets/Streaming_video/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
+            <item id="widget_item183_11" href="widgets/Streaming_video/script/video-tracker.js" media-type="text/javascript"/>
             
             <item id="widget_item184" href="widgets/Streaming_video/script/jquery-ui.min.js" media-type="text/javascript"/>
             <item id="widget_item185" href="widgets/Streaming_video/script/slider-a11y-vertical.js" media-type="text/javascript"/>
