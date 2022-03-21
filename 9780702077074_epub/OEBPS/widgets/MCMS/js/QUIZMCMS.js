@@ -33,14 +33,37 @@ var quiz = [
         userAnswered: ``
     },
     {
-        q: "Mrs Jones visits your pharmacy complaining of having a dry cough for the last 7 days. After questioning, you decide it is a simple viral infection and recommend simple linctus. If symptoms persist, after how many further days would referral to the physician be appropriate 14 days is",
-        q2: "",
+        q: `Mrs Jones visits your pharmacy complaining of having a dry cough for the last 7 days. After questioning, you decide it is a simple viral infection and recommend simple linctus. If symptoms persist, after how many further days would referral to the physician be appropriate 14 days is`,
+        q2: ``,
         q3: [],
-        option: ["True" , "False"],
+        option: [`True` , `False`],
         answer: [0],
-        ansText:"Rationale: Conditional referrals are important for safety netting purposes. Acute cough is defined as 3 weeks or less, so in this case giving 14 days as the referral point is correct as the person has had the cough for just 7 days.", 
+        ansText:`Rationale: Conditional referrals are important for safety netting purposes. Acute cough is defined as 3 weeks or less, so in this case giving 14 days as the referral point is correct as the person has had the cough for just 7 days.`, 
         state: 'notAnswered',
-        userAnswered: []
+        userAnswered: [],
+        type:`TF`
+    },
+    {
+        q: `Mrs Jones visits your pharmacy complaining of having a dry cough for the last 7 days. After questioning, you decide it is a simple viral infection and recommend simple linctus. If symptoms persist, after how many further days would referral to the physician be appropriate 10 days is`,
+        q2: ``,
+        q3: [],
+        option: [`True` , `False`],
+        answer: [1],
+        ansText:`Rationale: Conditional referrals are important for safety netting purposes. Acute cough is defined as 3 weeks or less, so in this case giving 14 days as the referral point is correct as the person has had the cough for just 7 days.`, 
+        state: 'notAnswered',
+        userAnswered: [],
+        type:`TF`
+    },
+    {
+        q: `Dyspnoea is a symptom most closely associated with Heart failure `,
+        q2: ``,
+        q3: [],
+        option: [`True`,`False`],
+        answer:[0],
+        ansText:`Rationale: Dyspnoea, difficulty in breathing, could be seen in all the listed conditions. However, in a community pharmacy context, people with conditions other than heart failure (c) will be less associated with dyspnoea. Other symptoms such as shortness of breath and fatigue will be more frequently seen.`,
+        state: 'notAnswered',
+        userAnswered: [],
+        type:`TF`
     },
     {
         q: `Mrs Jones visits your pharmacy complaining of having a dry cough for the last 7 days. After questioning, you decide it is a simple viral infection and recommend simple linctus. If symptoms persist, after how many further days would referral to the physician be appropriate?`,
@@ -51,7 +74,8 @@ var quiz = [
         answer: [4],
         ansText:`Rationale: Conditional referrals are important for safety netting purposes. Acute cough is defined as 3 weeks or less, so in this case giving 14 days as the referral point is correct as the person has had the cough for just 7 days.`, 
         state: `notAnswered`,
-        userAnswered: []
+        userAnswered: [],
+        type:`MCSS`
     },
     {
         q: `Mr Patel, who is 48 years old, presents with a nonproductive cough. Based on epidemiology, what is the most likely cause of the cough?`,
@@ -62,8 +86,8 @@ var quiz = [
         answer: [3],
         ansText:`Rationale: For all patients, regardless of age and gender, viral infection (d) is the most common presentation.`,
         state: `notAnswered`,
-        userAnswered: []
-
+        userAnswered: [],
+        type:`MCSS`
     },
     {
         q: `Dyspnoea is a symptom most closely associated with which condition?`,
@@ -74,7 +98,8 @@ var quiz = [
         answer:[2],
         ansText:`Rationale: Dyspnoea, difficulty in breathing, could be seen in all the listed conditions. However, in a community pharmacy context, people with conditions other than heart failure (c) will be less associated with dyspnoea. Other symptoms such as shortness of breath and fatigue will be more frequently seen.`,
         state: `notAnswered`,
-        userAnswered: []
+        userAnswered: [],
+        type:`MCSS`
     },
     {
         q: `You are recommending treatment for a young woman to treat a common cold (primary symptom of nasal congestion). She tells you that she is breastfeeding. What would be the most suitable option?`,

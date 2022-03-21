@@ -450,3 +450,6 @@ i{
     border: 1px solid var(--orange) !important;
     outline: none !important;
 }
+.mar-left{
+    margin-left: 1.5em;
+}

@@ -154,9 +154,11 @@ function getNewQuestion(question) {
     }
     if(currentQuestion.optionStyleType!=undefined && currentQuestion.optionStyleType!=null && currentQuestion.optionStyleType!=""){
         optionContainer.setAttribute("styletype",currentQuestion.optionStyleType);
+        $(".answer-controls").addClass("mar-left")
     }
     else{
         optionContainer.removeAttribute("styletype");
+        $(".answer-controls").addClass("mar-left")
     }
     //get the position of questionIndex from the availableQuestion
     // var index1 = quiz.indexOf(questionIndex);
