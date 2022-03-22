@@ -2699,6 +2699,7 @@
             <item id="widget_item021" href="widgets/Glossary/fonts/SourceSansPro-Regular.woff" media-type="application/font-woff"/>
             <item id="widget_item022" href="widgets/Glossary/images/icon_definition_blue.png" media-type="image/png"/>
             <item id="widget_item023" href="widgets/Glossary/images/icon_link_blue.png" media-type="image/png"/>
+            <item id="widget_item023_abc" href="widgets/Glossary/images/abc.jpg" media-type="image/jpeg"/>
             <item id="widget_item024" href="widgets/Glossary/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
             <item id="widget_item025" href="widgets/Glossary/script/transcription.js" media-type="text/javascript"/>
             <item id="widget_item026" href="widgets/Glossary/xhtml/Glossary.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
@@ -2780,12 +2781,15 @@
             <item id="widget_item104" href="widgets/Labels/images/navbar_minus.png" media-type="image/png"/>
             <item id="widget_item105" href="widgets/Labels/images/navbar_plus.png" media-type="image/png"/>
             <item id="widget_item106" href="widgets/Labels/images/normal-neuronal-firing.png" media-type="image/png"/>
+            <item id="widget_item106_111" href="widgets/Labels/images/f01-01-9780702077050.jpg" media-type="image/jpeg"/>
+            <item id="widget_item106_112" href="widgets/Labels/images/f01-01-9780702077050_labels.jpg" media-type="image/jpeg"/>
             <item id="widget_item107" href="widgets/Labels/images/web_arrow_poptip.png" media-type="image/png"/>
             <item id="widget_item108" href="widgets/Labels/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
             <item id="widget_item109" href="widgets/Labels/script/jquery-ui.min.js" media-type="text/javascript"/>
             <item id="widget_item110" href="widgets/Labels/script/ui-touch-punch.js" media-type="text/javascript"/>
             <item id="widget_item110_mainjs" href="widgets/Labels/script/main.js" media-type="text/javascript"/>
             <item id="widget_item111" href="widgets/Labels/xhtml/Labels.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+            <item id="widget_item111_TestYourSelf" href="widgets/Labels/xhtml/TestYourSelf.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
             <item id="widget_item112" href="widgets/MCSS/css/style.css" media-type="text/css"/>
             <item id="widget_item121" href="widgets/MCSS/images/assessment_check_large.png" media-type="image/png"/>
             <item id="widget_item122" href="widgets/MCSS/images/assessment_check_white.png" media-type="image/png"/>

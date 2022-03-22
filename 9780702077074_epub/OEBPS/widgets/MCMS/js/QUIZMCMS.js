@@ -136,7 +136,7 @@ var quiz = [
         q2: ``,
         q3: [],
         option: [`No treatment`, `A demulcent`, `A cough suppressant`, `An antihistamine`, `An expectorant`],
-        answer: 0,
+        answer: [0],
         ansText:`Rationale: Viral infections are self-limiting, and no treatment is necessary, so (a) would be a suitable recommendation. A demulcent could be tried. Because they are diabetic, a sugar-free alternative would be useful, but it is unlikely that a few days’ treatment with a demulcent containing sugar will affect their diabetic control. If a demulcent containing sugar is recommended, the person could be told to monitor their blood sugar level more regularly. Cough suppressants and antihistamines have no evidence of efficacy and should not be recommended. An expectorant is only suitable for productive coughs.`,
         state: `notAnswered`,
         userAnswered: []
@@ -146,7 +146,7 @@ var quiz = [
         q2: ``,
         q3: [],
         option: [`Acute viral infection`, `Heart failure`, `Pneumonia`, `Chronic bronchitis`, `Acute bacterial infection`],
-        answer: 0,
+        answer: [0],
         ansText:`Rationale: Sputum colour can be useful in helping narrow down the differential diagnosis. Viral and bacterial infection can range from sputum with no colour to yellow, green or brown. Given that viral infection is much more prevalent than bacterial infection, this is the most likely condition in this scenario.`,
         state: `notAnswered`,
         userAnswered: []
@@ -216,7 +216,7 @@ var quiz = [
         q2:`Has initially a nonproductive painful cough that progresses to a productive cough?`,
         q3:[`Select, from A to E, which of the following conditions:`],
         option: [`Pneumonia`, `Heart failure`, `Tuberculosis (TB)`, `Chronic bronchitis`, `Laryngotracheobronchitis`],
-        answer: 0,
+        answer: [0],
         ansText:`Rationale: Most coughs are productive or nonproductive from the outset. Heart failure (B), TB (C) and chronic bronchitis (D) are productive; croup (E) is nonproductive. Only pneumonia (A) from the listed conditions tends to change from nonproductive to productive`,
         state: `notAnswered`,
         userAnswered: []
@@ -236,7 +236,7 @@ var quiz = [
         q2:`Is associated with a high-grade fever?`,
         q3:[` Select, from A to E, which of the following conditions:`],
         option: [`Pneumonia`, `Heart failure`, `Tuberculosis (TB)`, `Chronic bronchitis`, `Laryngotracheobronchitis`],
-        answer: 0,
+        answer: [0],
         ansText:`Rationale: Fever tends to suggest infection. From the above, only two conditions are infectious in origin, pneumonia (A) and TB (C). Of these, pneumonia often presents with a high fever.`,
         state: `notAnswered`,
         userAnswered: []
@@ -357,7 +357,7 @@ var quiz = [
         q2:``,
         q3:[],
         option: [`Adolescents`, `Adults`, `Infants`, `Children`, `The elderly`],
-        answer: 0,
+        answer: [0],
         ansText:`Rationale: Glandular fever is most commonly seen in young adults as transmission is primarily through saliva (e.g. kissing).`,
         state: `notAnswered`,
         userAnswered: []

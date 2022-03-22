@@ -244,25 +244,31 @@ function addActiveClass(el) {
 
     if ((el.type === 'keydown' && el.keyCode == 13) || el.type === 'click') {
         if (currentQuestion.state !== 'wrong' && !$(el.target).hasClass('wrong') && !$(el.target).hasClass('last-child')) {
-            $(el.target).removeClass().addClass('focus-input');
-            selectOption = [];
-            $(el.target).removeClass().addClass('focus-input active');
-            if (currentQuestion.type != undefined && currentQuestion.type != null && currentQuestion.type != ""
-                && currentQuestion.type == "MCSS" || currentQuestion.type == "TF") {
-                $(el.target).prevAll().removeClass().addClass('focus-input');
-                $(el.target).nextAll().removeClass().addClass('focus-input');
+            if(!$(el.target).hasClass("active")){
+                $(el.target).removeClass().addClass('focus-input');
+                selectOption = [];
                 $(el.target).removeClass().addClass('focus-input active');
+                if (currentQuestion.type != undefined && currentQuestion.type != null && currentQuestion.type != ""
+                    && currentQuestion.type == "MCSS" || currentQuestion.type == "TF") {
+                    $(el.target).prevAll().removeClass().addClass('focus-input');
+                    $(el.target).nextAll().removeClass().addClass('focus-input');
+                    $(el.target).removeClass().addClass('focus-input active');
+                }
+                $('#mcq_button').html('Check Answer');
+                $('#mcq_button').removeAttr('aria-disabled');
+                $('#Add_solution').hide();
+                $('#answer_label').hide();
+                $('.tab-pane ').attr('data-state', 'answered');
+                $('#mcq_button').removeClass('disabled');
+                $('#mcq_button').attr('title', 'Check Answer');
+                $('#mcq_button').attr('tabindex', '0');
+                ariaAnnounce('Selected option is ' + $(el.target).text());
             }
-
-            $('#mcq_button').html('Check Answer');
-            $('#mcq_button').removeAttr('aria-disabled');
-            $('#Add_solution').hide();
-            $('#answer_label').hide();
-            $('.tab-pane ').attr('data-state', 'answered');
-            $('#mcq_button').removeClass('disabled');
-            $('#mcq_button').attr('title', 'Check Answer');
-            $('#mcq_button').attr('tabindex', '0');
-            ariaAnnounce('Selected option is ' + $(el.target).text());
+            else{
+                if($('.focus-input.active').length>1){
+                    $(el.target).removeClass("active");
+                }
+            }
         } else {
             if (currentQuestion.type != undefined && currentQuestion.type != null && currentQuestion.type != ""
                 && currentQuestion.type == "MCSS" || currentQuestion.type == "TF") {

@@ -24,4 +24,7 @@ var glossaries = {
 
     l5: `<p>*N indicates any nucleotide; S indicates G or C. <span>$$E=mc^2$$</span></p>`,
 
+    l6: `<p><img src="../../widgets/Glossary/images/abc.jpg"/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non auctor dolor. Proin rhoncus, metus in varius efficitur, enim ligula consectetur elit, ut porttitor metus ligula aliquam velit.</p>`,
+    l7: `<p><img src="../images/abc.jpg"/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non auctor dolor. Proin rhoncus, metus in varius efficitur, enim ligula consectetur elit, ut porttitor metus ligula aliquam velit.</p>`,
+
 }

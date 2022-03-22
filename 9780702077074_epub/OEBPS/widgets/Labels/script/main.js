@@ -2,6 +2,14 @@ $(".poptip_btn").on('click keydown', function (event) {
     //console.log(event);
     if ((event.type === 'keydown' && event.keyCode === 13) || event.type === 'click') {
         $(this).toggleClass('show-poptip');
+        if($(this).hasClass("show-poptip")){
+            $(".img-wrap.testyourself").removeClass("hide").addClass("show");
+            $(".img-wrap.showlabels").removeClass("show").addClass("hide");
+        }
+        else{
+            $(".img-wrap.testyourself").removeClass("show").addClass("hide");
+            $(".img-wrap.showlabels").removeClass("hide").addClass("show");
+        }
         $('.tooltip-down, .tooltip-up, .tooltip-right, .tooltip-left').toggle();
         if ($(this).hasClass('show-poptip')) {
             Utils.ariaAnnounce('Test Enabled')
@@ -22,7 +30,11 @@ $(document).ready(function () {
     $('#image-map').css({
         'width': $('#image-map img').width(),
         'height': $('#image-map img').height()
-    })
+    }).addClass("hide");
+    $('#image-map-labels').css({
+        'width': $('#image-map-labels img').width(),
+        'height': $('#image-map-labels img').height()
+    }).addClass("show");
 
     //tooltip direction
     var tooltipDirection;
@@ -62,6 +74,7 @@ $(document).ready(function () {
         $toolTipAnchorWrapper.append($tooltipAnchor);
         $tooltipAnchor.focusout(() => {
             Utils.hideToolTip();
+            Utils.setImageBound();
         });
         // append the tooltip
         $("#image-map").append($toolTipAnchorWrapper);
@@ -194,7 +207,7 @@ $(document).ready(function () {
             var newTop = toolTipoffset.top;
             $imageOffset = $imageWrapper.offset();
             if (toolTipoffset.right > winWidth) {
-                newLeft = $imageOffset.left - ((toolTipoffset.right - winWidth) - 50);
+                newLeft = $imageOffset.left - ((toolTipoffset.right - winWidth) + 20);
                 isLeftUpdated = true;
             }
             if (toolTipoffset.left < 50) {

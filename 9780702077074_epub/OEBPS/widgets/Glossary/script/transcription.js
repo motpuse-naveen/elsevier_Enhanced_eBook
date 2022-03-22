@@ -1,12 +1,13 @@
+/* v19.1 - 22MAR2022 - Image size issue */
 $(document).ready(function (){
     var $bubbleTips = $('[data-dfn]');
     $bubbleTips.on('click keydown', function (e) {
         // console.log(e.type, e.keyCode)
         debugger;
-        var dfnCode = $(e.target).attr('data-dfn');
+        var dfnCode = $(e.target).closest("[data-dfn]").attr('data-dfn');
         if ((e.type === 'keydown' && e.keyCode === 13) || e.type === 'click') {
             if (!$('.dropdown-content').is(':visible')) {
-                Utils.getTooltip(dfnCode, $(e.target));
+                Utils.getTooltip(dfnCode, $(e.target).closest("[data-dfn]"));
             } else {
                 var closestdropdwn = $('.dropdown-content:visible').closest(".dropdown");
                 var openanotherpoptip = false;
@@ -20,10 +21,11 @@ $(document).ready(function (){
                 }
                 $('.dropdown-content').hide();
                 if(openanotherpoptip){
-                    Utils.getTooltip(dfnCode, $(e.target));
+                    Utils.getTooltip(dfnCode, $(e.target).closest("[data-dfn]"));
                 }
             }
         }
+        e.stopPropagation();
     });
     $(window).click((e)=>{
         if (
@@ -61,7 +63,8 @@ $(document).ready(function (){
                 'aria-live':'assertive'
             });
             var isLoaded = new Promise((resolve, reject) =>{
-                if (!$ele.children().length) {
+                //if (!$ele.children().length) {
+                if (!$ele.find(".dropdown-content").length) {
                     $content.append($(dfnLinks[dfnCode]));
                         $ele.append($content)
                         resolve({data: $content, status: true});

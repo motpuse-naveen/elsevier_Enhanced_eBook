@@ -95,14 +95,14 @@ input#slide[type=range]:hover::-webkit-slider-thumb {
 	width: 407px!important;
 	height: 400px;
 }
-
 .slide8 #img {
-	/*max-width: 855px!important;
-	width: 855px!important;*/
+	height: 100%;
+}
+.slide8 #imglabels{
 	height: 100%;
 }
 
-#image-map {
+#image-map,#image-map-labels {
 	margin-top: 0px;
 }
 
@@ -123,14 +123,19 @@ input#slide[type=range]:hover::-webkit-slider-thumb {
 }
 
 @media (max-width: 767px) {
-	.slide8 #image-map {
+	.slide8 #image-map, .slide8 #image-map-labels {
 		transform: scale(0.8);
 	}
 }
 
 @media (max-width:630px) {
-	.slide8 #image-map {
+	.slide8 #image-map, .slide8 #image-map-labels {
 		transform: scale(0.6);
+	}
+}
+@media (max-width:470px) {
+	.slide8 #image-map, .slide8 #image-map-labels {
+		transform: scale(0.5);
 	}
 }
 @media screen and (max-width:767px) {
@@ -430,6 +435,11 @@ span.hotspot2 {
 	width: 855px!important;
 	height: 470px;
 } 
+.slide8 #imglabels {
+	max-width: 855px!important;
+	width: 855px!important;
+	height: 470px;
+} 
 
 .poptip_btn {
 	background-image: url(../images/image_figure_test_yourself_btn.png);
@@ -458,12 +468,24 @@ span.hotspot2 {
 	background-position: 0 -152px;
 }
 
-#image-map {
+#image-map,#image-map-labels {
 	position: relative;
 	width: auto !important;
 	height: auto !important;
 	display: inline-block;
 	transform: scale(0.92);
+}
+#image-map.img-wrap.testyourself.hide{
+	display: none;
+}
+#image-map.img-wrap.testyourself.show{
+	display: inline-block;
+}
+#image-map-labels.img-wrap.showlabels.show{
+	display: inline-block;
+}
+#image-map-labels.img-wrap.showlabels.hide{
+	display: none;
 }
 
 .slide8 .tooltip-down,
@@ -705,3 +727,5 @@ span.hotspot2 {
 .tooltipInner.maxzindex{
 	z-index: 10 !important;
 }
+
+
