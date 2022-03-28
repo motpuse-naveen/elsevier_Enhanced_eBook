@@ -183,6 +183,9 @@ function getNewQuestion(question) {
         // option.setAttribute("onclick", "addActiveClass(this)");
     }
     $('.focus-input').on('keydown click', addActiveClass);
+    $(".focus-input *").on("click", function(e){
+        e.stopPropagation()
+    })
     $('.tab-pane ').attr('data-state', currentQuestion.state);
     $('.tab-pane ').attr('id', question);
     if (currentQuestion.state === 'wrong') {

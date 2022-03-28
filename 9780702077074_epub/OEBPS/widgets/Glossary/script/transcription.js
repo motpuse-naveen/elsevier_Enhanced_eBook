@@ -3,7 +3,6 @@ $(document).ready(function (){
     var $bubbleTips = $('[data-dfn]');
     $bubbleTips.on('click keydown', function (e) {
         // console.log(e.type, e.keyCode)
-        debugger;
         var dfnCode = $(e.target).closest("[data-dfn]").attr('data-dfn');
         if ((e.type === 'keydown' && e.keyCode === 13) || e.type === 'click') {
             if (!$('.dropdown-content').is(':visible')) {

@@ -354,6 +354,7 @@ span.text-highlighter::after {
     bottom: 24px!important;
     text-indent: initial;
     border: 1px solid #E6E6E6;
+    font-weight: normal;
 }
 html {
     scroll-behavior: smooth;

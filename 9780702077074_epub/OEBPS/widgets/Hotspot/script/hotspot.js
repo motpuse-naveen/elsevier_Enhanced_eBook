@@ -332,7 +332,6 @@ function createDraggable() {
 
 function SetHotSpotPositions(){
     try{
-        debugger;
         if(typeof main_hotspot_positions != 'undefined' && main_hotspot_positions!=null){
             if(main_hotspot_positions.length>0){
                 var main_hs_elmnts = $(".hotspot_slide_wrap2 .hotspot")
