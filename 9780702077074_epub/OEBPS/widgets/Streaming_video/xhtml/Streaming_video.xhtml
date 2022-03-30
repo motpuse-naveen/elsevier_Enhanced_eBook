@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+   <!-- Version 19, Date:30 MAR 2022 -->
    <!--Streaming_Video Template Unique ID: XEGMD9ZA81NCFIQP-->
    <head>
       <meta charset="UTF-8" />
@@ -29,17 +30,17 @@
          <div id="ariaMessages" class="visually-hidden" aria-live="assertive"></div>
       </div>
       <script src="../script/video-tracker.js"></script>
-   </body>
-   <script>
-      var allImageElmts = document.querySelectorAll("video");
-      allImageElmts.forEach(imgelement => {
-         imgelement.addEventListener("contextmenu", function(event){
-            event.preventDefault();
-            return false;
+      <script>
+         var allImageElmts = document.querySelectorAll("video");
+         allImageElmts.forEach(imgelement => {
+            imgelement.addEventListener("contextmenu", function(event){
+               event.preventDefault();
+               return false;
+            });
          });
-      });
-      document.addEventListener("contextmenu", function (e){
-         e.preventDefault();
-      }, false);
-   </script>
+         document.addEventListener("contextmenu", function (e){
+            e.preventDefault();
+         }, false);
+      </script>
+   </body>
 </html>

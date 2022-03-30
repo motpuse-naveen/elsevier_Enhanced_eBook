@@ -1,3 +1,4 @@
+/* Version 19, Date:30 MAR 2022 */
 const correctFBText = "Correct."
 const incorrectFBText = "Incorrect. Please try again."
 var paginationTabindex = 10001;
@@ -225,6 +226,27 @@ function getNewQuestion(question) {
     $(".focus-input *").on("click", function(e){
         e.stopPropagation()
     })
+    $('a[href]').on('click', function (e) {
+        var annotId = $(this).attr("href");
+        if(!annotId.startsWith("#")){
+            annotId = "#" + annotId;
+        }
+        if($(annotId).length>0){
+            $(annotId).get(0).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        else{
+            if(typeof top.annotate_from_frame == "function"){
+                top.annotate_from_frame(annotId);
+            }
+        }
+    });
+    
+    if(typeof bind_glossary_events == "function"){
+        bind_glossary_events();
+    }
+    
     $('.tab-pane ').attr('data-state', currentQuestion.state);
     $('.tab-pane ').attr('id', question);
     if (currentQuestion.state === 'wrong') {
@@ -529,3 +551,4 @@ function ariaAnnounce(msg) {
         $('#ariaMessages').html("");
     }, 5000);
 };
+

@@ -1,3 +1,4 @@
+/* Version 19, Date:30 MAR 2022 */
 $(document).ready(function () {
     var isDragging = false;
     var framePadding = 40;

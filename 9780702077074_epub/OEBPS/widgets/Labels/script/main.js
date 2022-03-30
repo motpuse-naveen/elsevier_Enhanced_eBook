@@ -1,3 +1,4 @@
+/* Version 19, Date:30 MAR 2022 */
 $(".poptip_btn").on('click keydown', function (event) {
     //console.log(event);
     if ((event.type === 'keydown' && event.keyCode === 13) || event.type === 'click') {

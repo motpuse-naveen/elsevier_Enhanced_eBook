@@ -1,4 +1,5 @@
 // Handling next prev tooltip click
+/* Version 19, Date:30 MAR 2022 */
 function plusSlides(event) {
    var n = parseInt($(event.target).attr('data-nav'));
    var prevToolTip = Utils.getActiveTooltipNumber();

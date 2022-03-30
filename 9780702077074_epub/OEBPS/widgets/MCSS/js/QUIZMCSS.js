@@ -12,7 +12,7 @@ var quiz = [
         userAnswered: ``
     },
     {
-        q: `Which of the following conditions with cough as a major presenting symptom is least likely to produce a productive cough?`,
+        q: `Which of the following conditions with cough as a major presenting symptom is least likely to produce a productive cough? <a href="#f0010ab_v2">link from question to page</a>`,
         q2: ``,
         q3: [],
         option: [`Chronic bronchitis`, `Asthma`, `Heart failure`, `Pneumonia`, `Tuberculosis`],
@@ -23,7 +23,7 @@ var quiz = [
         userAnswered: ``
     },
     {
-        q: `Mrs Jones visits your pharmacy complaining of having a dry cough for the last 7 days. After questioning, you decide it is a simple viral infection and recommend simple linctus. If symptoms persist, after how many further days would referral to the physician be appropriate?`,
+        q: `<span id="refMCSSQ3">Mrs Jones visits your pharmacy complaining of having a dry cough for the last 7 days. After questioning, you decide it is a simple viral infection and recommend simple linctus. If symptoms persist, after how many further days would referral to the physician be appropriate?</span>`,
         q2: ``,
         q3: [],
         option: [`3 days`, `5 days`, `7 days`, `10 days`, `14 days`],
@@ -34,7 +34,7 @@ var quiz = [
         userAnswered: ``
     },
     {
-        q: `Mr Patel, who is 48 years old, presents with a nonproductive cough. Based on epidemiology, what is the most likely cause of the cough?`,
+        q: `Mr Patel, who is <span class="anychar dropdown def-img anychar-tooltip" aria-label="m dash" tabindex="0" role="button" data-dfn="l5">48</span> years old, presents with a nonproductive cough. Based on epidemiology, what is the most likely cause of the cough?`,
         q2: `Rationale: For all patients, regardless of age and gender, viral infection (d) is the most common presentation.`,
         q3: [],
         option: [`Acute bronchitis`, ` Upper airways cough syndrome (postnasal drip)`, `Asthma`, `Viral infection`, `Pneumothorax`],

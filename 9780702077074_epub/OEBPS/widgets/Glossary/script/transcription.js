@@ -1,5 +1,25 @@
-/* v19.1 - 22MAR2022 - Image size issue */
+/* Version 19, Date:30 MAR 2022 */
 $(document).ready(function (){
+    bind_glossary_events();
+    $(window).click((e)=>{
+        if (
+            !$(e.target).hasClass('def-img') && 
+            !$(e.target).hasClass('dropdown-content') && 
+            $(e.target).parents('.dropdown-content').length <= 0
+        ) {
+            $('.dropdown-content').hide();
+        }
+    });
+    $('.dropdown').on('keydown', '.dropdown-content', (e)=> {
+        console.log($(e.target))
+        if (e.type === 'keydown' && e.keyCode === 27) { 
+            $(e.target).parent().focus();   
+            $(e.target).hide();
+        }
+    })
+});
+
+function bind_glossary_events(){
     var $bubbleTips = $('[data-dfn]');
     $bubbleTips.on('click keydown', function (e) {
         // console.log(e.type, e.keyCode)
@@ -26,23 +46,7 @@ $(document).ready(function (){
         }
         e.stopPropagation();
     });
-    $(window).click((e)=>{
-        if (
-            !$(e.target).hasClass('def-img') && 
-            !$(e.target).hasClass('dropdown-content') && 
-            $(e.target).parents('.dropdown-content').length <= 0
-        ) {
-            $('.dropdown-content').hide();
-        }
-    });
-    $('.dropdown').on ('keydown', '.dropdown-content', (e)=> {
-        console.log($(e.target))
-        if (e.type === 'keydown' && e.keyCode === 27) { 
-            $(e.target).parent().focus();   
-            $(e.target).hide();
-        }
-    })
-});
+}
 
 (function (app) {
     var dfnLinks = glossaries;
