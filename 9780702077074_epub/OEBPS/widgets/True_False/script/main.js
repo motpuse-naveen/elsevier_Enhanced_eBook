@@ -1,4 +1,4 @@
-/* Version 19, Date:30 MAR 2022 */
+/* Version 19.1, Date:31 MAR 2022 */
 const correctFBText = "Correct."
 const incorrectFBText = "Incorrect. Please try again."
 var paginationTabindex = 10001;
@@ -187,21 +187,26 @@ function getNewQuestion(question) {
     $(".focus-input *").on("click", function(e){
         e.stopPropagation()
     })
-    $('a[href]').on('click', function (e) {
+    $('.tab-pane a[href]').on('click', function (e) {
         var annotId = $(this).attr("href");
         if(!annotId.startsWith("#")){
             annotId = "#" + annotId;
         }
         if($(annotId).length>0){
-            $(annotId).get(0).scrollIntoView({
-                behavior: 'smooth'
-            });
+            document.location.hash = annotId;
         }
         else{
-            if(typeof top.annotate_from_frame == "function"){
-                top.annotate_from_frame(annotId);
+            try{
+                if(typeof parent.annotate_from_frame == "function"){
+                    parent.annotate_from_frame(annotId);
+                }
+            }
+            catch(err){
+                //$(this).hide();
             }
         }
+        //e.stopPropagation();
+        e.preventDefault();
     });
     
     if(typeof bind_glossary_events == "function"){

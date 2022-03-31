@@ -91,7 +91,7 @@
             <item id="B9780702077050020103_fm02-9780702077050" href="IMAGES/B9780702077050020103/main.assets/fm02-9780702077050.jpg" media-type="image/jpeg"/>
             <item id="B9780702077050020115" href="XHTML/B9780702077050020115/B9780702077050020115.xhtml" media-type="application/xhtml+xml"/>
             <item id="B9780702077050020115_fm01-9780702077050" href="IMAGES/B9780702077050020115/main.assets/fm01-9780702077050.jpg" media-type="image/jpeg"/>
-            <item id="part_p1" href="XHTML/part_p1.xhtml" media-type="application/xhtml+xml"/>
+            <item id="part_p1" href="XHTML/part_p1.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
             <item id="B978070207705000001X" href="XHTML/B978070207705000001X/B978070207705000001X.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
             <item id="B978070207705000001X_f01-01-9780702077050" href="IMAGES/B978070207705000001X/main.assets/f01-01-9780702077050.jpg" media-type="image/jpeg"/>
             <item id="B978070207705000001X_f01-02-9780702077050" href="IMAGES/B978070207705000001X/main.assets/f01-02-9780702077050.jpg" media-type="image/jpeg"/>

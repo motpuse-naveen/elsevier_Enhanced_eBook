@@ -1,4 +1,4 @@
-/* Version 19, Date:30 MAR 2022 */
+/* Version 19.1, Date:31 MAR 2022 */
 /*** Disable Right click on image ***/
 var allImageElmts = document.querySelectorAll("img");
 allImageElmts.forEach(imgelement => {
@@ -19,9 +19,8 @@ function annotate_from_frame(elementId) {
     }
 	const element = document.getElementById(elementId);
 	if(element!=null){
-		element.scrollIntoView({
-			behavior: 'smooth'
-		});
+		document.location.hash = "#"
+		document.location.hash = "#" + elementId;
 	}
 }
 /*** End from_frame Annotation ***/
@@ -33,8 +32,8 @@ window.addEventListener("load", function(event) {
 	if(frameid!=undefined && frameid!=null && frameid!=""){
 		const element = document.getElementById(frameid);
 		if(element!=null){
-			//element.scrollIntoView(true);
-			element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+			document.location.hash = "#"
+			document.location.hash = "#" + frameid;
 			if(questionnumber!=undefined && questionnumber!=null && questionnumber!=""){
 				element.contentDocument.querySelector(".nav-link.step[data-id='q-" + questionnumber + "']").click()
 			}
@@ -68,8 +67,8 @@ function handle_frame_target_click(event){
 	if(hreflink.startsWith("#")){
 		const element = document.getElementById(frameid);
 		if(element!=null){
-			//element.scrollIntoView(true)
-			element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+			document.location.hash = "#"
+			document.location.hash = "#" + frameid;
 			if(questionnumber!=undefined && questionnumber!=null && questionnumber!=""){
 				element.contentDocument.querySelector(".nav-link.step[data-id='q-" + questionnumber + "']").click()
 			}
