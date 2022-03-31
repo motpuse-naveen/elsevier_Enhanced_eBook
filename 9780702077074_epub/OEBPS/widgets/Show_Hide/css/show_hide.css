@@ -1,6 +1,7 @@
 /*@charset "UTF-8";
 	@namespace "http://www.w3.org/1999/xhtml";
 @namespace epub "http://www.idpf.org/2007/ops";*/
+/* Version 19.1, Date:31 MAR 2022 */
 
 body{
 	color:var(--primary-text);
@@ -42,11 +43,13 @@ ol.ques-list li{
 	margin-bottom: 2em;
 }
 ol.ques-list li .ques-title{
-	position: absolute;
+	/*position: absolute;
 	left: 0em;
-	top: 0em;
+	top: 0em;*/
 	font-weight: 400;
 	color:var(--orange);
+	float:left;
+	padding-right: 10px;
 }
 ol.ques-list li .ques-info{
 	padding-left: 1.5em;

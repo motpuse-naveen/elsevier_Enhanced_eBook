@@ -1,4 +1,4 @@
-/* Version 19, Date:30 MAR 2022 */
+/* Version 19.1, Date:31 MAR 2022 */
 $(".show_hide_ans").on('click', function (event) {
     $(this).toggleClass('show-ans');
     if ($.trim($(this).text()) == "Hide Answer") {
