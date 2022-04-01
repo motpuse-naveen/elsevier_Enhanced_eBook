@@ -2773,6 +2773,7 @@
             <item id="widget_item093" href="widgets/Image_Slider/script/jquery-ui.min.js" media-type="text/javascript"/>
             <item id="widget_item094" href="widgets/Image_Slider/script/slider-a11y.js" media-type="text/javascript"/>
             <item id="widget_item095" href="widgets/Image_Slider/script/ui-touch-punch.js" media-type="text/javascript"/>
+            <item id="widget_item095_11" href="widgets/Image_Slider/script/img-slider-main.js" media-type="text/javascript"/>
             <item id="widget_item096" href="widgets/Image_Slider/xhtml/Image_Slider.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
             <item id="widget_item097" href="widgets/Labels/css/header_style.css" media-type="text/css"/>
             <item id="widget_item098" href="widgets/Labels/css/style.css" media-type="text/css"/>
@@ -2840,6 +2841,7 @@
             <item id="widget_item171" href="widgets/Slide_Show/script/jquery-ui.min.js" media-type="text/javascript"/>
             <item id="widget_item172" href="widgets/Slide_Show/script/slider-a11y.js" media-type="text/javascript"/>
             <item id="widget_item173" href="widgets/Slide_Show/script/ui-touch-punch.js" media-type="text/javascript"/>
+            <item id="widget_item173_11" href="widgets/Slide_Show/script/slide_show.js" media-type="text/javascript"/>
             <item id="widget_item174" href="widgets/Slide_Show/xhtml/Slide_Show.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
             <item id="widget_item175" href="widgets/Streaming_video/css/style.css" media-type="text/css"/>
             
