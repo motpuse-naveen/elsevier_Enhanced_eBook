@@ -1,4 +1,5 @@
 /* Version 19.1, Date:31 MAR 2022 */
+/* Version 19.2, Date:04 APR 2022 */
 /*** Disable Right click on image ***/
 var allImageElmts = document.querySelectorAll("img");
 allImageElmts.forEach(imgelement => {
@@ -14,11 +15,11 @@ document.addEventListener("contextmenu", function (e) {
 
 /*** Annotation from Question to top ***/
 function annotate_from_frame(elementId) {
-	if(elementId.startsWith("#")){
-        elementId = elementId.substring(1,elementId.length);
-    }
+	if (elementId.startsWith("#")) {
+		elementId = elementId.substring(1, elementId.length);
+	}
 	const element = document.getElementById(elementId);
-	if(element!=null){
+	if (element != null) {
 		document.location.hash = "#"
 		document.location.hash = "#" + elementId;
 	}
@@ -26,63 +27,79 @@ function annotate_from_frame(elementId) {
 /*** End from_frame Annotation ***/
 
 /*** Annotate within iframe ***/
-window.addEventListener("load", function(event) {
-    var frameid = getParameterByName("frameid", window.location.href)
-	var questionnumber = getParameterByName("questionnumber", window.location.href)
-	if(frameid!=undefined && frameid!=null && frameid!=""){
-		const element = document.getElementById(frameid);
-		if(element!=null){
-			document.location.hash = "#"
-			document.location.hash = "#" + frameid;
-			if(questionnumber!=undefined && questionnumber!=null && questionnumber!=""){
-				element.contentDocument.querySelector(".nav-link.step[data-id='q-" + questionnumber + "']").click()
+window.addEventListener("load", function (event) {
+	var frameid = document.location.hash;
+	/*var logdiv = document.getElementById("logh2")
+	if(logdiv!=null){
+		logdiv.innerText = frameid;
+	}*/
+	if (frameid != undefined && frameid != null && frameid != "") {
+		if(frameid.indexOf("frameid~~")>0){
+			var localhash = frameid.replace("frameid~~","");
+			/*if(logdiv!=null){
+				logdiv.innerText = frameid + ":NM:" + localhash;
+			}*/
+			var hashval = localhash.split("~~")[0];
+			var qno = localhash.split("~~")[1];
+			const element11 = document.querySelector(hashval);
+			/*if(logdiv!=null){
+				logdiv.innerText = frameid + ":NM:" + localhash + ":NM:" + hashval;
+			}*/
+			if (element11 != null) {
+				//document.location.hash = "#"
+				document.location.hash = hashval;
+				if (qno != undefined && qno != null && qno != "") {
+					element11.contentDocument.querySelector(".nav-link.step[data-id='q-" + qno + "']").click()
+				}
 			}
 		}
 	}
 });
 
-function getParameterByName(name, url = window.location.href) {
-    name = name.replace(/[\[\]]/g, '\\$&');
-    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+function getParameterByName(name, url = document.location.href) {
+	name = name.replace(/[\[\]]/g, '\\$&');
+	var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+		results = regex.exec(url);
+	if (!results) return null;
+	if (!results[2]) return '';
+	return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
 var allhrefs = document.querySelectorAll("a[itemid][itemref][href]");
 allhrefs.forEach(hrefelm => {
 	if (typeof window.addEventListener != "undefined") {
-		hrefelm.addEventListener("click",handle_frame_target_click,false);
+		hrefelm.addEventListener("click", handle_frame_target_click, false);
 	} else {
-		hrefelm.attachEvent("onclick",handle_frame_target_click);
+		hrefelm.attachEvent("onclick", handle_frame_target_click);
 	}
 });
-function handle_frame_target_click(event){
+function handle_frame_target_click(event) {
 	//debugger
 	event.preventDefault();
 	var frameid = event.target.getAttribute("itemid");
 	var questionnumber = event.target.getAttribute("itemref");
 	var hreflink = event.target.getAttribute("href");
-	if(hreflink.startsWith("#")){
+	if (hreflink.startsWith("#")) {
 		const element = document.getElementById(frameid);
-		if(element!=null){
+		if (element != null) {
 			document.location.hash = "#"
 			document.location.hash = "#" + frameid;
-			if(questionnumber!=undefined && questionnumber!=null && questionnumber!=""){
+			if (questionnumber != undefined && questionnumber != null && questionnumber != "") {
 				element.contentDocument.querySelector(".nav-link.step[data-id='q-" + questionnumber + "']").click()
 			}
 		}
 	}
-	else{
-		var url = window.location.pathname;
-		var filename = url.substring(url.lastIndexOf('/')+1);
-		if(filename!=""){
-			url = url.replace(filename,hreflink);
+	/*
+	else {
+		var url = document.location.pathname;
+		var filename = url.substring(url.lastIndexOf('/') + 1);
+		if (filename != "") {
+			url = url.replace(filename, hreflink);
 			url = url + "?frameid=" + frameid + "&questionnumber=" + questionnumber;
-			window.location.href = url;
+			document.location.href = url;
 		}
 	}
+	*/
 }
 /*** End within iframe Annotation ***/
 

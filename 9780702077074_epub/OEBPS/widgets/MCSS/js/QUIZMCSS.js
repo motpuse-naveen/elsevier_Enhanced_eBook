@@ -18,7 +18,7 @@ var quiz = [
         option: [`Chronic bronchitis`, `Asthma`, `Heart failure`, `Pneumonia`, `Tuberculosis`],
         optionStyleType: `st-lower-alpha`,
         answer: 1,
-        ansText: `Rationale: Chronic bronchitis (a), bronchiectasis (c), and tuberculosis (e) are associated with productive coughs; Pneumonia (d) can start with a nonproductive cough but becomes productive; asthma (b) invariably has a nonproductive cough.`,
+        ansText: `Rationale: Chronic bronchitis (a), bronchiectasis (c), and tuberculosis (e) are associated with productive coughs; Pneumonia (d) can start with a nonproductive cough but becomes productive; asthma (b) invariably has a nonproductive cough.<a href="#f0010ab_v2">link from question to page</a>`,
         state: `notAnswered`,
         userAnswered: ``
     },

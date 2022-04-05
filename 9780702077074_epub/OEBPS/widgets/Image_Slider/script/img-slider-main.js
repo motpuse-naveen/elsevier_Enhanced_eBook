@@ -19,14 +19,14 @@
         }, 5000);
     };
     app.sliderRange = { min: minSliderRange, max: maxSliderRange };
-    var sliders = document.getElementById('imageSlider1');
+    /*var sliders = document.getElementById('imageSlider1');
     app.sliderObj = new SliderA11y(sliders);
     var isSliderInit = false;
     app.sliderObjInit = function () {
         if (!isSliderInit) {
             app.sliderObj.init();
         }
-    }
+    }*/
     function scaleImage(scaleSliderVal) {
         currentScale = parseFloat(1) + ((parseInt(scaleSliderVal) * 0.01) * 4);
         $imageWrapper.css('transform', 'scale(' + currentScale + ')');
@@ -43,7 +43,7 @@
         return minSliderRange;
     }
     app.isZoomed = function () {
-        return currentSliderVal & gt; 0;
+        return currentSliderVal > 0;
     }
     app.getCurrentScale = function () {
         return currentScale;
@@ -135,7 +135,7 @@
 var Utils;
 // Utility Functions End
 $(document).ready(function () {
-    Utils.sliderObjInit();
+    //Utils.sliderObjInit();
     $('.btn-range1').on('click keydown', function (e) {
         if ((e.type === 'keydown' && (e.keyCode === '32' || e.keyCode === '13')) || e.type === 'click') {
             var direction = $(this).data("dir");

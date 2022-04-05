@@ -1,6 +1,7 @@
 /*@charset "UTF-8";
 	@namespace "http://www.w3.org/1999/xhtml";
 @namespace epub "http://www.idpf.org/2007/ops";*/
+/* Version 19.2, Date:05 APR 2022 */
 
 body {
 	margin: 0px;
@@ -184,9 +185,9 @@ i{
 }
 .mcq button#mcq_button {
     border: 2px solid transparent;
-	position: absolute;
+	/*position: absolute;
+    bottom: 0px;*/
     right: 20px;
-    bottom: 0px;
 }
 .check.disabled, .check-try-again.disabled {
     pointer-events: none;

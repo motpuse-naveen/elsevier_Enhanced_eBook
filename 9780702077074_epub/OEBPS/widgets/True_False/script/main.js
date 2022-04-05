@@ -1,4 +1,4 @@
-/* Version 19.1, Date:31 MAR 2022 */
+/* Version 19.3, Date:05 APR 2022 */
 const correctFBText = "Correct."
 const incorrectFBText = "Incorrect. Please try again."
 var paginationTabindex = 10001;
@@ -187,28 +187,6 @@ function getNewQuestion(question) {
     $(".focus-input *").on("click", function(e){
         e.stopPropagation()
     })
-    $('.tab-pane a[href]').on('click', function (e) {
-        var annotId = $(this).attr("href");
-        if(!annotId.startsWith("#")){
-            annotId = "#" + annotId;
-        }
-        if($(annotId).length>0){
-            document.location.hash = annotId;
-        }
-        else{
-            try{
-                if(typeof parent.annotate_from_frame == "function"){
-                    parent.annotate_from_frame(annotId);
-                }
-            }
-            catch(err){
-                //$(this).hide();
-            }
-        }
-        //e.stopPropagation();
-        e.preventDefault();
-    });
-    
     if(typeof bind_glossary_events == "function"){
         bind_glossary_events();
     }
@@ -274,6 +252,7 @@ function getNewQuestion(question) {
     MathJax.typesetClear()
     MathJax.typeset();
     questionCounter++;
+    bind_annotLinkEvents();
 }
 function addActiveClass(el) {
     if ((el.type === 'keydown' && el.keyCode == 13) || el.type === 'click') {
@@ -392,6 +371,7 @@ function updateAnswerIndicator(markType) {
         $('#answer_label').removeClass().addClass('not-quite');
         $('#Add_solution').children().html(quiz[currentQuestion].ansText);
     }
+    bind_annotLinkEvents();
 }
 $('#mcq_button').on('mousedown click', function (e) {
     if ((e.type === 'keydown' && e.keyCode == 13) || e.type === 'click') {
@@ -434,6 +414,7 @@ window.onload = function () {
     $('#Add_solution').hide();
     $('#Add_solution').children().html(quiz[0].ansText);
     $('.arrow-left').addClass('disabled')
+    bind_annotLinkEvents();
 };
 $('#show_ans').on('click keydown', (function (e) {
     if ((e.type === 'keydown' && e.keyCode == 13) || e.type === 'click') {
@@ -453,6 +434,7 @@ $('#show_ans').on('click keydown', (function (e) {
         })
         $('.focus-input').removeClass('wrong');
         $('#answer_label').hide();
+        bind_annotLinkEvents();
     }
 }));
 $('.arrow-left').on('click keydown', function (e) {
@@ -500,4 +482,29 @@ function ariaAnnounce(msg) {
         $('#ariaMessages').html("");
     }, 5000);
 };
+
+function bind_annotLinkEvents(){
+    $('.tab-pane a[href]').on('click', function (e) {
+        var annotId = $(this).attr("href");
+        if(!annotId.startsWith("#")){
+            annotId = "#" + annotId;
+        }
+        if($(annotId).length>0){
+            document.location.hash = annotId;
+        }
+        else{
+            try{
+                if(typeof parent.annotate_from_frame == "function"){
+                    parent.annotate_from_frame(annotId);
+                }
+            }
+            catch(err){
+                //$(this).hide();
+            }
+        }
+        //e.stopPropagation();
+        e.preventDefault();
+    });
+}
+
 
