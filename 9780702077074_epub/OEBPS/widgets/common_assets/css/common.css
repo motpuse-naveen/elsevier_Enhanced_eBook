@@ -17,3 +17,28 @@ figure img{
 .stop-scrolling {
 	overflow: hidden;
 }
+
+.video-area {
+	padding: 0px;
+	overflow: hidden;
+	height: 100%;
+    width: 100%; 
+}
+video{
+  /*width: 100vw;*/
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: fill;
+}
+video::-internal-media-controls-download-button { 
+    display:none; 
+} 
+ 
+video::-webkit-media-controls-enclosure { 
+    overflow:hidden; 
+} 
+ 
+video::-webkit-media-controls-panel { 
+    width: calc(100% + 30px); /* Adjust as needed */ 
+}

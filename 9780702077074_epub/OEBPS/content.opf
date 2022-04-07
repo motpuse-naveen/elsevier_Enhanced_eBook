@@ -2859,8 +2859,8 @@
             
             <item id="widget_item184" href="widgets/Streaming_video/script/jquery-ui.min.js" media-type="text/javascript"/>
             <item id="widget_item185" href="widgets/Streaming_video/script/slider-a11y-vertical.js" media-type="text/javascript"/>
-            <item id="widget_item186" href="https://static.us.elsevierhealth.com/Provencher_1_9780323287845/9780323287845_0001.m3u8" media-type="application/x-mpegurl"/>
-            
+            <item id="widget_item186" href="https://static.us.elsevierhealth.com/standring_42_9780702077050/9780702077050_0001.mp4" media-type="video/mp4"/>
+            <item id="widget_item186_123" href="https://static.us.elsevierhealth.com/goldman_cecilmedicine24e_excon/goldman_105-1_lung_recruitment_in_a_rat_lung_9781437736656.m3u8" media-type="application/x-mpegurl"/>
             <item id="widget_item187" href="widgets/Streaming_video/xhtml/Streaming_video.xhtml" properties="scripted remote-resources" media-type="application/xhtml+xml"/>
             
             <item id="widget_item187a" href="widgets/Streaming_video/xhtml/sintel-en.vtt" media-type="text/vtt"/>
