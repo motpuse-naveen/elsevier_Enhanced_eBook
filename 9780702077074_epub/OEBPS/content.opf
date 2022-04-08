@@ -64,6 +64,7 @@
             <item id="id_js" href="Style/math.js" media-type="text/javascript"/>
             <item id="common_jquery_reference" href="widgets/common_assets/scripts/jquery-3.6.0.min.js" media-type="text/javascript"/>
             <item id="common_js" href="widgets/common_assets/scripts/common.js" media-type="text/javascript"/>
+            <item id="video_tracker_js" href="widgets/common_assets/scripts/video-tracker.js" media-type="text/javascript"/>
             <item id="iframecommon_js" href="widgets/common_assets/scripts/iframe_common.js" media-type="text/javascript"/>
             <item id="iframecommon_css" href="widgets/common_assets/css/iframe_common.css" media-type="text/css"/>
             <item id="variables_css" href="widgets/common_assets/css/variables.css" media-type="text/css"/>
@@ -2855,7 +2856,7 @@
             <item id="widget_item181" href="widgets/Streaming_video/images/video-img.png" media-type="image/png"/>
             <item id="widget_item182" href="widgets/Streaming_video/images/web_volume_dk.png" media-type="image/png"/>
             <item id="widget_item183" href="widgets/Streaming_video/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
-            <item id="widget_item183_11" href="widgets/Streaming_video/script/video-tracker.js" media-type="text/javascript"/>
+
             
             <item id="widget_item184" href="widgets/Streaming_video/script/jquery-ui.min.js" media-type="text/javascript"/>
             <item id="widget_item185" href="widgets/Streaming_video/script/slider-a11y-vertical.js" media-type="text/javascript"/>
