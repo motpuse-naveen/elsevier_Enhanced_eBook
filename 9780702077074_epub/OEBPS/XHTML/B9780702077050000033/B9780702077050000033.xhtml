@@ -14,6 +14,7 @@ content="text/html; charset=utf-8"/><title>Gray's
 <script type="text/javascript" src="../../widgets/Glossary/script/glossary-poptip.js" ></script>
 <script type="text/javascript" src="../../widgets/Glossary/script/transcription.js" ></script>
 <script type="text/javascript" src="../../widgets/common_assets/scripts/mathjax/tex-mml-chtml.js"></script>
+<script type="text/javascript" src="../../widgets/common_assets/scripts/hlsjs/hls.min.js"></script>
 
 
 
@@ -66,18 +67,19 @@ content="text/html; charset=utf-8"/><title>Gray's
       </div>
    </div>
    <p style="margin: 0px;"><br/></p>
+   <p style="margin: 0px;">Load m3u8 file using HLS.js from Remote location https://static.us.elsevierhealth.com</p>
+   <p style="margin: 0px;"><br/></p>
    <div class="video-area" role="application">
       <div class="sr-only" style="position: absolute; left: -9999px;" role="heading" aria-level="1">Variable Bitrate Streaming Test</div>
-      <video controls="controls"  controlslist="nodownload">
-         <source src="https://static.us.elsevierhealth.com/goldman_cecilmedicine24e_excon/goldman_105-1_lung_recruitment_in_a_rat_lung_9781437736656.m3u8" type="application/x-mpegurl" />
-         <!--<track src="sintel-en.vtt" kind="subtitles" srclang="en" label="English" />-->
+      <video class="hls-video" controls="controls"  controlslist="nodownload" src="https://static.us.elsevierhealth.com/goldman_cecilmedicine24e_excon/test-5.m3u8">
          Your browser does not support HTML5 video.
       </video>
       <div class="vidleg">
          <p><span class="fignum" >Video 1.2:</span> Variable Bitrate Streaming Test</p>
-         <p>#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1400000 goldman_105-1_lung_recruitment_in_a_rat_lung_9781437736656_ios_400px140k</p>
+         <p>#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1400000 goldman_105-1_lung_recruitment_in_a_rat_lung_9781437736656_ios_400px140k (TS Files)</p>
       </div>
    </div>
+   <p style="margin: 0px;"><br/></p>
 
 <!--
 <p>Video With Able Player</p>
@@ -708,6 +710,20 @@ content="text/html; charset=utf-8"/><title>Gray's
                   </p>
                   <a>Chapter 7. Skin and its
                         appendages</a>
+                        <div>
+                              <p style="margin: 0px;"><br/></p>
+                              <p style="margin: 0px;">Load m3u8 file using HLS.js from working url</p>
+                              <p style="margin: 0px;"><br/></p>
+                              <div class="video-area" role="application">
+                                    <div class="sr-only" style="position: absolute; left: -9999px;" role="heading" aria-level="1">Variable Bitrate Streaming Test</div>
+                                    <video class="hls-video" controls="controls"  controlslist="nodownload" src="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8">
+                                    Your browser does not support HTML5 video.
+                                    </video>
+                                    <div class="vidleg">
+                                    <p><span class="fignum" >Video 1.3:</span> Big Buck Bunny</p>
+                                    </div>
+                              </div>
+                        </div>
               
          </div>
       </div>  
@@ -736,4 +752,32 @@ content="text/html; charset=utf-8"/><title>Gray's
 <script src="../../widgets/Show_Hide/script/show_hide.js"></script>
 <script src="../../widgets/common_assets/scripts/common.js"></script>
 <script src="../../widgets/common_assets/scripts/video-tracker.js"></script>
+
+<script>
+      var allvideoelemts = document.querySelectorAll("video.hls-video");
+      allvideoelemts.forEach(videoelm => {
+        //var video = document.getElementById('video');
+        var videoSrc = videoelm.src;
+        if (Hls.isSupported()) {
+          var hls = new Hls({
+            debug: true,
+          });
+          hls.loadSource(videoSrc);
+          hls.attachMedia(videoelm);
+          hls.on(Hls.Events.MEDIA_ATTACHED, function () {
+            videoelm.muted = true;
+            videoelm.play();
+          });
+        }
+        // hls.js is not supported on platforms that do not have Media Source Extensions (MSE) enabled.
+        // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element through the `src` property.
+        // This is using the built-in support of the plain video element, without using hls.js.
+        else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+          videoelm.src = videoSrc;
+          videoelm.addEventListener('canplay', function () {
+            videoelm.play();
+          });
+        }
+      });
+    </script>
 </body></html>
