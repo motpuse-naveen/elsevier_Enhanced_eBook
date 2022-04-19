@@ -1,3 +1,15 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+	color: inherit;
+}
+
 .inner-image-area {
 	height: 100%;
 	display: block;
@@ -29,12 +41,6 @@
 	position: relative;
 	max-width: 979px;
 	margin: 0 auto 0;
-}
-
-.container {
-	display: flex;
-	height: 100vh;
-	width: 100vw;
 }
 
 .center {
@@ -85,20 +91,8 @@ input#slide[type=range]:hover::-webkit-slider-thumb {
 .hotspot-slider-area .slide8.inner-slide-area {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	/*align-items: center;*/
 	position: relative;
-	height: 100%;
-}
-
-.slide7 #img {
-	max-width: 407px!important;
-	width: 407px!important;
-	height: 400px;
-}
-.slide8 #img {
-	height: 100%;
-}
-.slide8 #imglabels{
 	height: 100%;
 }
 
@@ -122,47 +116,6 @@ input#slide[type=range]:hover::-webkit-slider-thumb {
 	display: flex;
 }
 
-@media (max-width: 767px) {
-	.slide8 #image-map, .slide8 #image-map-labels {
-		transform: scale(0.8);
-	}
-}
-
-@media (max-width:630px) {
-	.slide8 #image-map, .slide8 #image-map-labels {
-		transform: scale(0.6);
-	}
-}
-@media (max-width:470px) {
-	.slide8 #image-map, .slide8 #image-map-labels {
-		transform: scale(0.5);
-	}
-}
-@media screen and (max-width:767px) {
-	.inner-image-area img {
-		width: auto!important;
-		max-width: 100%;
-	}
-
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-	.inner-image-area .ss-img-wrap {
-		transform: scale(0.8);
-	}
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-	.inner-image-area .img-wrap {
-		transform: scale(0.9);
-	}
-	.img-slider {
-		transform: scale(0.3);
-	}
-	.zoomimage .inner-image-area #img {
-		max-height: 60% !important;
-	}
-}
 
 input#sliderInputBox {
 	width: 90px;
@@ -279,8 +232,6 @@ html .ui-button.ui-state-disabled:active {
 	text-align: center;
 	margin: 0;
 }
-
-
 /* Add a transparency effect for thumbnail images */
 
 .slide-thumbnail {
@@ -316,8 +267,6 @@ html .ui-button.ui-state-disabled:active {
 	pointer-events: none;
 	color: lightgray!important;
 }
-
-
 /*********** HOTSPOT SCREEN CSS ***********/
 
 .hotspot-slider-area .caption-container {
@@ -329,7 +278,7 @@ html .ui-button.ui-state-disabled:active {
 	position: relative;
 	margin: 0px auto 0;
 	height: calc(100vh - 0px);
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 .hotspot-slider-area .holder {
@@ -393,60 +342,12 @@ span.hotspot2 {
 	display: flex;
 }
 
-.hotspot-slider-area .hotspot_slide_wrap1 span:first-child {
-	position: absolute;
-	left: 50%;
-	top: 2%;
-	transform: translate(-50%, 0);
-	width: 30%;
-	display: block;
-	height: 32%;
-	cursor: pointer;
-}
-
-.hotspot-slider-area .hotspot_slide_wrap1 span:nth-child(2) {
-	position: absolute;
-	left: 1.5%;
-	top: unset;
-	width: 47%;
-	display: block;
-	height: 48%;
-	bottom: 1.5%;
-	cursor: pointer;
-}
-
-.hotspot-slider-area .hotspot_slide_wrap1 span:nth-child(3) {
-	position: absolute;
-	left: unset;
-	top: unset;
-	width: 47%;
-	display: block;
-	height: 48%;
-	bottom: 1.5%;
-	right: 1%;
-	cursor: pointer;
-}
-
-
-/**************** slide_8 css *************/
-
- .slide8 #img {
-	max-width: 855px!important;
-	width: 855px!important;
-	height: 470px;
-} 
-.slide8 #imglabels {
-	max-width: 855px!important;
-	width: 855px!important;
-	height: 470px;
-} 
-
 .poptip_btn {
 	background-image: url(../images/image_figure_test_yourself_btn.png);
 	cursor: pointer;
 	position: absolute;
 	left: 10px;
-	top: 16px;
+	top: 5px;
 	color: transparent;
 	height: 32px;
 	width: 128px;
@@ -473,7 +374,7 @@ span.hotspot2 {
 	width: auto !important;
 	height: auto !important;
 	display: inline-block;
-	transform: scale(0.92);
+	/*transform: scale(0.92);*/
 }
 #image-map.img-wrap.testyourself.hide{
 	display: none;
@@ -642,90 +543,15 @@ span.hotspot2 {
 	outline: none;
 }
 
-.thumbnail_slidr {
-	overflow: hidden;
-}
-
-.thumbnail_slidr_inner {
-	list-style: none;
-	padding: 0;
-	display: flex;
-}
-
-.main-slider-area.slide7 *::selection {
-	color: none !important;
-	background: none !important;
-}
-
 .tooltip .pin-inner-txt p b {
 	font-size: 16px;
 	font-weight: 700;
 	color: var(--blue);
 }
-
-.resp {
-	width: auto!important;
-	max-width: 100%;
-}
-
-@media (max-width: 991.98px) {
-	.hotspot-slider-area .hotspot_slide_wrap1,
-	span.hotspot2 {
-		height: 90% !important;
-	}
-}
-
-#imageSlider1 {
-	top: 0px !important;
-}
-
-#id_kbd {
-	clear: both;
-}
-
 sup {
 	line-height: 14px;
-}
-
-.inner-image-area {
-	height: 100vh;
-	height: calc(var(--vh, 1vh) * 100);
-	margin: 0 auto;
-}
-
-.hotspot-zoom .slides.inner-slide-area {
-	height: auto;
-	width: auto;
-}
-
-#questionName {
-	/*font-size: 14px;*/
-	line-height: 20px;
-	font-weight: 400;
-	color: #757575;
-	margin-bottom: 20px;
-	margin-top: 0px;
-}
-
-.hotspot-slider-area img {
-	vertical-align: middle;
-}
-
-.slides.inner-slide-area.zoomimg span.hotspot_slide_wrap1 img {
-	max-width: 90%;
-	max-height: 80%;
-	padding-bottom: 70px;
-}
-
-.hotspot-slider-area .hotspot_slide_wrap1,
-span.hotspot2 {
-	height: 100%;
-}
-.zoom_image_popup{
-	z-index:999;
 }
 .tooltipInner.maxzindex{
 	z-index: 10 !important;
 }
-
 

@@ -28,6 +28,7 @@ $(".poptip_btn").on('click keydown', function (event) {
 
 $(document).ready(function () {
     // set the image-map width and height to match the img size
+    /*
     $('#image-map').css({
         'width': $('#image-map img').width(),
         'height': $('#image-map img').height()
@@ -36,6 +37,10 @@ $(document).ready(function () {
         'width': $('#image-map-labels img').width(),
         'height': $('#image-map-labels img').height()
     }).addClass("show");
+    */
+
+    $('#image-map').addClass("hide")
+    $('#image-map-labels').addClass("show");
 
     //tooltip direction
     var tooltipDirection;

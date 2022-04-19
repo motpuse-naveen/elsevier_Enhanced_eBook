@@ -2783,7 +2783,7 @@
             <item id="widget_item095" href="widgets/Image_Slider/script/ui-touch-punch.js" media-type="text/javascript"/>
             <item id="widget_item095_11" href="widgets/Image_Slider/script/img-slider-main.js" media-type="text/javascript"/>
             <item id="widget_item096" href="widgets/Image_Slider/xhtml/Image_Slider.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-            <item id="widget_item097" href="widgets/Labels/css/header_style.css" media-type="text/css"/>
+            <item id="widget_item097" href="widgets/Labels/css/device.css" media-type="text/css"/>
             <item id="widget_item098" href="widgets/Labels/css/style.css" media-type="text/css"/>
             <item id="widget_item103" href="widgets/Labels/images/image_figure_test_yourself_btn.png" media-type="image/png"/>
             <item id="widget_item103_1" href="widgets/Labels/images/hotspot-mag-glass.png" media-type="image/png"/>
@@ -2792,12 +2792,29 @@
             <item id="widget_item106" href="widgets/Labels/images/normal-neuronal-firing.png" media-type="image/png"/>
             <item id="widget_item106_111" href="widgets/Labels/images/f01-01-9780702077050.jpg" media-type="image/jpeg"/>
             <item id="widget_item106_112" href="widgets/Labels/images/f01-01-9780702077050_labels.jpg" media-type="image/jpeg"/>
+
+            <item id="widget_item106_112_1" href="widgets/Labels/images/fig1.png" media-type="image/png"/>
+            <item id="widget_item106_112_2" href="widgets/Labels/images/fig3.png" media-type="image/png"/>
+            <item id="widget_item106_112_3" href="widgets/Labels/images/ch03_figure5.png" media-type="image/png"/>
+            <item id="widget_item106_112_4" href="widgets/Labels/images/ch03_figure9.png" media-type="image/png"/>
+            <item id="widget_item106_112_5" href="widgets/Labels/images/ch01_figure_text_032.png" media-type="image/png"/>
+            <item id="widget_item106_112_6" href="widgets/Labels/images/ch01_figure_text_035.png" media-type="image/png"/>
+            <item id="widget_item106_112_7" href="widgets/Labels/images/ch03_figure_text_05.png" media-type="image/png"/>
+            <item id="widget_item106_112_8" href="widgets/Labels/images/ch03_figure_text_009.png" media-type="image/png"/>
+
             <item id="widget_item107" href="widgets/Labels/images/web_arrow_poptip.png" media-type="image/png"/>
             <item id="widget_item108" href="widgets/Labels/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
             <item id="widget_item109" href="widgets/Labels/script/jquery-ui.min.js" media-type="text/javascript"/>
             <item id="widget_item110" href="widgets/Labels/script/ui-touch-punch.js" media-type="text/javascript"/>
             <item id="widget_item110_mainjs" href="widgets/Labels/script/main.js" media-type="text/javascript"/>
             <item id="widget_item111" href="widgets/Labels/xhtml/Labels.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+
+            <item id="widget_item111_1_32" href="widgets/Labels/xhtml/ch1_1.32.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+            <item id="widget_item111_1_35" href="widgets/Labels/xhtml/ch1_1.35.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+            <item id="widget_item111_3_5" href="widgets/Labels/xhtml/ch3_5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+            <item id="widget_item111_3_9" href="widgets/Labels/xhtml/ch3_9.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+
+
             <item id="widget_item111_TestYourSelf" href="widgets/Labels/xhtml/TestYourSelf.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
             <item id="widget_item112" href="widgets/MCSS/css/style.css" media-type="text/css"/>
             <item id="widget_item121" href="widgets/MCSS/images/assessment_check_large.png" media-type="image/png"/>
