@@ -23,13 +23,22 @@ figure img{
 	overflow: hidden;
 	height: 100%;
     width: 100%; 
+	max-width: 740px;
+    margin: 0 auto;
 }
-video{
-  /*width: 100vw;*/
-  width: 100%;
-  height: auto;
-  max-height: 100%;
-  object-fit: fill;
+video.hls-video{
+	width: 100vw !important;
+	width: 100% !important;
+	height: auto !important;
+	max-height: 100% !important;
+	object-fit: fill !important;
+}
+.video-area video{
+	width: 100vw !important;
+	width: 100% !important;
+	height: auto !important;
+	max-height: 100% !important;
+	object-fit: fill !important;
 }
 video::-internal-media-controls-download-button { 
     display:none; 
@@ -42,7 +51,10 @@ video::-webkit-media-controls-enclosure {
 video::-webkit-media-controls-panel { 
     width: calc(100% + 30px); /* Adjust as needed */ 
 }
-.vidleg
+.video-area .vidleg
 {
 	text-indent: 0em !important;
+}
+.video-area .vidleg *{
+    text-indent: unset !important;
 }
