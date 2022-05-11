@@ -33,6 +33,7 @@ var quiz = [
         state: `notAnswered`,
         userAnswered: ``
     },
+    
     {
         q: `Mr Patel, who is <span class="anychar dropdown def-img anychar-tooltip" aria-label="m dash" tabindex="0" role="button" data-dfn="l5">48</span> years old, presents with a nonproductive cough. Based on epidemiology, what is the most likely cause of the cough?`,
         q2: `Rationale: For all patients, regardless of age and gender, viral infection (d) is the most common presentation.`,
@@ -103,6 +104,42 @@ var quiz = [
         option: [`Acute viral infection`, `Heart failure`, `Pneumonia`, `Chronic bronchitis`, `Acute bacterial infection`],
         answer: 0,
         ansText:`Rationale: Sputum colour can be useful in helping narrow down the differential diagnosis. Viral and bacterial infection can range from sputum with no colour to yellow, green or brown. Given that viral infection is much more prevalent than bacterial infection, this is the most likely condition in this scenario.`,
+        state: `notAnswered`,
+        userAnswered: ``
+    },
+    {
+        q: `Consecutive repeat measurements of blood glucose concentration (all values in mmol/L) in a single blood sample, using the same point of care testing device, are: 5.1, 4.9, 5.0, 5.0, 5.1, 5.0, 5.2, 5.1, 5.0, 5.1. On the basis of these data, which one of the following statements about the analyzer/method is most applicable?`,
+        q2: ``,
+        q3: [],
+        option: [`It has high accuracy`, `It has high precision`, `It is speciﬁc for glucose`, `It is suitable for use by patients with diabetes to monitor their blood glucose concentrations`, `It should be capable of detecting hypoglycaemia in patients even if they are asymptomatic`],
+        optionFeedback: [`Accuracy is a measure of the closeness of a result to the true value. The true value (as determined, for example by a reference method) is not given here`,`Precision is a measure of the reproducibility of a measurement; these results fall within a very small range, indicating good precision`,`Specificity in this context implies that only glucose is measured by the test. No information is provided concerning this`,`Precision (and accuracy) are obviously desirable characteristics of any tests, but whether it is suitable for use in any given context depends on many other factors, for example cost and ease of use`,`This would certainly be a desirable characteristic but does not follow from the data presented because the glucose concentrations are not in the hypoglycaemic range`],
+        optionStyleType: `st-upper-alpha`,
+        answer: 2,
+        ansText: `Precision is a measure of the reproducibility of a measurement; these results fall within a very small range, indicating good precision`,
+        state: `notAnswered`,
+        userAnswered: ``
+    },
+    {
+        q: `The plasma concentration of a substance that is being investigated as a possible test for renal function is measured in a series of serum specimens obtained from one man on successive days under similar circumstances. The analyzes are performed in a single batch on one analyzer. The results, all in nmol/L, are: 132, 135, 131, 133, 132, 132, 134, 136, 135, 133. Which of the following statements is most applicable to these data?`,
+        q2: ``,
+        q3: [],
+        option: [`Measuring the substance is likely to be a sensitive test of renal function`, `Measuring the substance is likely to be a specific test of renal function`, `The biological variation appears to be low`, `The test has high accuracy`, `The test has poor precision`],
+        optionFeedback: [`To determine sensitivity (the likelihood of a positive test in a patient with disease), it is necessary to know how the test performs in individuals with and without the disease in question`,`To determine specificity (the likelihood of a negative test in a patient without disease), it is necessary to know how the test performs in individuals with and without the disease in question`,`The tight clustering of values about the mean suggests that both biological and analytical variations are low`,`It is not possible to assess the accuracy of the test without knowing the true value, as determined by a reference method`,`On the contrary, the tight clustering of the data around the mean suggests that the test is precise`],
+        optionStyleType: `st-upper-alpha`,
+        answer: 3,
+        ansText: `The tight clustering of values about the mean suggests that both biological and analytical variations are low`,
+        state: `notAnswered`,
+        userAnswered: ``
+    },
+    {
+        q: `A patient, during admission for an elective knee replacement, had two samples taken for urea and electrolytes within a short space of time with no change in treatment. The results were sample 1: sodium 160 mmol/L, potassium 3.5 mmol/L; sample 2: sodium 137 mmol/L, potassium 4.0 mmol/L. What is the likeliest explanation?`,
+        q2: ``,
+        q3: [],
+        option: [`Sample 2 was taken from a vein into which 5% dextrose was being infused (i.e. it represents a drip arm contamination)`, `EDTA contamination of sample 1`,`Sample 1 results represent contamination with 0.9% saline from a drip arm`, `Analytical error`, `Sample 1 was taken into a sodium citrate tube (for clotting studies) then decanted into the serum tube`],
+        optionFeedback: [`5% Dextrose is effectively water so will dilute the sample. However, as this patient is well, the normal values in sample 2 are likely to be the correct values whereas the abnormal hypernatraemia in sample 1 may indicate this is the spurious result`,`EDTA is a potassium salt so contamination results primarily in hyperkalaemia with no significant change in sodium concentration`,`The hypernatraemia of sample 1 suggests possible contamination. The sodium and chloride concentration of 0.9% saline is 154 mmol/L therefore results tend towards this depending on quantity of contamination but cannot exceed this concentration`,`Although errors can occur within the laboratory, they are rare and a random error would affect a single analyte not both. Laboratories usually automatically repeat any very abnormal results`,`If a sample is taken into a sodium citrate tube and then decanted into the serum tube, sodium concentration is usually ~160 mmol/L and potassium and calcium concentrations are reduced by ~0.5 mmol/L`],
+        optionStyleType: `st-upper-alpha`,
+        answer: 5,
+        ansText:`If a sample is taken into a sodium citrate tube and then decanted into the serum tube, sodium concentration is usually ~160 mmol/L and potassium and calcium concentrations are reduced by ~0.5 mmol/L.`, 
         state: `notAnswered`,
         userAnswered: ``
     },
