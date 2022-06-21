@@ -1,7 +1,7 @@
 /*@charset "UTF-8";
 	@namespace "http://www.w3.org/1999/xhtml";
 @namespace epub "http://www.idpf.org/2007/ops";*/
-/* Version 19.2, Date:05 APR 2022 */
+/* Version 19.5, Date:21 JUNE 2022 */
 
 body {
 	margin: 0px;
@@ -119,6 +119,9 @@ body {
     outline: 2px solid var(--blue);
     color: var(--blue);
     outline-offset: -1px;
+}
+.focus-input.active i,.focus-input.active b, .focus-input.active span, .focus-input.active div {
+    color: var(--blue);
 }
 .active, .slide-thumbnail:hover {
     opacity: 1;

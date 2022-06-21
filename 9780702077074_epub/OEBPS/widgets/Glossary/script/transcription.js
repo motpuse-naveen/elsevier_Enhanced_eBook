@@ -44,7 +44,7 @@ function bind_glossary_events(){
                 }
             }
         }
-        e.stopPropagation();
+        //e.stopPropagation();
     });
 }
 

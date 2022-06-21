@@ -70,13 +70,15 @@ var quiz = [
         q2: ``,
         q3: [],
         option: [`3 days`, `5 days`, `7 days`, `10 days`, `14 days`],
+        optionFeedback: [`Accuracy is a measure of the closeness of a result to the true value. The true value (as determined, for example by a reference method) is not given here`,`Precision is a measure of the reproducibility of a measurement; these results fall within a very small range, indicating good precision`,`Specificity in this context implies that only glucose is measured by the test. No information is provided concerning this`,`Precision (and accuracy) are obviously desirable characteristics of any tests, but whether it is suitable for use in any given context depends on many other factors, for example cost and ease of use`,`This would certainly be a desirable characteristic but does not follow from the data presented because the glucose concentrations are not in the hypoglycaemic range`],
         optionStyleType: `st-upper-roman`,
         answer: [4],
         ansText:`Rationale: Conditional referrals are important for safety netting purposes. Acute cough is defined as 3 weeks or less, so in this case giving 14 days as the referral point is correct as the person has had the cough for just 7 days.`, 
         state: `notAnswered`,
         userAnswered: [],
         type:`MCSS`
-    },
+    }
+    ,
     {
         q: `Mr Patel, who is 48 years old, presents with a nonproductive cough. Based on epidemiology, what is the most likely cause of the cough?`,
         q2: ``,
@@ -210,7 +212,8 @@ var quiz = [
         ansText:`Rationale: Associated symptoms with cough are useful in formulating a differential diagnosis. Pneumonia (A) shows signs of infection, heart failure (B) shortness of breath, chronic bronchitis (D) wheeze and breathlessness and croup (E) breathlessness. None show night sweats.`,
         state: `notAnswered`,
         userAnswered: []
-    },
+    }
+    ,
     {
         q: `Questions 2.16 to 2.21 concern the following conditions:` ,
         q2:`Has initially a nonproductive painful cough that progresses to a productive cough?`,
@@ -220,7 +223,8 @@ var quiz = [
         ansText:`Rationale: Most coughs are productive or nonproductive from the outset. Heart failure (B), TB (C) and chronic bronchitis (D) are productive; croup (E) is nonproductive. Only pneumonia (A) from the listed conditions tends to change from nonproductive to productive`,
         state: `notAnswered`,
         userAnswered: []
-    },
+    }
+    ,
     {
         q: `Questions 2.16 to 2.21 concern the following conditions: `,
         q2:`Is closely associated with a history of smoking?`,

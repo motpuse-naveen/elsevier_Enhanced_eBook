@@ -212,6 +212,8 @@ i {
     content: '*';
     background: none;
     color: blue;
+    text-decoration: none;
+    text-transform: none;
 }
 .anychar.dropdown.def-img.anychar-tooltip {
     background: none;
@@ -222,6 +224,8 @@ i {
     padding-left: 3px;
     margin-left: 1px;
     color: blue;
+    text-decoration: none;
+    text-transform: none;
 }
 .no-leftPad{
     padding-left: 0px !important;
@@ -354,6 +358,8 @@ span.text-highlighter::after {
     width: 20px;
 	display:inline-block;
 	vertical-align: middle;
+    text-decoration: none;
+    text-transform: none;
 }
 .dropdown-content{
     bottom: 24px!important;
@@ -363,6 +369,7 @@ span.text-highlighter::after {
     font-style: normal;
     text-align: left;
     text-decoration: none;
+    text-transform: none;
 }
 html {
     scroll-behavior: smooth;

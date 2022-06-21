@@ -1,5 +1,6 @@
 // Handling next prev tooltip click
 /* Version 19, Date:30 MAR 2022 */
+var HTSPOT_MAX = 9;
 function plusSlides(event) {
    var n = parseInt($(event.target).attr('data-nav'));
    var prevToolTip = Utils.getActiveTooltipNumber();
@@ -10,7 +11,7 @@ function plusSlides(event) {
       Utils.ariaAnnounce('Selected, ' + $('#tooltip-' + activeToolTipNumber).find('p').text());
       autoDragPagination(activeToolTipNumber);
    }
-   if (activeToolTipNumber >= 9) {
+   if (activeToolTipNumber >= HTSPOT_MAX) {
       $('.nextContainer a').addClass('disabled');
    } else {
       $('.nextContainer a').removeClass('disabled');
@@ -62,6 +63,7 @@ function autoDragPagination(selectedStep) {
 }
 $(document).ready(function () {
    var isSliderDown = false;
+   HTSPOT_MAX = $(".pin").length;
    $(".rail, #imageSlider1").on('mousedown touchstart', () => {
       isSliderDown = true;
    });
@@ -105,7 +107,7 @@ $(document).ready(function () {
 
 
          var activeToolTipNumber = Utils.getActiveTooltipNumber();
-         if (activeToolTipNumber >= 9) {
+         if (activeToolTipNumber >= HTSPOT_MAX) {
             $('.nextContainer a').addClass('disabled');
          } else {
             $('.nextContainer a').removeClass('disabled');
@@ -225,8 +227,8 @@ $(document).ready(function () {
       } else {
          activeTooltipNumber = n;
       }
-      if (activeTooltipNumber > 9) {
-         activeTooltipNumber = 9;
+      if (activeTooltipNumber > HTSPOT_MAX) {
+         activeTooltipNumber = HTSPOT_MAX;
       }
       if (activeTooltipNumber < 1) {
          activeTooltipNumber = 1;

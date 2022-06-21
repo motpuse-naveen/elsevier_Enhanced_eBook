@@ -77,23 +77,25 @@ function autoDragPagination(selectedStep) {
         stepAtCenter = hiddenToLeft + stepCountAtCenter;
     }
     // Applying left
-    if (selectedStep > stepAtCenter) {
-        var newLeft = oldLeft - ((selectedStep - stepAtCenter) * stepWidth);
-        if (newLeft < minLeft) {
-            newLeft = minLeft;
+    if ((ulWrapperWidth - (stepWidth * 2)) < totalItemsWidth) {
+        if (selectedStep > stepAtCenter) {
+            var newLeft = oldLeft - ((selectedStep - stepAtCenter) * stepWidth);
+            if (newLeft < minLeft) {
+                newLeft = minLeft;
+            }
+            // // (totalItemsWidth - ulWrapperWidth)
+            // for(let i = 0; i&lt;=hiddenUnderLeft;i++) {
+            //    // console.log()
+            //    $($('.steps ul li')[i]).find('a').removeAttr('tabindex');
+            // }
+            $ul.css('left', newLeft);
+        } else {
+            var newLeft = oldLeft + ((stepAtCenter - selectedStep) * stepWidth);
+            if (newLeft > maxLeft) {
+                newLeft = maxLeft;
+            }
+            $ul.css('left', newLeft);
         }
-        // // (totalItemsWidth - ulWrapperWidth)
-        // for(let i = 0; i&lt;=hiddenUnderLeft;i++) {
-        //    // console.log()
-        //    $($('.steps ul li')[i]).find('a').removeAttr('tabindex');
-        // }
-        $ul.css('left', newLeft);
-    } else {
-        var newLeft = oldLeft + ((stepAtCenter - selectedStep) * stepWidth);
-        if (newLeft > maxLeft) {
-            newLeft = maxLeft;
-        }
-        $ul.css('left', newLeft);
     }
     // $('.steps ul li a').removeAttr('tabindex');
     // var hiddenUnderLeft = (Math.abs(newLeft)/stepWidth);
@@ -179,6 +181,9 @@ function getNewQuestion(question) {
         option.setAttribute('role', 'option');
         optionsIndex++;
         option.className = "focus-input";
+        if (typeof currentQuestion.optionFeedback != 'undefined') {
+            option.setAttribute('data-feedback', currentQuestion.optionFeedback[j]);
+        }
         optionContainer.appendChild(option);
         // option.setAttribute("onclick","checkResult(this)");
         // option.setAttribute("onclick", "addActiveClass(this)");
@@ -193,10 +198,15 @@ function getNewQuestion(question) {
     
     $('.tab-pane ').attr('data-state', currentQuestion.state);
     $('.tab-pane ').attr('id', question);
+    $(".ic-opt-fbk").remove();
+    var optFeedback = ""
     if (currentQuestion.state === 'wrong') {
         $('.focus-input').each(function () {
             if ($(this).attr('data-id') == currentQuestion.userAnswered) {
                 $(this).addClass('wrong');
+                if (typeof currentQuestion.optionFeedback != 'undefined') {
+                    optFeedback = $(this).attr('data-feedback')
+                }
             }
         });
         $('#mcq_button').html('Try Again');
@@ -256,6 +266,7 @@ function getNewQuestion(question) {
 }
 function addActiveClass(el) {
     if ((el.type === 'keydown' && el.keyCode == 13) || el.type === 'click') {
+        $(".ic-opt-fbk").remove();
         $(el.target).prevAll().removeClass().addClass('focus-input');
         $(el.target).nextAll().removeClass().addClass('focus-input');
         $(el.target).removeClass().addClass('focus-input active');
@@ -304,6 +315,11 @@ function getResult(element) {
     else {
         $(element).removeClass().addClass("focus-input wrong");
         correctMsg.classList.add("not-quite");
+        var optFeedback = $(element).attr('data-feedback')
+        if (optFeedback != undefined && optFeedback != "") {
+            var feedback = $("<p>").addClass("ic-opt-fbk").html(optFeedback)
+            $('#answer_label').after(feedback);
+        }
         correctMsg.innerHTML = incorrectFBText;
         updateAnswerIndicator("wrong");
         $('#mcq_button').html('Try Again');
@@ -375,6 +391,7 @@ function updateAnswerIndicator(markType) {
 }
 $('#mcq_button').on('mousedown click', function (e) {
     if ((e.type === 'keydown' && e.keyCode == 13) || e.type === 'click') {
+        $(".ic-opt-fbk").remove();
         let buttonText = $('#mcq_button').text().split(' ')[0].trim().toLocaleLowerCase();
         if (buttonText === 'check') {
             let answered = $('.Multiple-choice').find('.active');
@@ -433,6 +450,7 @@ $('#show_ans').on('click keydown', (function (e) {
             }
         })
         $('.focus-input').removeClass('wrong');
+        $(".ic-opt-fbk").remove();
         $('#answer_label').hide();
         bind_annotLinkEvents();
     }

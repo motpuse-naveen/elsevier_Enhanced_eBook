@@ -1,7 +1,7 @@
 /*@charset "UTF-8";
 	@namespace "http://www.w3.org/1999/xhtml";
 @namespace epub "http://www.idpf.org/2007/ops";*/
-/* Version 19.2, Date:05 APR 2022 */
+/* Version 19.5, Date:21 JUNE 2022 */
 
 body {
 	margin: 0px;
@@ -118,6 +118,9 @@ body {
     outline: 2px solid var(--blue);
     color: var(--blue);
     outline-offset: -1px;
+}
+.focus-input.active i,.focus-input.active b, .focus-input.active span, .focus-input.active div {
+    color: var(--blue);
 }
 .active, .slide-thumbnail:hover {
     opacity: 1;
@@ -254,13 +257,23 @@ i{
     z-index: 9;
 }
 
-.arrow-left.outer, .arrow-right.outer {
+.arrow-left.outer {
     width: 30px;
     height: 30px;
     z-index: 204;
     position: absolute;
     top: 30px;
-    left: 28px;
+    left: 10px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.arrow-right.outer {
+    width: 30px;
+    height: 30px;
+    z-index: 204;
+    position: absolute;
+    top: 30px;
+    right: 10px;
     cursor: pointer;
     border: 1px solid transparent;
 }
@@ -307,7 +320,7 @@ i{
 .arrow-mask {
     position: absolute;
     height: 90px;
-    width: 70px;
+    width: 50px;
 }
 .mcq_toolbar_main {
     overflow: hidden;
@@ -339,6 +352,7 @@ i{
     margin: 0px 22px;
     position: relative;
     left: 0;
+    padding-left: 15px;
 }
 .steps li.nav-item {
     margin: 28px 4px;

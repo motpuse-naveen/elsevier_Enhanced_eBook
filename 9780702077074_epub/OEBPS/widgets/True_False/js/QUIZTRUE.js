@@ -5,6 +5,7 @@ var quiz = [
         q2: ``,
         q3: [],
         option: [`True` , `False`],
+        optionFeedback: [`Accuracy is a measure of the closeness of a result to the true value. The true value (as determined, for example by a reference method) is not given here`,`Precision is a measure of the reproducibility of a measurement; these results fall within a very small range, indicating good precision`],
         answer: 0,
         ansText:`Rationale: Conditional referrals are important for safety netting purposes. Acute cough is defined as 3 weeks or less, so in this case giving 14 days as the referral point is correct as the person has had the cough for just 7 days.`, 
         state: 'notAnswered',
