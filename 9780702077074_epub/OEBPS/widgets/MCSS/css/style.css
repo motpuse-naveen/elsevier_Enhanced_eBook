@@ -1,7 +1,7 @@
 /*@charset "UTF-8";
 	@namespace "http://www.w3.org/1999/xhtml";
 @namespace epub "http://www.idpf.org/2007/ops";*/
-/* Version 19.5, Date:21 JUNE 2022 */
+/* Version 19.6, Date:22 JUNE 2022 */
 
 body {
 	margin: 0px;
@@ -133,6 +133,9 @@ body {
     color: var(--red);
     position: relative;
 }
+.focus-input.wrong i,.focus-input.wrong b, .focus-input.wrong span, .focus-input.wrong div {
+    color: var(--red);
+}
 .Multiple-choice .focus-input:last-child {
     border-width: 1px 1px 1px 1px;
 }
@@ -142,6 +145,9 @@ body {
     color: var(--green);
     position: relative;
     border-bottom-width: 1px;
+}
+.focus-input.last-child i,.focus-input.last-child b, .focus-input.last-child span, .focus-input.last-child div {
+    color: var(--green);
 }
 .already-answered {
     pointer-events: none;
