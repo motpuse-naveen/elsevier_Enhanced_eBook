@@ -1,5 +1,5 @@
 /*** Disable Right click on image ***/
-var allImageElmts = document.querySelectorAll("figure img");
+var allImageElmts = document.querySelectorAll("img");
 allImageElmts.forEach(imgelement => {
     imgelement.addEventListener("contextmenu", function(event){
 		event.preventDefault();

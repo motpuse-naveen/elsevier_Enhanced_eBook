@@ -1,4 +1,4 @@
-/* Version 19.3, Date:05 APR 2022 */
+/* Version 19.5, Date:07 July 2022 */
 const correctFBText = "Correct."
 const incorrectFBText = "Incorrect. Please try again."
 var paginationTabindex = 10001;
@@ -122,6 +122,7 @@ function setAvailableQuestion() {
 }
 // goto question and new question of array
 function getNewQuestion(question) {
+    $('#mcq_button').show();
     QuestionNumber.innerText = "Question " + (question);
     QuestionNumber.setAttribute('aria-label', "Question " + (question));
     QuestionNumber.setAttribute('role', "heading");
@@ -190,6 +191,9 @@ function getNewQuestion(question) {
     }
     $('.focus-input').on('keydown click', addActiveClass);
     $(".focus-input *").on("click", function(e){
+        if($(this).closest(".focus-input").length>0){
+            $(this).closest(".focus-input").click();
+        }
         e.stopPropagation()
     })
     if(typeof bind_glossary_events == "function"){
@@ -227,7 +231,7 @@ function getNewQuestion(question) {
             }
         });
         if (question == quiz.length) {
-            $('#mcq_button').html('Done');
+            $('#mcq_button').html('Done').hide();
             $('#mcq_button').attr('title', 'Done');
         } else {
             $('#mcq_button').html('Next Question');
@@ -291,9 +295,10 @@ function getResult(element) {
         $(element).attr("role", "img");
         updateAnswerIndicator("correct");
         if (parseInt($('.tab-pane').attr('id')) == quiz.length) {
-            $('#mcq_button').html('Done');
+            $('#mcq_button').html('Done').hide();
             $('#mcq_button').attr('title', 'Done');
         } else {
+            $('#mcq_button').show()
             $('#mcq_button').html('Next Question');
             $('#mcq_button').attr('title', 'Next Question');
         }
