@@ -1,4 +1,5 @@
 /* Version 19.5, Date:07 July 2022 */
+/* Version 19.7, Date:08 JULY 2022 */
 const correctFBText = "Correct."
 const incorrectFBText = "Incorrect. Please try again."
 var paginationTabindex = 10001;
@@ -39,8 +40,8 @@ $(".steps").on('click keydown', function (e) {
     if ((e.type === 'keydown' && e.keyCode == 13) || e.type === 'click') {
         getQuestionByEvent(e);
         $ul = $('.steps ul');
-        $ulWrapper = $ul.parent();
-        stepWidth = 38;
+        $ulWrapper = $ul//.parent();
+        stepWidth = $('.steps ul li').outerWidth();
         ulWrapperWidth = $ulWrapper.width();
         wrapperCapacity = ulWrapperWidth / stepWidth;
         totalItemsWidth = $('.steps ul li').length * stepWidth;
@@ -58,8 +59,8 @@ $(".steps").on('click keydown', function (e) {
 });
 function autoDragPagination(selectedStep) {
     $ul = $('.steps ul');
-    $ulWrapper = $ul.parent();
-    stepWidth = 38;
+    $ulWrapper = $ul//.parent();
+    stepWidth = $('.steps ul li').outerWidth();
     ulWrapperWidth = $ulWrapper.width();
     wrapperCapacity = ulWrapperWidth / stepWidth;
     totalItemsWidth = $('.steps ul li').length * stepWidth;

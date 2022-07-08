@@ -1,7 +1,7 @@
 /*@charset "UTF-8";
 	@namespace "http://www.w3.org/1999/xhtml";
 @namespace epub "http://www.idpf.org/2007/ops";*/
-/* Version 19.6, Date:22 JUNE 2022 */
+/* Version 19.7, Date:08 JULY 2022 */
 
 body {
 	margin: 0px;
@@ -358,7 +358,7 @@ i{
     padding-inline-start: 0px;
 }
 .steps li.nav-item {
-    margin: 10px 4px;
+    padding: 10px 4px;
     line-height: 15px;
     outline: none;
     border: 1px solid transparent;

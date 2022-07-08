@@ -1,7 +1,7 @@
 /*@charset "UTF-8";
 	@namespace "http://www.w3.org/1999/xhtml";
 @namespace epub "http://www.idpf.org/2007/ops";*/
-/* Version 19.6, Date:22 JUNE 2022 */
+/* Version 19.7, Date:08 JULY 2022 */
 
 body {
 	margin: 0px;
@@ -270,7 +270,7 @@ i{
     z-index: 204;
     position: absolute;
     top: 30px;
-    left: 10px;
+    left: 2px;
     cursor: pointer;
     border: 1px solid transparent;
 }
@@ -280,7 +280,7 @@ i{
     z-index: 204;
     position: absolute;
     top: 30px;
-    right: 10px;
+    right: 2px;
     cursor: pointer;
     border: 1px solid transparent;
 }
@@ -327,7 +327,7 @@ i{
 .arrow-mask {
     position: absolute;
     height: 90px;
-    width: 50px;
+    width: 36px;
 }
 .mcq_toolbar_main {
     overflow: hidden;
@@ -348,7 +348,7 @@ i{
 .steps {
     background: #fff;
     width: auto;
-    transform: translate(3.5px, 0px);
+    /*transform: translate(3.5px, 0px);*/
 }
 .nav.nav-tabs.md-tabs.nav-justified {
     flex-wrap: nowrap;
@@ -356,13 +356,15 @@ i{
     list-style: none;
     text-align: center;
     /* overflow: hidden; */
-    margin: 0px 22px;
+    margin: 0px 0px;
     position: relative;
     left: 0;
-    padding-left: 15px;
+    margin-left: 36px;
+    margin-right: 36px;
+    padding: 0px;
 }
 .steps li.nav-item {
-    margin: 28px 4px;
+    padding: 28px 4px;
     line-height: 15px;
     outline: none;
     border: 1px solid transparent;
@@ -371,10 +373,10 @@ i{
     opacity: 1;
 }
 .step {
-    padding: 3px;
+    padding: 3px 0px;
     position: relative;
     display: inline-block;
-    width: 18px;
+    width: 24px;
     height: 23px;
     cursor: pointer;
     color: var(--primary-text);
