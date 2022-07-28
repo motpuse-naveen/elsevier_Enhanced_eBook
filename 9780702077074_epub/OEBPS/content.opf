@@ -64,6 +64,7 @@
             <item id="id_js" href="Style/math.js" media-type="text/javascript"/>
             <item id="common_jquery_reference" href="widgets/common_assets/scripts/jquery-3.6.0.min.js" media-type="text/javascript"/>
             <item id="common_js" href="widgets/common_assets/scripts/common.js" media-type="text/javascript"/>
+            <item id="video-iframe-popup_js" href="widgets/common_assets/scripts/video-iframe-popup.js" media-type="text/javascript"/>
             <item id="video_tracker_js" href="widgets/common_assets/scripts/video-tracker.js" media-type="text/javascript"/>
             <item id="iframecommon_js" href="widgets/common_assets/scripts/iframe_common.js" media-type="text/javascript"/>
             <item id="iframecommon_css" href="widgets/common_assets/css/iframe_common.css" media-type="text/css"/>
