@@ -484,8 +484,10 @@ $('#mcq_button').on('mousedown click', function (e) {
     }
 })
 window.onload = function () {
+    $(".answer-controls").hide()
     setAvailableQuestion();
     getNewQuestion(1);
+    $(".answer-controls").show()
     answerIndicatot();
     $('#Add_solution').hide();
     $('#Add_solution').children().html(quiz[0].ansText);

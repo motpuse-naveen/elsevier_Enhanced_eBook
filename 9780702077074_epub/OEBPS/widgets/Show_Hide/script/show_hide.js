@@ -17,5 +17,11 @@ $(".show_hide_ans").on('click', function (event) {
 });
 
 $(document).ready(function () {
+    var img1 = new Image();
+    img1.src = "../images/Expand_Hover_N.svg"
+    var img2 = new Image();
+    img2.src = "../images/Collapse_N.svg"
+    var img3 = new Image();
+    img3.src = "../images/Collapse_hover_N.svg"
     $("div").children(".answer").hide();
 })
