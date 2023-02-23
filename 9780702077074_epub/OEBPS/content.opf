@@ -2838,25 +2838,33 @@
             <item id="widget_item131" href="widgets/MCSS/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
             <item id="widget_item131_mainjs" href="widgets/MCSS/script/main.js" media-type="text/javascript"/>
             <item id="widget_item132" href="widgets/MCSS/xhtml/MCSS.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-            <item id="widget_item149" href="widgets/Show_Hide/css/show_hide.css" media-type="text/css"/>
 
+            <item id="widget_item149" href="widgets/Show_Hide/css/show_hide.css" media-type="text/css"/>
             <item id="widget_item154" href="widgets/Show_Hide/images/Expand_N.svg" media-type="image/svg+xml"/>
             <item id="widget_item155" href="widgets/Show_Hide/images/Collapse_N.svg" media-type="image/svg+xml"/>
             <item id="widget_item154_1" href="widgets/Show_Hide/images/Expand_Hover_N.svg" media-type="image/svg+xml"/>
             <item id="widget_item155_1" href="widgets/Show_Hide/images/Collapse_hover_N.svg" media-type="image/svg+xml"/>
-
             <item id="widget_item156" href="widgets/Show_Hide/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
             <item id="widget_item156_1" href="widgets/Show_Hide/script/show_hide.js" media-type="text/javascript"/>
             <item id="widget_item157" href="widgets/Show_Hide/xhtml/Show_Hide.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
             <item id="widget_item157_1" href="widgets/Show_Hide/xhtml/empty_Show_Hide.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+
+            <item id="widget_item149" href="widgets/Show_Hide_Custom/css/show_hide_custom.css" media-type="text/css"/>
+            <item id="widget_item154" href="widgets/Show_Hide_Custom/images/Expand_N.svg" media-type="image/svg+xml"/>
+            <item id="widget_item155" href="widgets/Show_Hide_Custom/images/Collapse_N.svg" media-type="image/svg+xml"/>
+            <item id="widget_item154_1" href="widgets/Show_Hide_Custom/images/Expand_Hover_N.svg" media-type="image/svg+xml"/>
+            <item id="widget_item155_1" href="widgets/Show_Hide_Custom/images/Collapse_hover_N.svg" media-type="image/svg+xml"/>
+            <item id="widget_item156" href="widgets/Show_Hide_Custom/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
+            <item id="widget_item156_1" href="widgets/Show_Hide_Custom/script/show_hide_custom.js" media-type="text/javascript"/>
+            <item id="widget_item157" href="widgets/Show_Hide_Custom/xhtml/Show_Hide_Custom.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+            <item id="widget_item157_1" href="widgets/Show_Hide_Custom/xhtml/empty_Show_Hide_Custom.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+
             <item id="widget_item158" href="widgets/Slide_Show/css/header_style.css" media-type="text/css"/>
             <item id="widget_item159" href="widgets/Slide_Show/css/style.css" media-type="text/css"/>
-
             <item id="widget_item160" href="widgets/Slide_Show/fonts/InklingSerifWeb-Regular.ttf" media-type="application/vnd.ms-opentype"/>
             <item id="widget_item161" href="widgets/Slide_Show/fonts/InklingSerifWeb-Regular.woff" media-type="application/font-woff"/>
             <item id="widget_item162" href="widgets/Slide_Show/fonts/SourceSansPro-Regular.ttf" media-type="application/vnd.ms-opentype"/>
             <item id="widget_item163" href="widgets/Slide_Show/fonts/SourceSansPro-Regular.woff" media-type="application/font-woff"/>
-
             <item id="widget_item164" href="widgets/Slide_Show/images/image_figure_controls.png" media-type="image/png"/>
             <item id="widget_item165" href="widgets/Slide_Show/images/navbar_minus.png" media-type="image/png"/>
             <item id="widget_item166" href="widgets/Slide_Show/images/navbar_plus.png" media-type="image/png"/>
