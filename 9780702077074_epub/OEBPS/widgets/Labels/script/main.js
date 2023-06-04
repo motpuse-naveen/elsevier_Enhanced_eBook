@@ -239,7 +239,7 @@ $(document).ready(function () {
             $tooltip.find('p').focus();
             $tooltip.addClass('is-visible');
             $tooltip.closest(".tooltipInner").addClass('maxzindex');
-        }, 200);
+        }, 300);
     }
     app.getNewScaleByDirection = function (direction) {
         var newZoom = currentSliderVal;
@@ -298,7 +298,7 @@ $(document).ready(function () {
         if ($imgBoundingBox.height < $(window).height()) {
             newTop = 0;
         }
-        $imageWrapper.animate({ 'top': newTop, 'left': newLeft }, 400);
+        $imageWrapper.animate({ 'top': newTop, 'left': newLeft }, 100);
     }
     app.ariaAnnounce = function (msg) {
         console.log(msg);
