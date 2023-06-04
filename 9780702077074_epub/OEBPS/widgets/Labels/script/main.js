@@ -217,7 +217,7 @@ $(document).ready(function () {
                 isLeftUpdated = true;
             }
             if (toolTipoffset.left < 50) {
-                newLeft = Math.abs(toolTipoffset.left) + 50;
+                newLeft = Math.abs(toolTipoffset.left) + 20;
                 isLeftUpdated = true;
             }
             if (toolTipoffset.top < 50) {
@@ -225,7 +225,7 @@ $(document).ready(function () {
                 isTopUpdated = true;
             }
             if (toolTipoffset.bottom > winHeight) {
-                newTop = $imageOffset.top - ((toolTipoffset.bottom - winHeight) - 50);
+                newTop = $imageOffset.top - ((toolTipoffset.bottom - winHeight) + 50);
                 isTopUpdated = true;
             }
             if (isTopUpdated && isLeftUpdated) {
