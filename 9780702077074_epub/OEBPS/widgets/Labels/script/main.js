@@ -79,8 +79,10 @@ $(document).ready(function () {
         $tooltipAnchor.html($(".pin").eq(i).html());
         $toolTipAnchorWrapper.append($tooltipAnchor);
         $tooltipAnchor.focusout(() => {
-            Utils.hideToolTip();
-            Utils.setImageBound();
+            setTimeout(() => {
+                Utils.hideToolTip();
+                Utils.setImageBound();
+            },50);
         });
         // append the tooltip
         $("#image-map").append($toolTipAnchorWrapper);
@@ -225,15 +227,15 @@ $(document).ready(function () {
                 isTopUpdated = true;
             }
             if (toolTipoffset.bottom > winHeight) {
-                newTop = $imageOffset.top - ((toolTipoffset.bottom - winHeight) + 50);
+                newTop = $imageOffset.top - ((toolTipoffset.bottom - winHeight) - 50);
                 isTopUpdated = true;
             }
             if (isTopUpdated && isLeftUpdated) {
-                $imageWrapper.animate({ 'left': newLeft + 'px', 'top': newTop + 'px' }, 20);
+                $imageWrapper.animate({ 'left': newLeft + 'px', 'top': newTop + 'px' }, 50);
             } else if (isTopUpdated) {
-                $imageWrapper.animate({ 'top': newTop + 'px' }, 100);
+                $imageWrapper.animate({ 'top': newTop + 'px' }, 50);
             } else if (isLeftUpdated) {
-                $imageWrapper.animate({ 'left': newLeft + 'px' }, 100);
+                $imageWrapper.animate({ 'left': newLeft + 'px' }, 50);
             }
             $tooltip.fadeIn(500);
             $tooltip.find('p').focus();
@@ -298,7 +300,8 @@ $(document).ready(function () {
         if ($imgBoundingBox.height < $(window).height()) {
             newTop = 0;
         }
-        $imageWrapper.animate({ 'top': newTop, 'left': newLeft }, 100);
+        $imageWrapper.animate({ 'top': newTop, 'left': newLeft }, 200);
+        //$imageWrapper.css({ 'top': newTop, 'left': newLeft });
     }
     app.ariaAnnounce = function (msg) {
         console.log(msg);
