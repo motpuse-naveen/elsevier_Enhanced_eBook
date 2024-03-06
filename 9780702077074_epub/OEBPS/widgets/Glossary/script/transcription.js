@@ -6,8 +6,20 @@ $(document).ready(function (){
             !$(e.target).hasClass('def-img') && 
             !$(e.target).hasClass('dropdown-content') && 
             $(e.target).parents('.dropdown-content').length <= 0
-        ) {
-            $('.dropdown-content').hide();
+        ) { 
+            setTimeout(function(){
+                $('.dropdown-content').hide();
+                //NM: 09-June-2023 - The code is added to fix issue 
+                //Related to the annotation links in poptip is not working on ipad
+                $('.dropdown-content').each(function(){
+                    if($(this).closest(".dropdown[temp-data-dfn]").length>0){
+                        var tempdataDefElm =$(this).closest(".dropdown[temp-data-dfn]")
+                        var tempdataDefVal =  tempdataDefElm.attr("temp-data-dfn");
+                        tempdataDefElm.removeAttr("temp-data-dfn");
+                        tempdataDefElm.attr("data-dfn", tempdataDefVal);
+                    }
+                });
+            },200);
         }
     });
     $('.dropdown').on('keydown', '.dropdown-content', (e)=> {
@@ -15,14 +27,25 @@ $(document).ready(function (){
         if (e.type === 'keydown' && e.keyCode === 27) { 
             $(e.target).parent().focus();   
             $(e.target).hide();
+            //NM: 09-June-2023 - The code is added to fix issue 
+            //Related to the annotation links in poptip is not working on ipad
+            $(e.target).each(function(){
+                if($(this).closest(".dropdown[temp-data-dfn]").length>0){
+                    var tempdataDefElm =$(this).closest(".dropdown[temp-data-dfn]")
+                    var tempdataDefVal =  tempdataDefElm.attr("temp-data-dfn");
+                    tempdataDefElm.removeAttr("temp-data-dfn");
+                    tempdataDefElm.attr("data-dfn", tempdataDefVal);
+                }
+            });
         }
-    })
+    });
 });
 
 function bind_glossary_events(){
-    var $bubbleTips = $('[data-dfn]');
-    $bubbleTips.on('click keydown', function (e) {
-        // console.log(e.type, e.keyCode)
+    //var $bubbleTips = $('[data-dfn]');
+    //$('[data-dfn]').on('click keydown', function (e) {
+    $(document).on('click keydown', '[data-dfn]', function (e) {
+        console.log(e.target)
         var dfnCode = $(e.target).closest("[data-dfn]").attr('data-dfn');
         if ((e.type === 'keydown' && e.keyCode === 13) || e.type === 'click') {
             if (!$('.dropdown-content').is(':visible')) {
@@ -38,7 +61,19 @@ function bind_glossary_events(){
                         }
                     }
                 }
-                $('.dropdown-content').hide();
+                setTimeout(function(){
+                    $('.dropdown-content').hide();
+                    //NM: 09-June-2023 - The code is added to fix issue 
+                    //Related to the annotation links in poptip is not working on ipad
+                    $('.dropdown-content').each(function(){
+                        if($(this).closest(".dropdown[temp-data-dfn]").length>0){
+                            var tempdataDefElm =$(this).closest(".dropdown[temp-data-dfn]")
+                            var tempdataDefVal =  tempdataDefElm.attr("temp-data-dfn");
+                            tempdataDefElm.removeAttr("temp-data-dfn");
+                            tempdataDefElm.attr("data-dfn", tempdataDefVal);
+                        }
+                    });
+                },200)
                 if(openanotherpoptip){
                     Utils.getTooltip(dfnCode, $(e.target).closest("[data-dfn]"));
                 }
@@ -47,6 +82,19 @@ function bind_glossary_events(){
         //e.stopPropagation();
     });
 }
+
+$(document).on('click keydown', '.dropdown-content a[href]', function (e) {
+    $('.dropdown-content').each(function(){
+        if($(this).closest(".dropdown[temp-data-dfn]").length>0){
+            var tempdataDefElm =$(this).closest(".dropdown[temp-data-dfn]")
+            var tempdataDefVal =  tempdataDefElm.attr("temp-data-dfn");
+            tempdataDefElm.removeAttr("temp-data-dfn");
+            tempdataDefElm.attr("data-dfn", tempdataDefVal);
+        }
+    });
+    $('.dropdown-content').hide();
+    e.stopPropagation();
+});
 
 (function (app) {
     var dfnLinks = glossaries;
@@ -94,8 +142,20 @@ function bind_glossary_events(){
                         var scrollTop = $(window).scrollTop();
                         $(window).scrollTop(scrollTop + (dimens.eleBox.top - 20 ));
                     }
-                    MathJax.typeset();
-                    //MathJax.typesetPromise()
+                    //NM: 09-June-2023 - The code is added to fix issue 
+                    //Related to the annotation links in poptip is not working on ipad
+                    if($element.find('a[href^="#"]').length>0){
+                        if($element.closest(".dropdown[data-dfn]").length>0){
+                            var dataDefElm = $element.closest(".dropdown[data-dfn]");
+                            var dataDefVal =  dataDefElm.attr("data-dfn");
+                            dataDefElm.removeAttr("data-dfn");
+                            dataDefElm.attr("temp-data-dfn", dataDefVal);
+                        }
+                    }
+                    if (typeof MathJax != 'undefined' && typeof MathJax != 'null'){
+                        MathJax.typeset();
+                        //MathJax.typesetPromise()
+                    }
                 }
                 var data = null;
                 if (res.data) {

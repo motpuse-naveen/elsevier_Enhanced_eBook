@@ -292,6 +292,7 @@ $(document).ready(function () {
       $(".column[data-tooltipnumber='col_" + Utils.getActiveTooltipNumber() + "']").addClass('selected');
       $(".refresh_btn").removeClass("disabled")
       //;//.addClass('selected');
+      var navHeight = $(".thumbnail_main").height();
       console.log($(".column[data-tooltipnumber]"), Utils.getActiveTooltipNumber())
       // console.log(Utils.getActiveTooltipNumber());
       $imageWrapper.css({ 'left': 0, 'top': 0 });
@@ -311,29 +312,30 @@ $(document).ready(function () {
             isLeftUpdated = true;
          }
          if (toolTipoffset.left < 50) {
-            newLeft = Math.abs(toolTipoffset.left) + 50;
+            newLeft = Math.abs(toolTipoffset.left) + 20;
             isLeftUpdated = true;
          }
          if (toolTipoffset.top < 50) {
             newTop = Math.abs(toolTipoffset.top) + 50;
             isTopUpdated = true;
          }
-         if (toolTipoffset.bottom > winHeight) {
-            newTop = $imageOffset.top - ((toolTipoffset.bottom - winHeight) - 50);
+         if (toolTipoffset.top + toolTipoffset.height > (winHeight - navHeight - 30)) {
+            newTop = $imageOffset.top - ((toolTipoffset.top + toolTipoffset.height) - (winHeight - navHeight) + 30);
+            //newTop = $imageOffset.top - toolTipoffset.height + 50//((toolTipoffset.bottom - winHeight) + 50);
             isTopUpdated = true;
          }
          if (isTopUpdated && isLeftUpdated) {
-            $imageWrapper.animate({ 'left': newLeft + 'px', 'top': newTop + 'px' }, 20);
+            $imageWrapper.animate({ 'left': newLeft + 'px', 'top': newTop + 'px' }, 50);
          } else if (isTopUpdated) {
-            $imageWrapper.animate({ 'top': newTop + 'px' }, 100);
+            $imageWrapper.animate({ 'top': newTop + 'px' }, 50);
          } else if (isLeftUpdated) {
-            $imageWrapper.animate({ 'left': newLeft + 'px' }, 100);
+            $imageWrapper.animate({ 'left': newLeft + 'px' }, 50);
          }
          $tooltip.fadeIn(500);
          $tooltip.find('p').focus();
          $tooltip.addClass('is-visible');
          $tooltip.closest(".tooltipInner").addClass('maxzindex');
-      }, 200);
+      }, 300);
    }
    app.getNewScaleByDirection = function (direction) {
       var newZoom = currentSliderVal;
@@ -396,7 +398,7 @@ $(document).ready(function () {
       if ($imgBoundingBox.height < $(window).height()) {
          newTop = 0;
       }
-      $imageWrapper.animate({ 'top': newTop, 'left': newLeft }, 400);
+      $imageWrapper.animate({ 'top': newTop, 'left': newLeft }, 200);
    }
    app.ariaAnnounce = function (msg) {
       console.log(msg);
