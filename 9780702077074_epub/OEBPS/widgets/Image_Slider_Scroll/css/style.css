@@ -1,0 +1,750 @@
+.main-image-area {
+	background-color: white;
+	position: relative;
+	margin: 0px auto 0;
+	height: calc(100vh - 45px) !important;
+	overflow: hidden;
+}
+
+.inner-image-area {
+	height: 100%;
+	display: block;
+	-webkit-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-ms-transform-origin: center center;
+	transform-origin: center center;
+	position: relative;
+	line-height: 0;
+	margin: auto;
+	min-height: auto;
+	display: flex;
+	justify-content: center;
+	/*align-items: center;*/
+	overflow: auto;
+	padding: 10px;
+}
+
+.inner-image-area img {
+	width: auto !Important;
+	margin: auto;
+	max-width: 100%;
+	max-height: 80%;
+	padding-top: 10px;
+	padding-bottom: 8rem;
+}
+
+.pop-tip {
+	border: 4px solid #007cb6;
+	border-radius: 20px;
+	padding: 13px 6px;
+	top: 18px;
+	position: absolute;
+	right: 380px;
+	z-index: 999;
+	cursor: pointer;
+	color: #007cb6;
+}
+
+.main-document-area {
+	background-color: white;
+	position: relative;
+	max-width: 979px;
+	margin: 0 auto 0;
+}
+
+.container {
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+}
+
+
+/*----- Image Zoom -----*/
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	align-items: center;
+}
+
+.zoomimage .inner-image-area #img {
+	position: relative;
+	width: auto;
+	max-height: 100%;
+	margin: auto;
+	display: flex;
+}
+
+input#slide[type=range] {
+	-webkit-appearance: none;
+	margin: 0;
+	width: 90px;
+	border-radius: 5px;
+}
+
+input#slide[type=range]:focus {
+	outline: none;
+}
+
+input#slide[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 5px;
+	cursor: pointer;
+	box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
+	background: #E8E8E8;
+	border-radius: 5px;
+	border: 0px solid #000101;
+}
+
+input#slide[type=range]::-webkit-slider-thumb {
+	box-shadow: 0px 1px 0 rgb(0 0 0 / 20%);
+	border: 2px solid #fff;
+	height: 13px;
+	width: 13px;
+	border-radius: 15px;
+	background: #A2A2A2;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -5px;
+}
+
+input#slide[type=range]:hover::-webkit-slider-thumb {
+	background: #007cb6;
+}
+
+.focus-input.active {
+	outline: 2px solid #007cb6;
+	color: #007cb6;
+	outline-offset: -1px;
+}
+
+.focus-input {
+	background: #fff;
+	border-style: solid;
+	border-color: #CDCDCD;
+	border-width: 1px 1px 0 1px;
+	padding: 16px 60px 16px 16px;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+	color: #757575;
+	text-align: justify;
+}
+
+.neuromuscularfunction .arrow-left.outer,
+.neuromuscularfunction .arrow-right.outer {
+	top: 7px;
+}
+
+.neuromuscularfunction .arrow-left.outer {
+	left: 10px;
+}
+
+.neuromuscularfunction .arrow-right.outer {
+	right: 10px;
+}
+
+.arrow-left.outer,
+.arrow-right.outer {
+	background: url(../images/image_figure_controls.png);
+	background-size: 211px;
+	width: 30px;
+	height: 43px;
+	z-index: 204;
+	position: absolute;
+	top: 22px;
+	cursor: pointer;
+}
+
+.arrow-right.outer {
+	background-position: -107px 0;
+	right: 19px;
+}
+
+.arrow-left.outer {
+	background-position: -74px 0;
+	left: 15px;
+}
+
+
+/* img-slide */
+
+.Nervous-system-header {
+	background: #eef1f3;
+	display: flex;
+	justify-content: end;
+	width: 600px;
+	margin: 0px auto;
+}
+
+.buttonWrapper {
+	display: flex;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-content: space-between;
+}
+
+button {
+	border: none;
+	padding: 4px;
+	color: #232c3d;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.Nervous-system-main {
+	width: 100%;
+	height: calc(100% - 0px);
+}
+
+.Nervous-system {
+	display: none;
+	padding: 0;
+	text-align: center;
+	width: 100%;
+}
+
+.Nervous-system.active {
+	display: block;
+	margin: 0;
+}
+
+.Nervous-system-images {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.slider-track-line {
+	height: 16px;
+}
+
+.track {
+	position: relative;
+	top: 4.5px;
+	height: 6px;
+	background: #d9d9d9;
+	border: #22adcc;
+	box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
+	transition: all 0.2s ease-out;
+	cursor: pointer;
+	border-radius: 14px;
+}
+
+.buttonWrapper {
+	position: relative;
+	margin-top: 5px;
+}
+.radio-button{
+	position: absolute;
+	top: -22px;
+	left: 0px;
+	height: 17px;
+	width: 17px;
+	background: url(../images/timeline_dot_small.png), #d9d9d9;
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+	background-size: 8px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	-ms-border-radius: 16px;
+	border-radius: 16px;
+	-webkit-box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
+	-moz-box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.08) inset;
+	box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
+}
+/*
+.radio-button-1 {
+	position: absolute;
+	top: -22px;
+	height: 17px;
+	width: 17px;
+	background: url(../images/timeline_dot_small.png), #d9d9d9;
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+	background-size: 8px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	-ms-border-radius: 16px;
+	border-radius: 16px;
+	-webkit-box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
+	-moz-box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.08) inset;
+	box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
+}
+
+.radio-button-2 {
+	position: absolute;
+	top: -22px;
+	left: 33%;
+	height: 17px;
+	width: 17px;
+	background: url(../images/timeline_dot_small.png), #d9d9d9;
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+	background-size: 8px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	-ms-border-radius: 16px;
+	border-radius: 16px;
+	-webkit-box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
+	-moz-box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.08) inset;
+	box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
+}
+
+.radio-button-3 {
+	position: absolute;
+	top: -22px;
+	left: 67%;
+	height: 17px;
+	width: 17px;
+	background: url(../images/timeline_dot_small.png), #d9d9d9;
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+	background-size: 8px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	-ms-border-radius: 16px;
+	border-radius: 16px;
+	-webkit-box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
+	-moz-box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.08) inset;
+	box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
+}
+
+.radio-button-4 {
+	position: absolute;
+	top: -22px;
+	right: 0px;
+	height: 17px;
+	width: 17px;
+	background: url(../images/timeline_dot_small.png), #d9d9d9;
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+	background-size: 8px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	-ms-border-radius: 16px;
+	border-radius: 16px;
+	-webkit-box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
+	-moz-box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.08) inset;
+	box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
+}
+*/
+
+
+.Nervous-system-slide .label {
+	color: #6e6e70;
+	font-size: 14px;
+	font-family: 'Conv_SourceSansPro-Light';
+	font-weight: 600;
+}
+
+#draggableDot {
+	position: absolute;
+	top: 20px;
+	height: 10px;
+	width: 10px;
+	background: #007cb6;
+	border: 3px solid #fff;
+	-webkit-border-radius: 13px;
+	-moz-border-radius: 13px;
+	-ms-border-radius: 13px;
+	border-radius: 13px;
+	-webkit-box-shadow: 0px 1px 0 rgb(0 0 0 / 20%);
+	-moz-box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 1px 0 rgb(0 0 0 / 20%);
+	z-index: 1;
+}
+
+span.nrvs-label.current-step {
+	font-size: 16px;
+}
+
+.Nervous-system-images img {
+	max-width: 100%;
+}
+
+.track:hover {
+	height: 15px;
+	top: 0px;
+}
+
+.marker-container-1 {
+	position: absolute;
+	width: 200px;
+	margin-left: -92px;
+	top: -36px;
+	left: 39px;
+	white-space: nowrap;
+	overflow: hidden;
+	opacity: 0;
+	text-overflow: ellipsis;
+	-webkit-transition: all, 0.14s ease-out;
+	-moz-transition: all, 0.14s ease-out;
+	-ms-transition: all, 0.14s ease-out;
+	transition: all, 0.14s ease-out;
+}
+
+.marker-container-2 {
+	position: absolute;
+	width: 200px;
+	margin-left: -92px;
+	top: -36px;
+	white-space: nowrap;
+	overflow: hidden;
+	opacity: 0;
+	text-overflow: ellipsis;
+	-webkit-transition: all, 0.14s ease-out;
+	-moz-transition: all, 0.14s ease-out;
+	-ms-transition: all, 0.14s ease-out;
+	transition: all, 0.14s ease-out;
+}
+
+.marker-container-3 {
+	right: -52px;
+	position: absolute;
+	width: 200px;
+	margin-left: -92px;
+	top: -36px;
+	white-space: nowrap;
+	overflow: hidden;
+	opacity: 0;
+	text-overflow: ellipsis;
+	-webkit-transition: all, 0.14s ease-out;
+	-moz-transition: all, 0.14s ease-out;
+	-ms-transition: all, 0.14s ease-out;
+	transition: all, 0.14s ease-out;
+}
+
+.marker-container-4 {
+	right: -52px;
+	position: absolute;
+	width: 200px;
+	margin-left: -92px;
+	top: -36px;
+	white-space: nowrap;
+	overflow: hidden;
+	opacity: 0;
+	text-overflow: ellipsis;
+	-webkit-transition: all, 0.14s ease-out;
+	-moz-transition: all, 0.14s ease-out;
+	-ms-transition: all, 0.14s ease-out;
+	transition: all, 0.14s ease-out;
+}
+
+.marker-label-1,
+.marker-label-2,
+.marker-label-3,
+.marker-label-4 {
+	display: inline;
+	line-height: 31px;
+	text-align: center;
+	padding: 6px 10px;
+	border-radius: 2px;
+	color: white;
+	font-weight: 600;
+	pointer-events: none;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+	background-size: 100%;
+	background-image: linear-gradient(#3b3a3a, #2a2a2a);
+	transition: all, 0.14s ease-out;
+	transform: scale(0.8) translate(0, 10px);
+	font-size: 12px;
+}
+
+.marker-container-1:hover,
+.marker-container-2:hover,
+.marker-container-3:hover,
+.marker-container-4:hover {
+	opacity: 0;
+}
+
+.range {
+	background-color: lime;
+	height: 15px;
+	width: 10px;
+	position: relative;
+	top: 2px;
+	box-shadow: inset 0px 0px 10px black;
+}
+
+.Nervous-system-slide {
+	background-color: #fff;
+	border-top: 1px solid #f2f2f6;
+	border-bottom: 1px solid #f2f2f6;
+	padding: 20px 60px 10px 50px;
+	-webkit-box-shadow: 0 -1px 1px rgb(0 0 0 / 10%);
+	-moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 -1px 1px rgb(0 0 0 / 10%);
+}
+
+.nrvs-label {
+	color: #6e6e70;
+	font-size: 14px;
+	font-family: "Conv_SourceSansPro-Light", Verdana, Helvetica, sans-serif;
+	font-weight: 600;
+}
+
+.neuromuscularfunction .footer {
+	bottom: 0px;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.neuromuscularfunction .slider-tab {
+	bottom: 0px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 99999;
+}
+
+@media screen and (max-width:767px) {
+	.inner-image-area img {
+		width: auto!important;
+		max-width: 100%;
+		padding-top: 10px;
+		padding-bottom: 9rem;
+	}
+	.slide8 #image-map {
+		transform: scale(0.45);
+	}
+	.subcaption.active {
+		position: absolute;
+		bottom: 68px;
+		left: 0;
+		right: 0;
+		z-index: 203;
+		font-weight: 500;
+		text-align: center;
+		padding: 0.5em;
+		color: #191919;
+		/*background-color: rgba(255, 255, 255, 0.8);*/
+		background-color: rgba(255, 255, 255);
+		border-top: 1px solid #f7f7f7;
+		font-size: 14px;
+		width: auto !important;
+		margin-left: 0 !important;
+	}
+	.neuromuscularfunction .subcaption.active {
+		position: fixed;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+	.inner-image-area .ss-img-wrap {
+		transform: scale(0.8);
+	}
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+	.inner-image-area .img-wrap {
+		transform: scale(0.9);
+	}
+	/* .inner-image-area .ss-img-wrap { */
+	/* transform: scale(0.32); */
+	/* } */
+	.img-slider {
+		transform: scale(0.3);
+	}
+	.zoomimage .inner-image-area #img {
+		max-height: 99% !important;
+	}
+}
+
+input#sliderInputBox {
+	width: 90px;
+	border: none;
+	background: transparent;
+}
+
+#imageSlider {
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+	top: 2px;
+	left: 16px;
+	width: 77px;
+}
+
+.holder::-webkit-scrollbar {
+	display: none;
+}
+
+
+/* Hide the images by default */
+
+
+/* Container for image text */
+
+
+/* Add a transparency effect for thumbnail images */
+
+.slide-thumbnail {
+	width: 100%;
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.active,
+.slide-thumbnail:hover {
+	opacity: 1;
+}
+
+.visually-hidden {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	position: absolute !important;
+	height: 0px;
+	width: 0px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px);
+	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+	clip: rect(1px, 1px, 1px, 1px);
+	/*maybe deprecated but we need to support legacy browsers */
+	clip-path: inset(50%);
+	/*modern browsers, clip-path works inwards from each corner*/
+	white-space: nowrap;
+	/* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+}
+
+.disabled {
+	pointer-events: none;
+	color: lightgray!important;
+}
+
+@media only screen and (max-width: 600px) {
+	div.def-img {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.neuromuscularfunction .subcaption.active {
+		padding-left: 5px;
+		padding-right: 5px;
+		margin: 0 auto;
+	}
+}
+
+#imageSlider1 {
+	top: 0px !important;
+}
+
+.thumb {
+	top: 0px;
+	height: 9px !important;
+	width: 9px !important;
+	margin-top: -6px;
+	background: #A2A2A2;
+	border: 2px solid #FFF;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	border-radius: 15px;
+	-webkit-box-shadow: 0px 1px 0 rgb(0 0 0 / 20%);
+	-moz-box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 1px 0 rgb(0 0 0 / 20%);
+	cursor: pointer;
+	position: relative;
+}
+
+.thumb:hover {
+	background: #007cb6;
+}
+
+.thumb:focus {
+	background: #007cb6;
+	outline: 2px solid;
+	border-radius: 50%;
+}
+
+.rail {
+	height: 5px;
+	background: #E8E8E8;
+	border: #22adcc;
+	border-radius: 10px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
+	-moz-box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.08) inset;
+	box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
+	margin: 5px;
+	padding: 1px;
+	position: relative;
+	box-sizing: border-box;
+	width: 90px;
+}
+
+sup {
+	line-height: 14px;
+}
+
+.inner-image-area {
+	height: 100vh;
+	/* Use vh as a fallback for browsers that do not support Custom Properties */
+	height: calc(var(--vh, 1vh) * 100);
+	margin: 0 auto;
+}
+
+.Nervous-system-main .inner-image-area {
+	height: 100%;
+	margin: 0 auto;
+}
+
+.subcaption.active {
+	position: absolute;
+	bottom: 68px;
+	left: 0;
+	right: 0;
+	z-index: 203;
+	font-weight: 500;
+	text-align: center;
+	padding: 0.5em;
+	color: #191919;
+	/*background-color: rgba(255, 255, 255, 0.8);*/
+	background-color: rgba(255, 255, 255);
+	border-top: 1px solid #f7f7f7;
+	font-size: 14px;
+	width: 97%;
+	margin-left: 1%;
+}
+
+.neuromuscularfunction .subcaption.active {
+	margin-left: 0px;
+    position: fixed;
+    display: block;
+    /*height: 42px;*/
+    overflow-y: auto;
+	margin: 4px 0px;
+}
