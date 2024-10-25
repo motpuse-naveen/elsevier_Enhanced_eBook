@@ -248,6 +248,9 @@
     background-position: 10px 10px;
     border: 1px solid transparent;
 }
+.prevContainer a:focus-visible, .nextContainer a:focus-visible {
+    border: 2px solid #EB6500;
+}
 .prevContainer a {
     background-image: url(../images/left-arrow-default.svg);
     background-position: 7px 3px;

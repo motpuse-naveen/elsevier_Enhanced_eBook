@@ -1,5 +1,5 @@
 /* v19.4 - 12APR2022 */
-body{
+body .dropdown{
 	color:var(--primary-text);
 	line-height: 1.2em;
 }
@@ -10,24 +10,24 @@ section {
 	display: block;
 }
 
-hgroup#covertitle {
+.dropdown hgroup#covertitle {
 	margin-top: 4em;
 }
 
-hgroup#covertitle h2 {
+.dropdown hgroup#covertitle h2 {
 	margin-left: 8em;
 }
 
-h1,
-h2 {
+.dropdown h1,
+.dropdown h2 {
 	font-weight: normal;
 }
 
-h1 {
+.dropdown h1 {
 	margin-bottom: 0.3em;
 }
 
-h2 {
+.dropdown h2 {
 	margin-top: 0em;
 	font-size: 95%;
 }
@@ -99,7 +99,7 @@ a:active {
     letter-spacing: 1.5px;
 }
 
-i {
+.dropdown i {
     color: #000;
 }
 .transcription .dropdown {
@@ -247,7 +247,7 @@ i {
 }
 
 
-sup {
+.dropdown sup {
     line-height: 14px;
 }
 .document-area11 ul {

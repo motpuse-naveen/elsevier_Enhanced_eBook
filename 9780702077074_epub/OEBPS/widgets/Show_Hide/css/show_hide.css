@@ -49,10 +49,12 @@ ol.ques-list li .ques-title{
 	font-weight: 400;
 	color:var(--orange);
 	float:left;
-	padding-right: 10px;
+	padding-right: 4px;
+    text-align: right;
+    min-width: 2em;
 }
 ol.ques-list li .ques-info{
-	padding-left: 1.5em;
+	padding-left: 2.3em;
 }
 ol.ques-list li ol.option-list{
 
@@ -85,7 +87,7 @@ button.ans {
 	background-size: 1.2em auto;
 	padding: 0.5em 1em 0.375em 2em;
 	cursor: pointer;
-	margin-left: -1.25em;
+	/*margin-left: -1.25em;*/
     border-style: none;
     font-size: inherit;
 	font-family: inherit;
@@ -115,7 +117,7 @@ button.ans:focus-visible{
 
 .review-main .answer {
 	display: none;
-	margin-left: -12px;
+	margin-left: 0px;
 	text-indent: 0em;
 	font-size: 100%;
 }

@@ -2935,14 +2935,12 @@
             <item id="widget_item232" href="widgets/MCMS/images/false_red.png" media-type="image/png"/>
             <item id="widget_item233" href="widgets/MCMS/images/figure_arrow_mask_left.png" media-type="image/png"/>
             <item id="widget_item234" href="widgets/MCMS/images/figure_arrow_mask_right.png" media-type="image/png"/>
-
             <item id="widget_item235_1" href="widgets/MCMS/images/left-arrow-default.svg" media-type="image/svg+xml"/>
             <item id="widget_item235_2" href="widgets/MCMS/images/left-arrow-disabled.svg" media-type="image/svg+xml"/>
             <item id="widget_item235_3" href="widgets/MCMS/images/left-arrow-hover.svg" media-type="image/svg+xml"/>
             <item id="widget_item235_4" href="widgets/MCMS/images/right-arrow-default.svg" media-type="image/svg+xml"/>
             <item id="widget_item235_5" href="widgets/MCMS/images/right-arrow-disabled.svg" media-type="image/svg+xml"/>
             <item id="widget_item235_6" href="widgets/MCMS/images/right-arrow-hover.svg" media-type="image/svg+xml"/>
-
             <item id="widget_item236" href="widgets/MCMS/images/x.png" media-type="image/png"/>
             <item id="widget_item237" href="widgets/MCMS/js/QUIZMCMS.js" media-type="text/javascript"/>
             <item id="widget_item238" href="widgets/MCMS/script/jquery-3.6.0.min.js" media-type="text/javascript"/>

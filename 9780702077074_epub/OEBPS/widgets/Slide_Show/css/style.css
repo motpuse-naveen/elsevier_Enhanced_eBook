@@ -286,7 +286,11 @@
 }
 
 .thumbnail_main .column:focus {
-	border: 1px solid black;
+	border: 3px solid black;
+}
+
+.thumbnail_main .column:focus-visible {
+	border: 3px solid #EB6500;
 }
 
 .thumbnail_main .column.selected {
