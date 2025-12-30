@@ -16,9 +16,9 @@
       <div role="main">
          <div class="video-area" role="application">
             <div class="sr-only" style="position: absolute; left: -9999px;" role="heading" aria-level="1">Mitosis in a cell</div>
-            <video controls="controls"  controlslist="nodownload">
-               <source src="https://static.us.elsevierhealth.com/standring_42_9780702077050/9780702077050_0001.mp4" type="video/mp4" />
-               <!--<track src="sintel-en.vtt" kind="subtitles" srclang="en" label="English" />-->
+            <video controls="controls"  controlslist="nodownload" style="width:600px;">
+               <source src="3195394-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+               <track src="sintel-en.vtt" kind="subtitles" srclang="en" label="English" />
                Your browser does not support HTML5 video.
             </video>
             <div class="vidleg">
@@ -41,6 +41,22 @@
          document.addEventListener("contextmenu", function (e){
             e.preventDefault();
          }, false);
+         
+         const video = document.querySelector('video');
+const track = video.textTracks[0];
+
+if (track) {
+  track.mode = 'showing';
+  track.oncuechange = () => {
+    const cues = track.activeCues;
+    for (const cue of cues) {
+      cue.line = 0; // Position 10% from the top
+      cue.align = 'center'; // Center the text
+    }
+  };
+} else {
+  console.error("No active text track found!");
+}
       </script>
    </body>
 </html>
